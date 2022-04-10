@@ -1,57 +1,69 @@
+from sqlite3 import Row
 from tkinter import*
 
 def press(num): #momento en el que se presionan los numeros
-  global operador 
-  operador=operador+str(num)
-  entradaTexto.set(operador)
+
+  global operador
+  operador = operador + str(num)
+  entradaTexto.set(operador)  #cambiar nombre variable
   
 def resolver():
-  print("En proceso.")
+
+  try:
+
+    global operador
+    final = str(eval(operador))
+    entradaTexto.set(final)
+    salida = ""
   
- # global operador
-  #try:
-   #   opera=str(eval(operador))
-    #  entradaTexto.set(opera)
-  #except:
-   #   entradaTexto.set("ERROR")
-  #operador = ""
+  except:
+
+    entradaTexto.set(" error ")
+    salida = ""
   
 def clear():
+
     global operador
     operador=("")
     entradaTexto.set("0")
   
-ventana = Tk()
-ventana.title("CALCULADORA")
-ventana.geometry("280x450")
-ventana.configure(bg="grey")
-entradaTexto=StringVar()
+interfaz = Tk()
+interfaz.configure(bg="grey")
+interfaz.title("CALCULADOR DE VERGAS")
+interfaz.geometry("355x450")
+
+entradaTexto = StringVar()
+
 operador=""
 
-Salida=Entry(ventana,font=("arial", 14,"bold"),width=19,textvariable=entradaTexto,bd=20,insertwidth=4,bg="powder blue").place(x=15,y=10)
+salida = Entry(interfaz, font=("arial", 14, "bold"), width=19, textvariable=entradaTexto, bd=20, insertwidth=4,bg="white")
+salida.grid(padx = 10, pady=20, ipadx=40, ipady=50, row= 0, column=0)
 
-ancho=8
-largo=3
+ancho=7
+largo=1
 
-Button(ventana, text="7", width=ancho, height=largo, command=lambda: press(7)).place(x=35,y=80)
-Button(ventana, text="8", width=ancho, height=largo, command=lambda: press(8)).place(x=105,y=80)
-Button(ventana, text="9", width=ancho, height=largo, command=lambda: press(9)).place(x=175,y=80)
-Button(ventana, text="4", width=ancho, height=largo, command=lambda: press(4)).place(x=35,y=140)
-Button(ventana, text="5", width=ancho, height=largo, command=lambda: press(5)).place(x=105,y=140)
-Button(ventana, text="6", width=ancho, height=largo, command=lambda: press(6)).place(x=175,y=140)
-Button(ventana, text="1", width=ancho, height=largo, command=lambda: press(1)).place(x=35,y=200)
-Button(ventana, text="2", width=ancho, height=largo, command=lambda: press(2)).place(x=105,y=200)
-Button(ventana, text="3", width=ancho, height=largo, command=lambda: press(3)).place(x=175,y=200)
-Button(ventana, text="0", width=ancho, height=largo, command=lambda: press(0)).place(x=35,y=260)
-Button(ventana, font=("arial",9,"bold"),text="+", width=ancho, height=largo, command=lambda: press("+")).place(x=105,y=260)
-Button(ventana, font=("arial",9,"bold"),text="—", width=ancho, height=largo, command=lambda: press("-")).place(x=175,y=260)
-Button(ventana, font=("arial",9,"bold"),text="x", width=ancho, height=largo, command=lambda: press("x")).place(x=35,y=320)
-Button(ventana, font=("arial",9,"bold"),text="/", width=ancho, height=largo, command=lambda: press("/")).place(x=105,y=320)
-Button(ventana, font=("arial",9,"bold"),text="C", width=ancho, height=largo, command=clear).place(x=175,y=320)
-Button(ventana, text="RESOLVER", width=28, height=2, command=resolver).place(x=35,y=380)
+case7 = Button(interfaz, text = " 7 ", width = ancho, height = largo, command=lambda: press(7))
+case7.grid(row=2, column=0)
+
+case8 = Button(interfaz, text = " 8 ", width = ancho, height = largo, command=lambda: press(8))
+case8.grid(row=2, column=1)
 
 
+Button(interfaz, text=" 9 ", width=ancho, height=largo, command=lambda: press(9)).grid(row=2, column=2)
+Button(interfaz, text=" 4 ", width=ancho, height=largo, command=lambda: press(4)).grid(row=3, column=0)
+Button(interfaz, text=" 5 ", width=ancho, height=largo, command=lambda: press(5)).grid(row=3, column=1)
+Button(interfaz, text=" 6 ", width=ancho, height=largo, command=lambda: press(6)).grid(row=3, column=2)
+Button(interfaz, text=" 1 ", width=ancho, height=largo, command=lambda: press(1)).grid(row=4, column=0)
+Button(interfaz, text=" 2 ", width=ancho, height=largo, command=lambda: press(2)).grid(row=4, column=1)
+Button(interfaz, text=" 3 ", width=ancho, height=largo, command=lambda: press(3)).grid(row=4, column=2)
+Button(interfaz, text=" 0 ", width=ancho, height=largo, command=lambda: press(0)).grid(row=5, column=1)
+Button(interfaz, font=("arial",9,"bold"),text=" + ", width=ancho, height=largo, command=lambda: press("+")).grid(row=5, column=2)
+Button(interfaz, font=("arial",9,"bold"),text=" — ", width=ancho, height=largo, command=lambda: press("-")).grid(row=5, column=0)
+Button(interfaz, font=("arial",9,"bold"),text=" x ", width=ancho, height=largo, command=lambda: press("x")).grid(row=6, column=0)
+Button(interfaz, font=("arial",9,"bold"),text=" / ", width=ancho, height=largo, command=lambda: press("/")).grid(row=6, column=1)
+Button(interfaz, font=("arial",9,"bold"),text=" C ", width=ancho, height=largo, command=clear).grid(row=6, column=2)
+Button(interfaz, text=" RESOLVER ", width=28, height=2, command=resolver, pady=10).grid(row=7, column=1)
 
 clear()
 
-ventana.mainloop()
+interfaz.mainloop()
