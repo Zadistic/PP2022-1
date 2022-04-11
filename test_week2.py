@@ -38,7 +38,7 @@ entradaTexto = StringVar()
 operador=""
 
 salida = Entry(interfaz, font=("arial", 14, "bold"), width=19, textvariable=entradaTexto, bd=20, insertwidth=4,bg="white")
-salida.grid(columnspan=4, padx = 10, pady=20, ipadx=40, ipady=50, row= 0, column=0)
+salida.grid(columnspan=3, padx = 10, pady=20, ipadx=40, ipady=50, row= 0, column=0)
 
 ancho=7
 largo=1
@@ -73,23 +73,23 @@ case3.grid(row=4, column=2)
 case0 = Button(interfaz, text=" 0 ", width=ancho, height=largo, command=lambda: press(0))
 case0.grid(row=5, column=1)
 
-suma = Button(interfaz, font=("arial",9,"bold"),text=" + ", width=ancho, height=largo, command=lambda: press("+"))
+suma = Button(interfaz,text=" + ", width=ancho, height=largo, command=lambda: press("+"))
 suma.grid(row=5, column=2)
 
-resta = Button(interfaz, font=("arial",9,"bold"),text=" — ", width=ancho, height=largo, command=lambda: press("-"))
+resta = Button(interfaz,text=" — ", width=ancho, height=largo, command=lambda: press("-"))
 resta.grid(row=5, column=0)
 
-multip = Button(interfaz, font=("arial",9,"bold"),text=" x ", width=ancho, height=largo, command=lambda: press("x"))
+multip = Button(interfaz, text=" x ", width=ancho, height=largo, command=lambda: press("x"))
 multip.grid(row=6, column=0)
 
-division = Button(interfaz, font=("arial",9,"bold"),text=" / ", width=ancho, height=largo, command=lambda: press("/"))
+division = Button(interfaz, text=" / ", width=ancho, height=largo, command=lambda: press("/"))
 division.grid(row=6, column=1)
 
-borrar = Button(interfaz, font=("arial",9,"bold"),text=" C ", width=ancho, height=largo, command=clear)
+borrar = Button(interfaz, text=" C ", width=ancho, height=largo, command=clear)
 borrar.grid(row=6, column=2)
 
-resol = Button(interfaz, text=" RESOLVER ", width=28, height=2, command=resolver, pady=10)
-resol.grid(row=7, column=1)
+resol = Button(interfaz, text=" RESOLVER ", width=7, height=1, command=resolver, pady=10)
+resol.grid(row=7, column=0)
 
 clear()
 
