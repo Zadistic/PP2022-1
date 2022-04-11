@@ -1,6 +1,7 @@
 from audioop import mul
 from sqlite3 import Row
 from tkinter import*
+import tkinter
 
 expresion = ""
 
@@ -36,14 +37,20 @@ def limpiar():
 if __name__ == "__main__":
 
 	interfaz = Tk()
+
+	dibujo = tkinter.Canvas(interfaz , bg="white", height=300, width=300)
+
+	coord = 10, 50, 240, 210
+	arc = dibujo.create_arc(coord, start=0, extent=150, fill="red")
+
 	interfaz.configure(background="grey75")
 	interfaz.title("Calculadora")
 	interfaz.geometry("373x450")
 
 	ecuacion = StringVar()
 
-	mostrar = Entry(interfaz, font=("arial", 14, "bold"), width=19, textvariable=ecuacion, bd=20, insertwidth=4,bg="white")
-	mostrar.grid(columnspan=4, padx = 20, pady=20, ipadx=50, ipady=80, row= 0, column=0)
+	#mostrar = Entry(interfaz, font=("arial", 14, "bold"), width=19, textvariable=ecuacion, bd=20, insertwidth=4,bg="white")
+	#mostrar.grid(columnspan=4, padx = 20, pady=20, ipadx=50, ipady=80, row= 0, column=0)
 
 	case1 = Button(interfaz, text=" 1 ", fg="white", bg="grey39", command=lambda: ingresar(1), height=1, width=7)
 	case1.grid(row=2, column=0)
@@ -95,5 +102,4 @@ if __name__ == "__main__":
 
 	decimal= Button(interfaz, text=".", fg="white", bg="grey39", command=lambda: ingresar("."), height=1, width=7)
 	decimal.grid(row=5, column=1)
-	
 	interfaz.mainloop()
