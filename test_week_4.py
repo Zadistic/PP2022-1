@@ -2,6 +2,7 @@ from audioop import mul
 from sqlite3 import Row
 from tkinter import*
 import tkinter
+from turtle import clear
 
 expresion = ""
 
@@ -142,8 +143,8 @@ if __name__ == "__main__":
 	resol = Button(interfaz, text=" = ", fg="white", bg="grey39", command=resolver, height=1, width=7)
 	resol.grid(row=6, column=3)
 
-	limpiar = Button(interfaz, text=" C ", fg="white", bg="maroon", command=limpiar, height=1, width=7)
-	limpiar.grid(row=5, column="2")
+	vaciar = Button(interfaz, text=" C ", fg="white", bg="maroon", command=limpiar, height=1, width=7)
+	vaciar.grid(row=5, column="2")
 
 	decimal= Button(interfaz, text=".", fg="white", bg="grey39", command=lambda: ingresar("."), height=1, width=7)
 	decimal.grid(row=5, column=1)
