@@ -17,50 +17,50 @@ def ingresar(num):
 	#expresion = expresion + str(num)
 	#ecuacion.set(expresion)
 
-def dibujar1():
+#def dibujar1():
 
-	coord = 20, 10, 20, 50
-	line = C.create_line(coord)
+#	coord = 20, 10, 20, 50
+#	line = C.create_line(coord)
 
-	coord = 10, 20, 20, 10
-	line = C.create_line(coord)
+#	coord = 10, 20, 20, 10
+#	line = C.create_line(coord)
 
-def dibujar2():
+#def dibujar2():
 
-	coord = 40, 10, 60, 10
-	line = C.create_line(coord)
+#	coord = 40, 10, 60, 10
+#	line = C.create_line(coord)
 
-	coord = 60, 10, 60, 30
-	line = C.create_line(coord)
+#	coord = 60, 10, 60, 30
+#	line = C.create_line(coord)
 
-	coord = 60, 30, 40, 30
-	line = C.create_line(coord)
+#	coord = 60, 30, 40, 30
+#	line = C.create_line(coord)
 
-	coord = 40, 30, 40, 50
-	line = C.create_line(coord)
+#	coord = 40, 30, 40, 50
+#	line = C.create_line(coord)
 
-	coord = 40, 50, 60, 50
-	line = C.create_line(coord)
+#	coord = 40, 50, 60, 50
+#	line = C.create_line(coord)
 
-def dibujar3():
+#def dibujar3():
 
-	coord = 80, 10, 100, 10
-	line = C.create_line(coord)
+#	coord = 80, 10, 100, 10
+#	line = C.create_line(coord)
 
-	coord = 100, 10, 100, 30
-	line = C.create_line(coord)
+#	coord = 100, 10, 100, 30
+#	line = C.create_line(coord)
 
-	coord = 100, 30, 80, 30
-	line = C.create_line(coord)
+#	coord = 100, 30, 80, 30
+#	line = C.create_line(coord)
 
-	coord = 100, 30, 100, 50
-	line = C.create_line(coord)
+#	coord = 100, 30, 100, 50
+#	line = C.create_line(coord)
 
-	coord = 80, 10, 100, 10
-	line = C.create_line(coord)
+#	coord = 80, 10, 100, 10
+#	line = C.create_line(coord)
 
-	coord = 100, 50, 80, 50
-	line = C.create_line(coord)
+#	coord = 100, 50, 80, 50
+#	line = C.create_line(coord)
 
 def resolver():
 
@@ -95,8 +95,8 @@ if __name__ == "__main__":
 
 	C = Canvas(interfaz, bg="white", height=250, width=300)
 	
-	#mostrar = Entry(interfaz, font=("arial", 14, "bold"), width=19, textvariable=ecuacion, bd=20, insertwidth=4,bg="white")
-	#mostrar.grid(columnspan=4, padx = 20, pady=50, ipadx=50, ipady=80, row= 0, column=0)
+	mostrar = Entry(interfaz, font=("arial", 14, "bold"), width=19, textvariable=ecuacion, bd=20, insertwidth=4,bg="white")
+	mostrar.grid(columnspan=4, padx = 20, pady=50, ipadx=50, ipady=80, row= 0, column=0)
 
 	case1 = Button(interfaz, text=" 1 ", fg="white", bg="grey39", command=lambda: ingresar(1), height=1, width=7)
 	case1.grid(row=2, column=0)
