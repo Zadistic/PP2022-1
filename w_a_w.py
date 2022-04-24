@@ -2,7 +2,7 @@ from audioop import mul
 from sqlite3 import Row
 from tkinter import*
 import tkinter
-from turtle import clear
+from turtle import clear, color
 
 expresion = ""
 
@@ -24,7 +24,7 @@ def fraccion(numeros):
    
    if (numeros==14):
       coord = contadori,y1+45,contadorf,y2+5
-      mostrar.create_line(coord)
+      mostrar.create_line(coord, fill="#f56464")
       mostrar.addtag_all
  
    
@@ -36,144 +36,145 @@ def dibujar(numeros):
   if (numeros==1):
 
     coord = i+10,y1,i+10,y2
-    mostrar.create_line(coord)
+    mostrar.create_line(coord, fill="violet red")
     mostrar.addtag_all
     
 
   if (numeros==2):
     
     coord = i, y1, i+20, y2-40
-    mostrar.create_line(coord)
+    mostrar.create_line(coord, fill="violet red")
     coord = i+20, y1, i+20, y2-20
-    mostrar.create_line(coord)
+    mostrar.create_line(coord, fill="violet red")
     coord = i+20, y1+20, i, y2-20
-    mostrar.create_line(coord)
+    mostrar.create_line(coord, fill="violet red")
     coord = i, y1+20, i, y2
-    mostrar.create_line(coord)
+    mostrar.create_line(coord, fill="violet red")
     coord = i, y1+40, i+20, y2
-    mostrar.create_line(coord)
+
+    mostrar.create_line(coord, fill="violet red")
     mostrar.addtag_all
     
 
   if (numeros==3):
 
      coord = i, y1, i+20, y2-40
-     mostrar.create_line(coord)
+     mostrar.create_line(coord, fill="violet red")
      coord = i+20, y1, i+20, y2-20
-     mostrar.create_line(coord)
+     mostrar.create_line(coord, fill="violet red")
      coord = i+20, y1+20, i, y2-20
-     mostrar.create_line(coord)
+     mostrar.create_line(coord, fill="violet red")
      coord = i+20, y1+20, i+20, y2
-     mostrar.create_line(coord)
+     mostrar.create_line(coord, fill="violet red")
      coord = i, y1, i+20, y2-40
-     mostrar.create_line(coord)
+     mostrar.create_line(coord, fill="violet red")
      coord = i+20, y1+40, i, y2
-     mostrar.create_line(coord)
+     mostrar.create_line(coord, fill="violet red")
      mostrar.addtag_all
      
 
   if (numeros==4):
 
      coord =i, y1+20,i , y2-40
-     mostrar.create_line(coord)
+     mostrar.create_line(coord, fill="violet red")
      coord =i, y1+20,i+20 , y2-20
-     mostrar.create_line(coord)
+     mostrar.create_line(coord, fill="violet red")
      coord =i+20, y1+20,i+20 , y2-40
-     mostrar.create_line(coord)
+     mostrar.create_line(coord, fill="violet red")
      coord =i+20, y1,i+20 , y2
-     mostrar.create_line(coord)
+     mostrar.create_line(coord, fill="violet red")
      mostrar.addtag_all
      
 
   if (numeros==5):
 
      coord =i, y1,i+20 , y2-40
-     mostrar.create_line(coord)
+     mostrar.create_line(coord, fill="violet red")
      coord =i, y1,i , y2-20
-     mostrar.create_line(coord)
+     mostrar.create_line(coord, fill="violet red")
      coord =i, y1+20,i+20 , y2-20
-     mostrar.create_line(coord)
+     mostrar.create_line(coord, fill="violet red")
      coord =i+20, y1+20,i+20 , y2
-     mostrar.create_line(coord)
+     mostrar.create_line(coord, fill="violet red")
      coord =i+20, y1+40,i , y2
-     mostrar.create_line(coord)
+     mostrar.create_line(coord, fill="violet red")
      mostrar.addtag_all
      
 
   if (numeros==6):
 
      coord =i, y1,i+20 , y2-40
-     mostrar.create_line(coord)
+     mostrar.create_line(coord, fill="violet red")
      coord =i, y1,i , 30
-     mostrar.create_line(coord)
+     mostrar.create_line(coord, fill="violet red")
      coord =i, y1+20,i+20 , y2-20
-     mostrar.create_line(coord)
+     mostrar.create_line(coord, fill="violet red")
      coord =i+20, y1+20,i+20 , y2
-     mostrar.create_line(coord)
+     mostrar.create_line(coord, fill="violet red")
      coord =i+20, y1+40,i , y2
-     mostrar.create_line(coord)
+     mostrar.create_line(coord, fill="violet red")
      coord =i, y1+40,i , y2-20
-     mostrar.create_line(coord)
+     mostrar.create_line(coord, fill="violet red")
      mostrar.addtag_all
      
 
   if (numeros==7):
 
      coord =i, y1,i+20 , y2-40
-     mostrar.create_line(coord)
+     mostrar.create_line(coord, fill="violet red")
      coord =i+20, y1,i+20 , y2
-     mostrar.create_line(coord)
+     mostrar.create_line(coord, fill="violet red")
      mostrar.addtag_all
      
 
   if (numeros==8):
 
      coord =i, y1,i+20 , y2-40
-     mostrar.create_line(coord)
+     mostrar.create_line(coord, fill="violet red")
      coord =i, y1+40,i+20 , y2
-     mostrar.create_line(coord)
+     mostrar.create_line(coord, fill="violet red")
      coord =i, y1+20,i+20 , y2-20
-     mostrar.create_line(coord)
+     mostrar.create_line(coord, fill="violet red")
      coord =i, y1,i , y2
-     mostrar.create_line(coord)
+     mostrar.create_line(coord, fill="violet red")
      coord =i+20, y1,i+20 , y2
-     mostrar.create_line(coord)
+     mostrar.create_line(coord, fill="violet red")
      mostrar.addtag_all
      
 
   if (numeros==9):
 
      coord =i, y1,i , y2-20
-     mostrar.create_line(coord)
+     mostrar.create_line(coord, fill="violet red")
      coord =i, y1+20,i+20 , y2-20
-     mostrar.create_line(coord)
+     mostrar.create_line(coord, fill="violet red")
      coord =i+20, y1,i+20 , y2
-     mostrar.create_line(coord)
+     mostrar.create_line(coord, fill="violet red")
      coord =i, y1,i+20 , y2-40
-     mostrar.create_line(coord)
+     mostrar.create_line(coord, fill="violet red")
      
      
   if (numeros==0):
 
      coord =i, y1,i+20 , y2-40
-     mostrar.create_line(coord)
+     mostrar.create_line(coord, fill="violet red")
      coord =i, y1+40,i+20 , y2
-     mostrar.create_line(coord)
+     mostrar.create_line(coord, fill="violet red")
      coord =i, y1+40,i+20 , y2-40
-     mostrar.create_line(coord)
+     mostrar.create_line(coord, fill="violet red")
      coord =i, y1,i , y2
-     mostrar.create_line(coord)
+     mostrar.create_line(coord, fill="violet red")
      coord =i+20, y1,i+20 , y2
-     mostrar.create_line(coord)
+     mostrar.create_line(coord, fill="violet red")
      mostrar.addtag_all
      
 
   if (numeros==10):#suma
     
     coord =i+10, y1,i+10 , y2-10
-    mostrar.create_line(coord)
+    mostrar.create_line(coord, fill="#f56464")
     coord =i, y1+15,i+20 , y2-25
-    mostrar.create_line(coord)
+    mostrar.create_line(coord, fill="#f56464")
     
     
     
@@ -184,7 +185,7 @@ def dibujar(numeros):
     
 
     coord =i, y1+20,i+20 , y2-20
-    mostrar.create_line(coord)
+    mostrar.create_line(coord, fill="#f56464")
     mostrar.addtag_all
     contadori=i+30
     
@@ -192,9 +193,9 @@ def dibujar(numeros):
   if (numeros==12): #multiplicacion
     
     coord =i, y1+10, i+10, y2-15
-    mostrar.create_line(coord)
+    mostrar.create_line(coord, fill="#f56464")
     coord =i+10, y1+10, i, y2-15
-    mostrar.create_line(coord)
+    mostrar.create_line(coord, fill="#f56464")
     mostrar.addtag_all
     contadori=i+30
     
@@ -230,10 +231,8 @@ def resolver():
 		expresion = ""
 
 def limpiar():
-	global i
 
 	mostrar.delete('all')
-	i=x
     
 
 interfaz = Tk()
