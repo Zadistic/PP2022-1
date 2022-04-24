@@ -15,8 +15,8 @@ x=20
 y1=10
 y2=50
 i=x
-contadori=i
-contadorf=i
+contadori=x
+contadorf=x
 
 
 def fraccion(numeros):
@@ -200,11 +200,7 @@ def dibujar(numeros):
     contadori=i+30
     
     
-  if (numeros==13):
-        mostrar.delete("all")
-        i=10
-        
-        
+  
   i=i+30
   contadorf=contadorf+30
   
@@ -231,8 +227,18 @@ def resolver():
 		expresion = ""
 
 def limpiar():
+    global i,contadori,contadorf
+    mostrar.delete("all")
+    i=x
+    contadorf=x
+    contadori=x
+	
+   
 
-	mostrar.delete('all')
+   
+   
+   
+
     
 
 interfaz = Tk()
@@ -287,12 +293,12 @@ multip.grid(row=4, column=3)
 division = Button(interfaz, text=" / ", fg="white", bg="grey39", command=lambda: fraccion(14), height=2, width=7)
 division.grid(row=5, column=3)
 
-resol = Button(interfaz, text=" = ", fg="white", bg="grey39", command=resolver, height=2, width=7)
+resol = Button(interfaz, text=" = ", fg="white", bg="grey39", command=dibujar(2), height=2, width=7)
 resol.grid(row=6, column=3)
 
 vaciar = Button(interfaz, text=" C ", fg="white", bg="maroon", command=limpiar, height=2, width=7)
 vaciar.grid(row=5, column="2")
-decimal= Button(interfaz, text=".", fg="white", bg="grey39", command=lambda: ingresar("."), height=2, width=7)
+decimal= Button(interfaz, text=".", fg="white", bg="grey39", command=lambda: dibujar(1), height=2, width=7)
 decimal.grid(row=5, column=1)
 
 
