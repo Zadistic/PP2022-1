@@ -293,7 +293,7 @@ multip.grid(row=4, column=3)
 division = Button(interfaz, text=" / ", fg="white", bg="grey39", command=lambda: fraccion(14), height=2, width=7)
 division.grid(row=5, column=3)
 
-resol = Button(interfaz, text=" = ", fg="white", bg="grey39", command=dibujar(2), height=2, width=7)
+resol = Button(interfaz, text=" = ", fg="white", bg="grey39",  height=2, width=7)
 resol.grid(row=6, column=3)
 
 vaciar = Button(interfaz, text=" C ", fg="white", bg="maroon", command=limpiar, height=2, width=7)
