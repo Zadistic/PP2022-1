@@ -6,6 +6,7 @@ from turtle import clear, color
 
 expresion = ""
 
+save = 0
 x=20
 y1=10
 y2=50
@@ -22,7 +23,9 @@ num_color = "violet red"
 
 def fraccion():
 
-   global i, y1, y2, contadori,contadorf
+   global i, save, y1, y2, contadori,contadorf
+
+   save = i
 
    coord = contadori, y1+45, contadorf, y2+5
    mostrar.create_line(coord, fill=op_color)
@@ -33,10 +36,10 @@ def fraccion():
 
    i = contadori
    contadorf = i
-   
+
 def dibujar(numeros):
 
-  global flag, x,y1,y2,i,contadori,contadorf
+  global flag, save, y1, y2, i, contadori, contadorf
 
   if (numeros == 0): #Nro 0
    
@@ -163,7 +166,8 @@ def dibujar(numeros):
       mostrar.create_line(coord, fill=num_color)
      
   if (numeros == 10): #Suma
-    
+      
+      i = save
       y1 = 10
       y2 = 50
 
@@ -176,6 +180,7 @@ def dibujar(numeros):
 
   if (numeros == 11): #Resta
 
+      i = save
       y1 = 10
       y2 = 50
 
@@ -185,7 +190,8 @@ def dibujar(numeros):
       contadori=i+30
     
   if (numeros == 12): #Multiplicacion
-    
+
+      i = save
       y1 = 10
       y2 = 50
 
@@ -200,6 +206,7 @@ def dibujar(numeros):
   i=i+30
   contadorf=contadorf+30
   
+  print("VAlOR i = ", i)
 def ingresar():
    return 0
 
