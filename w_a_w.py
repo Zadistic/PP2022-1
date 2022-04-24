@@ -9,6 +9,10 @@ expresion = ""
 x=20
 y1=10
 y2=50
+flag = 0
+
+denom = 65
+
 i=x
 contadori=x
 contadorf=x
@@ -16,20 +20,25 @@ contadorf=x
 op_color = "#f56464"
 num_color = "violet red"
 
-def fraccion(numeros):
-   global contadori,contadorf
-   
-   if (numeros==14):
-      coord = contadori,y1+45,contadorf,y2+5
-      mostrar.create_line(coord, fill=op_color)
-      mostrar.addtag_all
- 
+def fraccion():
+
+   global flag, y1, y2, contadori,contadorf
+
+   coord = contadori, y1+45, contadorf, y2+5
+   mostrar.create_line(coord, fill=op_color)
+   mostrar.addtag_all
+
+   y1 = 65
+   y2 = 105
+
+   flag = 1
+
 def dibujar(numeros):
 
-  global x,y1,y2,i,contadori,contadorf
+  global flag, x,y1,y2,i,contadori,contadorf
 
   if (numeros == 0): #Nro 0
-
+   
     coord =i, y1,i+20 , y2-40
     mostrar.create_line(coord, fill=num_color)
     coord =i, y1+40,i+20 , y2
@@ -41,7 +50,6 @@ def dibujar(numeros):
     coord =i+20, y1,i+20 , y2
     mostrar.create_line(coord, fill=num_color)
     mostrar.addtag_all
-
 
   if (numeros == 1): #Nro 1
 
@@ -64,7 +72,6 @@ def dibujar(numeros):
     mostrar.create_line(coord, fill=num_color)
     mostrar.addtag_all
     
-
   if (numeros == 3): #Nro 3
 
      coord = i, y1, i+20, y2-40
@@ -93,7 +100,6 @@ def dibujar(numeros):
      mostrar.create_line(coord, fill=num_color)
      mostrar.addtag_all
      
-
   if (numeros == 5): #Nro 5
 
      coord =i, y1,i+20 , y2-40
@@ -166,14 +172,14 @@ def dibujar(numeros):
     mostrar.addtag_all
     contadori=i+30
 
-  if (numeros==11): #Resta
+  if (numeros == 11): #Resta
     
     coord =i, y1+20,i+20 , y2-20
     mostrar.create_line(coord, fill=op_color)
     mostrar.addtag_all
     contadori=i+30
     
-  if (numeros==12): #Multiplicacion
+  if (numeros == 12): #Multiplicacion
     
     coord =i, y1+10, i+10, y2-15
     mostrar.create_line(coord, fill=op_color)
@@ -192,7 +198,9 @@ def resolver():
    return 0
 
 def limpiar():
-    global i,contadori,contadorf
+
+    global i, contadori, contadorf
+
     mostrar.delete("all")
     i=x
     contadorf=x
@@ -247,7 +255,7 @@ resta.grid(row=3, column=3)
 multip = Button(interfaz, text=" * ", fg="white", bg="grey39", command=lambda: dibujar(12), height=2, width=7)
 multip.grid(row=4, column=3)
 
-division = Button(interfaz, text=" / ", fg="white", bg="grey39", command=lambda: fraccion(14), height=2, width=7)
+division = Button(interfaz, text=" / ", fg="white", bg="grey39", command=lambda: fraccion(), height=2, width=7)
 division.grid(row=5, column=3)
 
 resol = Button(interfaz, text=" = ", fg="white", bg="grey39",  height=2, width=7)
