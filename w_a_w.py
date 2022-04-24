@@ -211,7 +211,7 @@ def dibujar(numeros):
   i=i+30
   contadorf=contadorf+30
   
-  print("VAlOR i = ", i)
+  
 def ingresar():
    return 0
 
