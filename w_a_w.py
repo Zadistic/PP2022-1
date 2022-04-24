@@ -230,8 +230,10 @@ def resolver():
 		expresion = ""
 
 def limpiar():
+	global i
 
 	mostrar.delete('all')
+	i=x
     
 
 interfaz = Tk()
