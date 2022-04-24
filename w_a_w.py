@@ -1,5 +1,5 @@
 from audioop import mul
-from sqlite3 import Row
+from sqlite3 import Row, connect
 from tkinter import*
 import tkinter
 from turtle import clear, color
@@ -22,7 +22,7 @@ num_color = "violet red"
 
 def fraccion():
 
-   global flag, y1, y2, contadori,contadorf
+   global i, y1, y2, contadori,contadorf
 
    coord = contadori, y1+45, contadorf, y2+5
    mostrar.create_line(coord, fill=op_color)
@@ -31,8 +31,9 @@ def fraccion():
    y1 = 65
    y2 = 105
 
-   flag = 1
-
+   i = contadori
+   contadorf = i
+   
 def dibujar(numeros):
 
   global flag, x,y1,y2,i,contadori,contadorf
@@ -165,7 +166,7 @@ def dibujar(numeros):
     
       y1 = 10
       y2 = 50
-      
+
       coord =i+10, y1,i+10 , y2-10
       mostrar.create_line(coord, fill=op_color)
       coord =i, y1+15,i+20 , y2-25
