@@ -6,18 +6,12 @@ from turtle import clear, color
 
 expresion = ""
 
-
-
-   
-
-
 x=20
 y1=10
 y2=50
 i=x
 contadori=x
 contadorf=x
-
 
 def fraccion(numeros):
    global contadori,contadorf
@@ -27,20 +21,32 @@ def fraccion(numeros):
       mostrar.create_line(coord, fill="#f56464")
       mostrar.addtag_all
  
-   
-
 def dibujar(numeros):
-  global x,y1,y2,i,contadori,contadorf
 
+  global x,y1,y2,i,contadori,contadorf
   
-  if (numeros==1):
+  if (numeros == 0): #Nro 0
+
+    coord =i, y1,i+20 , y2-40
+    mostrar.create_line(coord, fill="violet red")
+    coord =i, y1+40,i+20 , y2
+    mostrar.create_line(coord, fill="violet red")
+    coord =i, y1+40,i+20 , y2-40
+    mostrar.create_line(coord, fill="violet red")
+    coord =i, y1,i , y2
+    mostrar.create_line(coord, fill="violet red")
+    coord =i+20, y1,i+20 , y2
+    mostrar.create_line(coord, fill="violet red")
+    mostrar.addtag_all
+
+
+  if (numeros == 1): #Nro 1
 
     coord = i+10,y1,i+10,y2
     mostrar.create_line(coord, fill="violet red")
     mostrar.addtag_all
     
-
-  if (numeros==2):
+  if (numeros == 2): #Nro 2
     
     coord = i, y1, i+20, y2-40
     mostrar.create_line(coord, fill="violet red")
@@ -56,7 +62,7 @@ def dibujar(numeros):
     mostrar.addtag_all
     
 
-  if (numeros==3):
+  if (numeros == 3): #Nro 3
 
      coord = i, y1, i+20, y2-40
      mostrar.create_line(coord, fill="violet red")
@@ -72,8 +78,7 @@ def dibujar(numeros):
      mostrar.create_line(coord, fill="violet red")
      mostrar.addtag_all
      
-
-  if (numeros==4):
+  if (numeros == 4): #Nro 4
 
      coord =i, y1+20,i , y2-40
      mostrar.create_line(coord, fill="violet red")
@@ -86,7 +91,7 @@ def dibujar(numeros):
      mostrar.addtag_all
      
 
-  if (numeros==5):
+  if (numeros == 5): #Nro 5
 
      coord =i, y1,i+20 , y2-40
      mostrar.create_line(coord, fill="violet red")
@@ -100,8 +105,7 @@ def dibujar(numeros):
      mostrar.create_line(coord, fill="violet red")
      mostrar.addtag_all
      
-
-  if (numeros==6):
+  if (numeros == 6): #Nro 6
 
      coord =i, y1,i+20 , y2-40
      mostrar.create_line(coord, fill="violet red")
@@ -117,17 +121,15 @@ def dibujar(numeros):
      mostrar.create_line(coord, fill="violet red")
      mostrar.addtag_all
      
-
-  if (numeros==7):
+  if (numeros == 7): #Nro 7
 
      coord =i, y1,i+20 , y2-40
      mostrar.create_line(coord, fill="violet red")
      coord =i+20, y1,i+20 , y2
      mostrar.create_line(coord, fill="violet red")
      mostrar.addtag_all
-     
-
-  if (numeros==8):
+      
+  if (numeros == 8): #Nro 8
 
      coord =i, y1,i+20 , y2-40
      mostrar.create_line(coord, fill="violet red")
@@ -141,8 +143,7 @@ def dibujar(numeros):
      mostrar.create_line(coord, fill="violet red")
      mostrar.addtag_all
      
-
-  if (numeros==9):
+  if (numeros == 9): #Nro 9
 
      coord =i, y1,i , y2-20
      mostrar.create_line(coord, fill="violet red")
@@ -153,44 +154,23 @@ def dibujar(numeros):
      coord =i, y1,i+20 , y2-40
      mostrar.create_line(coord, fill="violet red")
      
-     
-  if (numeros==0):
-
-     coord =i, y1,i+20 , y2-40
-     mostrar.create_line(coord, fill="violet red")
-     coord =i, y1+40,i+20 , y2
-     mostrar.create_line(coord, fill="violet red")
-     coord =i, y1+40,i+20 , y2-40
-     mostrar.create_line(coord, fill="violet red")
-     coord =i, y1,i , y2
-     mostrar.create_line(coord, fill="violet red")
-     coord =i+20, y1,i+20 , y2
-     mostrar.create_line(coord, fill="violet red")
-     mostrar.addtag_all
-     
-
-  if (numeros==10):#suma
+  if (numeros == 10): #Suma
     
     coord =i+10, y1,i+10 , y2-10
     mostrar.create_line(coord, fill="#f56464")
     coord =i, y1+15,i+20 , y2-25
     mostrar.create_line(coord, fill="#f56464")
-    
-    
-    
     mostrar.addtag_all
     contadori=i+30
 
-  if (numeros==11):#resta
+  if (numeros==11): #Resta
     
-
     coord =i, y1+20,i+20 , y2-20
     mostrar.create_line(coord, fill="#f56464")
     mostrar.addtag_all
     contadori=i+30
     
-
-  if (numeros==12): #multiplicacion
+  if (numeros==12): #Multiplicacion
     
     coord =i, y1+10, i+10, y2-15
     mostrar.create_line(coord, fill="#f56464")
@@ -198,33 +178,15 @@ def dibujar(numeros):
     mostrar.create_line(coord, fill="#f56464")
     mostrar.addtag_all
     contadori=i+30
-    
-    
   
   i=i+30
   contadorf=contadorf+30
   
 def ingresar():
-
-	global expresion
-
-	#expresion = expresion + str(num)
-	#ecuacion.set(expresion)
+   return 0
 
 def resolver():
-
-	try:
-
-		global expresion
-
-		resultado = str(eval(expresion))
-		ecuacion.set(resultado)
-		expresion = ""
-
-	except:
-
-		ecuacion.set(" error ")
-		expresion = ""
+   return 0
 
 def limpiar():
     global i,contadori,contadorf
@@ -233,14 +195,6 @@ def limpiar():
     contadorf=x
     contadori=x
 	
-   
-
-   
-   
-   
-
-    
-
 interfaz = Tk()
 interfaz.configure(background="grey75")
 interfaz.title("Calculadora")
@@ -296,10 +250,9 @@ division.grid(row=5, column=3)
 resol = Button(interfaz, text=" = ", fg="white", bg="grey39",  height=2, width=7)
 resol.grid(row=6, column=3)
 
-vaciar = Button(interfaz, text=" C ", fg="white", bg="maroon", command=limpiar, height=2, width=7)
+vaciar = Button(interfaz, text=" AC ", fg="white", bg="maroon", command=limpiar, height=2, width=7)
 vaciar.grid(row=5, column="2")
 decimal= Button(interfaz, text=".", fg="white", bg="grey39", command=lambda: dibujar(1), height=2, width=7)
 decimal.grid(row=5, column=1)
-
 
 interfaz.mainloop()
