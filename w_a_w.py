@@ -1,4 +1,3 @@
-from sqlite3 import Row, connect
 from tkinter import*
 import tkinter
 import tkinter.font as tkFont
