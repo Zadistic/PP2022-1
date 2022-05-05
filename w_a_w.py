@@ -319,12 +319,16 @@ coseno = Button(interfaz, text=" COS ", font = fontStyle, fg= "white", bg="grey3
 height=altura, width=ancho)
 coseno.grid(row=6, column=1)
 
-potencia = Button(interfaz, text=" ^ ", font = fontStyle, fg= "white", bg="grey39",
+potencia = Button(interfaz, text=" x² ", font = fontStyle, fg= "white", bg="grey39",
 height=altura, width=ancho)
 potencia.grid(row=6, column=2)
 
 tang = Button(interfaz, text=" TAN ", font = fontStyle, fg= "white", bg="grey39",
 height=altura, width=ancho)
 tang.grid(row=6, column=3)
+
+fact = Button(interfaz, text=" ! ", font = fontStyle, fg= "white", bg="grey39",
+height=altura, width=ancho)
+fact.grid(row=6, column=4)
 
 interfaz.mainloop()
