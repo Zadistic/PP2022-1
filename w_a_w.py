@@ -299,7 +299,7 @@ suma = Button(interfaz, text=" + ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(10), height=altura, width=ancho)
 suma.grid(row=3, column=4)
 
-resta = Button(interfaz, text=" - ", font= fontStyle, fg="white", bg="grey39",
+resta = Button(interfaz, text=" — ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(11), height=altura, width=ancho)
 resta.grid(row=4, column=4)
 
