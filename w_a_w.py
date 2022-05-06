@@ -249,39 +249,39 @@ fontStyle = tkFont.Font(family="Lucida Grande", size=22)
 
 case1 = Button(interfaz, text=" 1 ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(1), height=altura, width=ancho)
-case1.grid(row=2, column=0)
+case1.grid(row=4, column=1)
 
 case2 = Button(interfaz, text=" 2 ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(2), height=altura, width=ancho)
-case2.grid(row=2, column=1)
+case2.grid(row=4, column=2)
 
 case3 = Button(interfaz, text=" 3 ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(3), height=altura, width=ancho)
-case3.grid(row=2, column=2)
+case3.grid(row=4, column=3)
 
 case4 = Button(interfaz, text=" 4 ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(4), height=altura, width=ancho)
-case4.grid(row=3, column=0)
+case4.grid(row=3, column=1)
 
 case5 = Button(interfaz, text=" 5 ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(5), height=altura, width=ancho)
-case5.grid(row=3, column=1)
+case5.grid(row=3, column=2)
 
 case6 = Button(interfaz, text=" 6 ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(6), height=altura, width=ancho)
-case6.grid(row=3, column=2)
+case6.grid(row=3, column=3)
 
 case7 = Button(interfaz, text=" 7 ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(7), height=altura, width=ancho)
-case7.grid(row=4, column=0)
+case7.grid(row=2, column=1)
 
 case8 = Button(interfaz, text=" 8 ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(8), height=altura, width=ancho)
-case8.grid(row=4, column=1)
+case8.grid(row=2, column=2)
 
 case9 = Button(interfaz, text=" 9 ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(9), height=altura, width=ancho)
-case9.grid(row=4, column=2)
+case9.grid(row=2, column=3)
 
 case0 = Button(interfaz, text=" 0 ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(0), height=altura, width=ancho)
@@ -289,46 +289,50 @@ case0.grid(row=5, column=1)
 
 suma = Button(interfaz, text=" + ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(10), height=altura, width=ancho)
-suma.grid(row=2, column=3)
+suma.grid(row=2, column=4)
 
 resta = Button(interfaz, text=" - ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(11), height=altura, width=ancho)
-resta.grid(row=3, column=3)
+resta.grid(row=3, column=4)
 
 multip = Button(interfaz, text=" * ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(12), height=altura, width=ancho)
-multip.grid(row=4, column=3)
+multip.grid(row=4, column=4)
 
 division = Button(interfaz, text=" / ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: fraccion(), height=altura, width=ancho)
-division.grid(row=5, column=3)
+division.grid(row=5, column=4)
 
 resol = Button(interfaz, text=" = ", font= fontStyle, fg="white", bg="grey39",
 height=altura, width=ancho)
-resol.grid(row=5, column=2)
+resol.grid(row=5, column=3)
 
 vaciar = Button(interfaz, text=" AC ",relief=FLAT, font= fontStyle, fg="white", bg="#611115",
 command=limpiar, height=altura, width=ancho)
-vaciar.grid(row=5, column=0)
+vaciar.grid(row=6, column=0)
 
-seno = Button(interfaz, text=" SEN ", font = fontStyle, fg= "white", bg="grey39",
+seno = Button(interfaz, text=" sin ", font = fontStyle, fg= "white", bg="grey39",
 height=altura, width=ancho)
-seno.grid(row=6, column=0)
+seno.grid(row=3, column=0)
 
-coseno = Button(interfaz, text=" COS ", font = fontStyle, fg= "white", bg="grey39",
+coseno = Button(interfaz, text=" cos ", font = fontStyle, fg= "white", bg="grey39",
 height=altura, width=ancho)
-coseno.grid(row=6, column=1)
+coseno.grid(row=4, column=0)
 
 potencia = Button(interfaz, text=" x² ", font = fontStyle, fg= "white", bg="grey39",
 height=altura, width=ancho)
 potencia.grid(row=6, column=2)
 
-tang = Button(interfaz, text=" TAN ", font = fontStyle, fg= "white", bg="grey39",
+tang = Button(interfaz, text=" tan ", font = fontStyle, fg= "white", bg="grey39",
 height=altura, width=ancho)
-tang.grid(row=6, column=3)
+tang.grid(row=5, column=0)
 
-fact = Button(interfaz, text=" ! ", font = fontStyle, fg= "white", bg="grey39",
+fact = Button(interfaz, text=" x! ", font = fontStyle, fg= "white", bg="grey39",
 height=altura, width=ancho)
-fact.grid(row=6, column=4)
+fact.grid(row=2, column=0)
+
+decimal = Button(interfaz, text=" . ", font = fontStyle, fg="white", bg="grey39",
+height=altura, width=ancho)
+decimal.grid(row = 5, column=2)
 
 interfaz.mainloop()
