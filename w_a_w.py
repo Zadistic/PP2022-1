@@ -237,7 +237,7 @@ def limpiar():
 	 
 interfaz = Tk()
 interfaz.configure(background="grey70")
-interfaz.title("Calculadora")
+interfaz.title("CALCULADORA")
 interfaz.geometry("1920x1080")
 
 mostrar = Canvas(interfaz)
@@ -303,7 +303,7 @@ resta = Button(interfaz, text=" - ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(11), height=altura, width=ancho)
 resta.grid(row=4, column=4)
 
-multip = Button(interfaz, text=" * ", font= fontStyle, fg="white", bg="grey39",
+multip = Button(interfaz, text=" X ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(12), height=altura, width=ancho)
 multip.grid(row=5, column=4)
 
@@ -329,7 +329,11 @@ coseno.grid(row=4, column=0)
 
 potencia = Button(interfaz, text=" x² ", font = fontStyle, fg= "white", bg="grey39",
 height=altura, width=ancho)
-potencia.grid(row=2, column=3)
+potencia.grid(row=6, column=0)
+
+empty = Button(interfaz, text="", font = fontStyle, fg= "white", bg="grey39",
+height=altura, width=ancho)
+empty.grid(row=2, column=2)
 
 tang = Button(interfaz, text=" tan ", font = fontStyle, fg= "white", bg="grey39",
 height=altura, width=ancho)
@@ -349,6 +353,6 @@ abreP.grid(row = 2, column= 1)
 
 cierreP = Button(interfaz, text=" ) ", font = fontStyle, fg="white", bg="grey39",
 height=altura, width=ancho)
-cierreP.grid(row = 2, column= 2)
+cierreP.grid(row = 2, column= 3)
 
 interfaz.mainloop()
