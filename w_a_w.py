@@ -196,13 +196,72 @@ def dibujar(numeros):
 
         return 0
 
-    if (numeros == 15): #Seno
+    if (numeros == 15): #Seno #problema al salir del cilo solo se le sumaba 30 pixeles para que avanzara, en este caso tiene 
+        #S
+        coord =i, y1,i+20 , y2-40
+        dibujo.create_line(coord, fill=op_color)
+        coord =i, y1,i, y2-20
+        dibujo.create_line(coord, fill=op_color)
+        coord =i, y1+20,i+20, y2-20
+        dibujo.create_line(coord, fill=op_color)
+        coord =i+20, y1+20,i+20, y2
+        dibujo.create_line(coord, fill=op_color)
+        coord =i+20, y1+40,i, y2
+        dibujo.create_line(coord, fill=op_color)
+        #E
+        coord =i+25, y1,i+45, y2-40
+        dibujo.create_line(coord, fill=op_color)
+        coord =i+25, y1,i+25, y2-20
+        dibujo.create_line(coord, fill=op_color)
+        coord =i+25, y1+20,i+45, y2-20
+        dibujo.create_line(coord, fill=op_color)
+        coord =i+25, y1+20,i+25, y2
+        dibujo.create_line(coord, fill=op_color)
+        coord =i+25, y1+40,i+45, y2
+        dibujo.create_line(coord, fill=op_color)
+        #N
+        coord =i+50, y1,i+50, y2
+        dibujo.create_line(coord, fill=op_color)
+        coord =i+50, y1,i+75, y2
+        dibujo.create_line(coord, fill=op_color)
+        coord =i+75, y1,i+75, y2
+        dibujo.create_line(coord, fill=op_color)
 
-        return 0
-
+    
+        dibujo.addtag_all
+        i=i+60
+    
     if (numeros == 16): #Coseno
-
-        return 0
+        #C
+        coord =i, y1,i+20 , y2-40
+        dibujo.create_line(coord, fill=op_color)
+        coord=i,y1,i,y2
+        dibujo.create_line(coord,fill=op_color)
+        coord =i, y1+40,i+20 , y2
+        dibujo.create_line(coord, fill=op_color)
+        #O
+        coord =i+25, y1, i+45 , y2-40
+        dibujo.create_line(coord, fill=op_color)
+        coord =i+25, y1+40, i+45 , y2
+        dibujo.create_line(coord, fill=op_color)
+        coord =i+25, y1,i+25 , y2
+        dibujo.create_line(coord, fill=op_color)
+        coord =i+45, y1, i+45 , y2
+        dibujo.create_line(coord, fill=op_color)
+        #S
+        coord =i+50, y1,i+70 , y2-40
+        dibujo.create_line(coord, fill=op_color)
+        coord =i+50, y1,i+50, y2-20
+        dibujo.create_line(coord, fill=op_color)
+        coord =i+50, y1+20,i+70, y2-20
+        dibujo.create_line(coord, fill=op_color)
+        coord =i+70, y1+20,i+70, y2
+        dibujo.create_line(coord, fill=op_color)
+        coord =i+70, y1+40,i+50, y2
+        dibujo.create_line(coord, fill=op_color)
+        dibujo.addtag_all
+        i=i+60
+        
 
     if (numeros == 17): #Tangente
 
@@ -321,11 +380,11 @@ vaciar = Button(interfaz, text=" AC ",relief=FLAT, font= fontStyle, fg="white", 
 command=limpiar, height=altura, width=ancho)
 vaciar.grid(row=2, column=4)
 
-seno = Button(interfaz, text=" sin ", font = fontStyle, fg= "white", bg="grey39",
+seno = Button(interfaz, text=" sen ", font = fontStyle, fg= "white", bg="grey39",command=lambda:dibujar(15),
 height=altura, width=ancho)
 seno.grid(row=3, column=0)
 
-coseno = Button(interfaz, text=" cos ", font = fontStyle, fg= "white", bg="grey39",
+coseno = Button(interfaz, text=" cos ", font = fontStyle, fg= "white", bg="grey39",command=lambda:dibujar(16),
 height=altura, width=ancho)
 coseno.grid(row=4, column=0)
 
@@ -333,7 +392,7 @@ potencia = Button(interfaz, text=" x² ", font = fontStyle, fg= "white", bg="gre
 height=altura, width=ancho)
 potencia.grid(row=6, column=0)
 
-empty = Button(interfaz, text="", font = fontStyle, fg= "white", bg="grey39",
+empty = Button(interfaz, text="√", font = fontStyle, fg= "white", bg="grey39",
 height=altura, width=ancho)
 empty.grid(row=2, column=2)
 
