@@ -1,6 +1,7 @@
 from sqlite3 import Row, connect
 from tkinter import*
 import tkinter
+from tkinter import ttk
 import tkinter.font as tkFont
 
 x=20
@@ -238,8 +239,11 @@ interfaz.configure(background="grey70")
 interfaz.title("CALCULADORA")
 interfaz.geometry("1920x1080")
 
+text_square = ttk.Entry(width=100)
+text_square.place(x=20, y= 400, height=200)
+
 dibujo = Canvas(interfaz)
-dibujo.grid(columnspan=5, pady=20, ipadx=300, ipady=50, row= 0, column=0)
+dibujo.grid(columnspan=5, pady=20, ipadx=300, ipady=30, row= 0, column=0)
 
 altura = 1
 ancho = 8
