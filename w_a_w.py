@@ -17,8 +17,8 @@ def fraccion():
    global i, y1, y2, contadori, contadorf
 
    coord = contadori, y1+45, contadorf, y2+5
-   mostrar.create_line(coord, fill=op_color)
-   mostrar.addtag_all
+   dibujo.create_line(coord, fill=op_color)
+   dibujo.addtag_all
 
    y1 = 65
    y2 = 105
@@ -32,126 +32,126 @@ def dibujar(numeros):
     if (numeros == 0): #Nro 0
     
         coord =i, y1, i+20 , y2-40
-        mostrar.create_line(coord, fill=num_color)
+        dibujo.create_line(coord, fill=num_color)
         coord =i, y1+40, i+20 , y2
-        mostrar.create_line(coord, fill=num_color)
+        dibujo.create_line(coord, fill=num_color)
         coord =i, y1+40, i+20 , y2-40
-        mostrar.create_line(coord, fill=num_color)
+        dibujo.create_line(coord, fill=num_color)
         coord =i, y1,i , y2
-        mostrar.create_line(coord, fill=num_color)
+        dibujo.create_line(coord, fill=num_color)
         coord =i+20, y1, i+20 , y2
-        mostrar.create_line(coord, fill=num_color)
-        mostrar.addtag_all
+        dibujo.create_line(coord, fill=num_color)
+        dibujo.addtag_all
 
     if (numeros == 1): #Nro 1
 
         coord = i+10, y1, i+10, y2
-        mostrar.create_line(coord, fill=num_color)
-        mostrar.addtag_all
+        dibujo.create_line(coord, fill=num_color)
+        dibujo.addtag_all
         
     if (numeros == 2): #Nro 2
         
         coord = i, y1, i+20, y2-40
-        mostrar.create_line(coord, fill=num_color)
+        dibujo.create_line(coord, fill=num_color)
         coord = i+20, y1, i+20, y2-20
-        mostrar.create_line(coord, fill=num_color)
+        dibujo.create_line(coord, fill=num_color)
         coord = i+20, y1+20, i, y2-20
-        mostrar.create_line(coord, fill=num_color)
+        dibujo.create_line(coord, fill=num_color)
         coord = i, y1+20, i, y2
-        mostrar.create_line(coord, fill=num_color)
+        dibujo.create_line(coord, fill=num_color)
         coord = i, y1+40, i+20, y2
 
-        mostrar.create_line(coord, fill=num_color)
-        mostrar.addtag_all
+        dibujo.create_line(coord, fill=num_color)
+        dibujo.addtag_all
         
     if (numeros == 3): #Nro 3
 
         coord = i, y1, i+20, y2-40
-        mostrar.create_line(coord, fill=num_color)
+        dibujo.create_line(coord, fill=num_color)
         coord = i+20, y1, i+20, y2-20
-        mostrar.create_line(coord, fill=num_color)
+        dibujo.create_line(coord, fill=num_color)
         coord = i+20, y1+20, i, y2-20
-        mostrar.create_line(coord, fill=num_color)
+        dibujo.create_line(coord, fill=num_color)
         coord = i+20, y1+20, i+20, y2
-        mostrar.create_line(coord, fill=num_color)
+        dibujo.create_line(coord, fill=num_color)
         coord = i, y1, i+20, y2-40
-        mostrar.create_line(coord, fill=num_color)
+        dibujo.create_line(coord, fill=num_color)
         coord = i+20, y1+40, i, y2
-        mostrar.create_line(coord, fill=num_color)
-        mostrar.addtag_all
+        dibujo.create_line(coord, fill=num_color)
+        dibujo.addtag_all
         
     if (numeros == 4): #Nro 4
 
         coord =i, y1+20,i , y2-40
-        mostrar.create_line(coord, fill=num_color)
+        dibujo.create_line(coord, fill=num_color)
         coord =i, y1+20,i+20 , y2-20
-        mostrar.create_line(coord, fill=num_color)
+        dibujo.create_line(coord, fill=num_color)
         coord =i+20, y1+20,i+20 , y2-40
-        mostrar.create_line(coord, fill=num_color)
+        dibujo.create_line(coord, fill=num_color)
         coord =i+20, y1,i+20 , y2
-        mostrar.create_line(coord, fill=num_color)
-        mostrar.addtag_all
+        dibujo.create_line(coord, fill=num_color)
+        dibujo.addtag_all
         
     if (numeros == 5): #Nro 5
 
         coord =i, y1,i+20 , y2-40
-        mostrar.create_line(coord, fill=num_color)
+        dibujo.create_line(coord, fill=num_color)
         coord =i, y1,i , y2-20
-        mostrar.create_line(coord, fill=num_color)
+        dibujo.create_line(coord, fill=num_color)
         coord =i, y1+20,i+20 , y2-20
-        mostrar.create_line(coord, fill=num_color)
+        dibujo.create_line(coord, fill=num_color)
         coord =i+20, y1+20,i+20 , y2
-        mostrar.create_line(coord, fill=num_color)
+        dibujo.create_line(coord, fill=num_color)
         coord =i+20, y1+40,i , y2
-        mostrar.create_line(coord, fill=num_color)
-        mostrar.addtag_all
+        dibujo.create_line(coord, fill=num_color)
+        dibujo.addtag_all
         
     if (numeros == 6): #Nro 6
 
         coord =i, y1 ,i+20 , y2-40
-        mostrar.create_line(coord, fill=num_color)
+        dibujo.create_line(coord, fill=num_color)
         coord =i, y1 ,i , y2
-        mostrar.create_line(coord, fill=num_color)
+        dibujo.create_line(coord, fill=num_color)
         coord =i, y1+40 ,i+20 , y2
-        mostrar.create_line(coord, fill=num_color)
+        dibujo.create_line(coord, fill=num_color)
         coord =i+20, y1+40,i+20 , y2-20
-        mostrar.create_line(coord, fill=num_color)
+        dibujo.create_line(coord, fill=num_color)
         coord =i, y1+20,i+20, y2-20
-        mostrar.create_line(coord, fill=num_color)
-        mostrar.addtag_all
+        dibujo.create_line(coord, fill=num_color)
+        dibujo.addtag_all
         
     if (numeros == 7): #Nro 7
 
         coord =i, y1,i+20 , y2-40
-        mostrar.create_line(coord, fill=num_color)
+        dibujo.create_line(coord, fill=num_color)
         coord =i+20, y1,i+20 , y2
-        mostrar.create_line(coord, fill=num_color)
-        mostrar.addtag_all
+        dibujo.create_line(coord, fill=num_color)
+        dibujo.addtag_all
         
     if (numeros == 8): #Nro 8
 
         coord =i, y1,i+20 , y2-40
-        mostrar.create_line(coord, fill=num_color)
+        dibujo.create_line(coord, fill=num_color)
         coord =i, y1+40,i+20 , y2
-        mostrar.create_line(coord, fill=num_color)
+        dibujo.create_line(coord, fill=num_color)
         coord =i, y1+20,i+20 , y2-20
-        mostrar.create_line(coord, fill=num_color)
+        dibujo.create_line(coord, fill=num_color)
         coord =i, y1,i , y2
-        mostrar.create_line(coord, fill=num_color)
+        dibujo.create_line(coord, fill=num_color)
         coord =i+20, y1,i+20 , y2
-        mostrar.create_line(coord, fill=num_color)
-        mostrar.addtag_all
+        dibujo.create_line(coord, fill=num_color)
+        dibujo.addtag_all
         
     if (numeros == 9): #Nro 9
 
         coord =i, y1,i , y2-20
-        mostrar.create_line(coord, fill=num_color)
+        dibujo.create_line(coord, fill=num_color)
         coord =i, y1+20,i+20 , y2-20
-        mostrar.create_line(coord, fill=num_color)
+        dibujo.create_line(coord, fill=num_color)
         coord =i+20, y1,i+20 , y2
-        mostrar.create_line(coord, fill=num_color)
+        dibujo.create_line(coord, fill=num_color)
         coord =i, y1,i+20 , y2-40
-        mostrar.create_line(coord, fill=num_color)
+        dibujo.create_line(coord, fill=num_color)
         
     if (numeros == 10): #Suma
         
@@ -159,10 +159,10 @@ def dibujar(numeros):
         y2 = 50
 
         coord =i+10, y1, i+10 , y2-10
-        mostrar.create_line(coord, fill=op_color)
+        dibujo.create_line(coord, fill=op_color)
         coord =i, y1+15, i+20 , y2-25
-        mostrar.create_line(coord, fill=op_color)
-        mostrar.addtag_all
+        dibujo.create_line(coord, fill=op_color)
+        dibujo.addtag_all
         contadori=i+30
 
     if (numeros == 11): #Resta
@@ -171,8 +171,8 @@ def dibujar(numeros):
         y2 = 50
 
         coord =i, y1+20,i+20 , y2-20
-        mostrar.create_line(coord, fill=op_color)
-        mostrar.addtag_all
+        dibujo.create_line(coord, fill=op_color)
+        dibujo.addtag_all
         contadori=i+30
         
     if (numeros == 12): #Multiplicacion
@@ -181,10 +181,10 @@ def dibujar(numeros):
         y2 = 50
         
         coord =i, y1+10, i+10, y2-15
-        mostrar.create_line(coord, fill=op_color)
+        dibujo.create_line(coord, fill=op_color)
         coord =i+10, y1+10, i, y2-15
-        mostrar.create_line(coord, fill=op_color)
-        mostrar.addtag_all
+        dibujo.create_line(coord, fill=op_color)
+        dibujo.addtag_all
         contadori=i+30
 
     if (numeros == 13): #Potencia
@@ -208,14 +208,12 @@ def dibujar(numeros):
         return 0
 
 
-    if (numeros == 13): #Abre Parentesis
+    if (numeros == 18): #Abre Parentesis
 
         return 0
 
 
-    if (numeros == 13): #Cierre parentesis
-
-
+    if (numeros == 19): #Cierre parentesis
 
         return 0
 
@@ -227,7 +225,7 @@ def limpiar():
 
    global i, y1, y2, contadori, contadorf
 
-   mostrar.delete("all")
+   dibujo.delete("all")
    
    i=x
    contadorf=x
@@ -240,8 +238,8 @@ interfaz.configure(background="grey70")
 interfaz.title("CALCULADORA")
 interfaz.geometry("1920x1080")
 
-mostrar = Canvas(interfaz)
-mostrar.grid(columnspan=5, pady=20, ipadx=300, ipady=50, row= 0, column=0)
+dibujo = Canvas(interfaz)
+dibujo.grid(columnspan=5, pady=20, ipadx=300, ipady=50, row= 0, column=0)
 
 altura = 1
 ancho = 8
