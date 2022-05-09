@@ -335,10 +335,10 @@ def limpiar():
 interfaz = Tk()
 interfaz.configure(background="grey70")
 interfaz.title("CALCULADORA")
-interfaz.geometry("923x743")
+interfaz.geometry("923x763")
 fontStyle = tkFont.Font(family="Lucida Grande", size=22)
 
-text_square = ttk.Entry(width=90)
+text_square = ttk.Entry(width=36, font =("Lucida Grande", 20))
 text_square.grid(ipady= 18, row= 1, column=0, columnspan=3)
 
 dibujo = Canvas(interfaz)
@@ -349,11 +349,11 @@ ancho = 10
 fila_base = 3
 
 color_selection = Button(interfaz, text=" color ", font= fontStyle, fg="white", bg="grey39",
-command=lambda: dibujar(1), height=altura, width=ancho)
+command=lambda: dibujar(1), height=altura, width=5)
 color_selection.grid(row=fila_base-2, column=4)
 
 coord_button = Button(interfaz, text=" coords ", font= fontStyle, fg="white", bg="grey39",
-command=lambda: dibujar(1), height=altura, width=ancho)
+command=lambda: dibujar(1), height=altura, width=5)
 coord_button.grid(row=fila_base-2, column=3)
 
 #Botón para número 1
