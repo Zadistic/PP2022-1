@@ -432,7 +432,7 @@ height=altura, width=ancho)
 resol.grid(row=fila_base+4, column=3)
 
 #Botón para VACIAR
-vaciar = Button(interfaz, text=" AC ",relief=FLAT, font= fontStyle, fg="white", bg="#611115",
+vaciar = Button(interfaz, text=" CE ",relief=FLAT, font= fontStyle, fg="white", bg="#611115",
 command=limpiar, height=altura, width=ancho)
 vaciar.grid(row=fila_base, column=4)
 
