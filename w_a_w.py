@@ -203,10 +203,8 @@ def dibujar(numeros):
         
         dibujo.addtag_all
         
-
-        
-
     if (numeros == 15): #Seno 
+
         #S
         coord =i, y1,i+20 , y2-40
         dibujo.create_line(coord, fill=op_color)
@@ -242,6 +240,7 @@ def dibujar(numeros):
         i=i+60
     
     if (numeros == 16): #Coseno
+
         #C
         coord =i, y1,i+20 , y2-40
         dibujo.create_line(coord, fill=op_color)
@@ -274,6 +273,7 @@ def dibujar(numeros):
         
 
     if (numeros == 17): #Tangente
+
         #T
         coord =i+15, y1,i+15 , y2
         dibujo.create_line(coord, fill=op_color)
@@ -297,13 +297,9 @@ def dibujar(numeros):
         dibujo.addtag_all
         i=i+60
 
-        
-
-
     if (numeros == 18): #Abre Parentesis
 
         return 0
-
 
     if (numeros == 19): #Cierre parentesis
 
@@ -341,7 +337,7 @@ interfaz.title("CALCULADORA")
 interfaz.geometry("1920x1080")
 
 text_square = ttk.Entry(width=100)
-text_square.place(x=20, y= 400, height=200)
+text_square.place(x=20, y= 400, height=50)
 
 dibujo = Canvas(interfaz)
 dibujo.grid(columnspan=5, pady=20, ipadx=300, ipady=30, row= 0, column=0)
@@ -358,102 +354,127 @@ coord_button = Button(interfaz, text=" COORD ", font= fontStyle, fg="white", bg=
 command=lambda: dibujar(1), height=altura, width=ancho)
 coord_button.grid(row=0, column=6)
 
+#Botón para número 1
 case1 = Button(interfaz, text=" 1 ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(1), height=altura, width=ancho)
 case1.grid(row=5, column=1)
 
+#Botón para número 2
 case2 = Button(interfaz, text=" 2 ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(2), height=altura, width=ancho)
 case2.grid(row=5, column=2)
 
+#Botón para número 3
 case3 = Button(interfaz, text=" 3 ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(3), height=altura, width=ancho)
 case3.grid(row=5, column=3)
 
+#Botón para número 4
 case4 = Button(interfaz, text=" 4 ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(4), height=altura, width=ancho)
 case4.grid(row=4, column=1)
 
+#Botón para número 5
 case5 = Button(interfaz, text=" 5 ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(5), height=altura, width=ancho)
 case5.grid(row=4, column=2)
 
+#Botón para número 6
 case6 = Button(interfaz, text=" 6 ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(6), height=altura, width=ancho)
 case6.grid(row=4, column=3)
 
+#Botón para número 7
 case7 = Button(interfaz, text=" 7 ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(7), height=altura, width=ancho)
 case7.grid(row=3, column=1)
 
+#Botón para número 8
 case8 = Button(interfaz, text=" 8 ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(8), height=altura, width=ancho)
 case8.grid(row=3, column=2)
 
+#Botón para número 9
 case9 = Button(interfaz, text=" 9 ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(9), height=altura, width=ancho)
 case9.grid(row=3, column=3)
 
+#Botón para número 0
 case0 = Button(interfaz, text=" 0 ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(0), height=altura, width=ancho)
 case0.grid(row=6, column=1)
 
+#Botón para operador +
 suma = Button(interfaz, text=" + ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(10), height=altura, width=ancho)
 suma.grid(row=3, column=4)
 
+#Botón para operador -
 resta = Button(interfaz, text=" — ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(11), height=altura, width=ancho)
 resta.grid(row=4, column=4)
 
+#Botón para operador X
 multip = Button(interfaz, text=" X ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(12), height=altura, width=ancho)
 multip.grid(row=5, column=4)
 
+#Botón para operador /
 division = Button(interfaz, text=" / ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: fraccion(), height=altura, width=ancho)
 division.grid(row=6, column=4)
 
+#Botón para operador =
 resol = Button(interfaz, text=" = ", font= fontStyle, fg="white", bg="grey39",
 height=altura, width=ancho)
 resol.grid(row=6, column=3)
 
+#Botón para VACIAR
 vaciar = Button(interfaz, text=" AC ",relief=FLAT, font= fontStyle, fg="white", bg="#611115",
 command=limpiar, height=altura, width=ancho)
 vaciar.grid(row=2, column=4)
 
+#Botón para operador seno
 seno = Button(interfaz, text=" sen ", font = fontStyle, fg= "white", bg="grey39",command=lambda:dibujar(15),
 height=altura, width=ancho)
 seno.grid(row=3, column=0)
 
+#Botón para operador coseno
 coseno = Button(interfaz, text=" cos ", font = fontStyle, fg= "white", bg="grey39",command=lambda:dibujar(16),
 height=altura, width=ancho)
 coseno.grid(row=4, column=0)
 
+#Botón para operador potencia
 potencia = Button(interfaz, text=" x² ", font = fontStyle, fg= "white", bg="grey39",
 height=altura, width=ancho)
 potencia.grid(row=6, column=0)
 
-empty = Button(interfaz, text="√", font = fontStyle, fg= "white", bg="grey39",command=lambda:dibujar(20),
+#Botón para operador raiz
+raiz = Button(interfaz, text="√", font = fontStyle, fg= "white", bg="grey39",command=lambda:dibujar(20),
 height=altura, width=ancho)
-empty.grid(row=2, column=2)
+raiz.grid(row=2, column=2)
 
+#Botón para operador tangente
 tang = Button(interfaz, text=" tan ", font = fontStyle, fg= "white", bg="grey39",command=lambda:dibujar(17),
 height=altura, width=ancho)
 tang.grid(row=5, column=0)
 
+#Botón para operador factorial
 fact = Button(interfaz, text=" x! ", font = fontStyle, fg= "white", bg="grey39",command=lambda:dibujar(14),
 height=altura, width=ancho)
 fact.grid(row=2, column=0)
 
+#Botón para operador decimal
 decimal = Button(interfaz, text=" . ", font = fontStyle, fg="white", bg="grey39",
 height=altura, width=ancho)
 decimal.grid(row = 6, column=2)
 
+#Botón para Abre Paréntesis
 abreP = Button(interfaz, text=" ( ", font = fontStyle, fg="white", bg="grey39",
 height=altura, width=ancho)
 abreP.grid(row = 2, column= 1)
 
+#Botón para Cierre Paréntesis
 cierreP = Button(interfaz, text=" ) ", font = fontStyle, fg="white", bg="grey39",
 height=altura, width=ancho)
 cierreP.grid(row = 2, column= 3)
