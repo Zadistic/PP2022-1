@@ -193,10 +193,20 @@ def dibujar(numeros):
         return 0
 
     if (numeros == 14): #Factorial
+        #recta vertical
+        coord =i+3, y1,i+3 , y2-10
+        dibujo.create_line(coord, fill=op_color)
+        #punto
+        coord=i,y1+40,i+5,y2-5
+        dibujo.create_oval(coord,fill=op_color)
+        
+        
+        dibujo.addtag_all
+        
 
-        return 0
+        
 
-    if (numeros == 15): #Seno #problema al salir del cilo solo se le sumaba 30 pixeles para que avanzara, en este caso tiene 
+    if (numeros == 15): #Seno 
         #S
         coord =i, y1,i+20 , y2-40
         dibujo.create_line(coord, fill=op_color)
@@ -264,8 +274,30 @@ def dibujar(numeros):
         
 
     if (numeros == 17): #Tangente
+        #T
+        coord =i+15, y1,i+15 , y2
+        dibujo.create_line(coord, fill=op_color)
+        coord =i, y1,i+30 , y2-40
+        dibujo.create_line(coord, fill=op_color)
+        #A
+        coord =i+30, y1+40,i+40 , y2-40
+        dibujo.create_line(coord, fill=op_color)
+        coord =i+40, y1,i+50 , y2
+        dibujo.create_line(coord, fill=op_color)
+        coord =i+35, y1+20,i+45 , y2-20
+        dibujo.create_line(coord, fill=op_color)
+        #N
+        coord =i+52, y1,i+52, y2
+        dibujo.create_line(coord, fill=op_color)
+        coord =i+52, y1,i+77, y2
+        dibujo.create_line(coord, fill=op_color)
+        coord =i+77, y1,i+77, y2
+        dibujo.create_line(coord, fill=op_color)
 
-        return 0
+        dibujo.addtag_all
+        i=i+60
+
+        
 
 
     if (numeros == 18): #Abre Parentesis
@@ -277,6 +309,16 @@ def dibujar(numeros):
 
         return 0
 
+    if(numeros == 20):#raiz
+        coord =i, y1+20,i+10, y2
+        dibujo.create_line(coord, fill=op_color)
+        coord =i+10, y1+40,i+15, y2-45
+        dibujo.create_line(coord, fill=op_color)
+        coord =i+15, y1-5,i+25, y2-45
+        dibujo.create_line(coord, fill=op_color)
+
+        dibujo.addtag_all
+        
 
     i=i+30
     contadorf=contadorf+30
@@ -392,15 +434,15 @@ potencia = Button(interfaz, text=" x² ", font = fontStyle, fg= "white", bg="gre
 height=altura, width=ancho)
 potencia.grid(row=6, column=0)
 
-empty = Button(interfaz, text="√", font = fontStyle, fg= "white", bg="grey39",
+empty = Button(interfaz, text="√", font = fontStyle, fg= "white", bg="grey39",command=lambda:dibujar(20),
 height=altura, width=ancho)
 empty.grid(row=2, column=2)
 
-tang = Button(interfaz, text=" tan ", font = fontStyle, fg= "white", bg="grey39",
+tang = Button(interfaz, text=" tan ", font = fontStyle, fg= "white", bg="grey39",command=lambda:dibujar(17),
 height=altura, width=ancho)
 tang.grid(row=5, column=0)
 
-fact = Button(interfaz, text=" x! ", font = fontStyle, fg= "white", bg="grey39",
+fact = Button(interfaz, text=" x! ", font = fontStyle, fg= "white", bg="grey39",command=lambda:dibujar(14),
 height=altura, width=ancho)
 fact.grid(row=2, column=0)
 
