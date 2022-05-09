@@ -333,27 +333,27 @@ def limpiar():
    y2 = 50
 	 
 interfaz = Tk()
-interfaz.configure(background="grey70")
+interfaz.configure(background="grey60")
 interfaz.title("CALCULADORA")
-interfaz.geometry("923x763")
+interfaz.geometry("923x733")
 fontStyle = tkFont.Font(family="Lucida Grande", size=22)
 
 text_square = ttk.Entry(width=36, font =("Lucida Grande", 20))
-text_square.grid(ipady= 18, row= 1, column=0, columnspan=3)
+text_square.grid(ipady= 18, pady = 10, row= 1, column=0, columnspan=3)
 
 dibujo = Canvas(interfaz)
-dibujo.grid(columnspan=5, pady=30, ipadx=270, ipady=30, row= 0, column=0)
+dibujo.grid(columnspan=5, pady=5, ipadx=270, ipady=30, row= 0, column=0)
 
 altura = 1
 ancho = 10
 fila_base = 3
 
-color_selection = Button(interfaz, text=" color ", font= fontStyle, fg="white", bg="grey39",
-command=lambda: dibujar(1), height=altura, width=5)
+color_selection = Button(interfaz, text=" COLOR ", font= fontStyle, fg="white", bg="grey39",
+command=lambda: dibujar(1), height=altura, width=ancho)
 color_selection.grid(row=fila_base-2, column=4)
 
-coord_button = Button(interfaz, text=" coords ", font= fontStyle, fg="white", bg="grey39",
-command=lambda: dibujar(1), height=altura, width=5)
+coord_button = Button(interfaz, text=" COORDS ", font= fontStyle, fg="white", bg="grey39",
+command=lambda: dibujar(1), height=altura, width=ancho)
 coord_button.grid(row=fila_base-2, column=3)
 
 #Botón para número 1
