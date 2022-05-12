@@ -5,6 +5,8 @@ import tkinter as tk
 from tkinter import ttk
 import tkinter.font as tkFont
 from tkinter.tix import COLUMN
+from turtle import pensize
+import turtle
 
 x=20
 y1=10
@@ -530,5 +532,9 @@ abreP.grid(row=fila_base, column= 1)
 cierreP = Button(interfaz, text=" ) ", font = fontStyle, fg="white", bg="grey39",
 command = lambda:dibujar(")"), height=altura, width=ancho)
 cierreP.grid(row =fila_base, column= 3)
+
+#Botón para Activar Coordenadas
+coords = Button(interfaz, text=" coords", font=fontStyle, fg="white", bg="grey39",)
+coords.grid(row=fila_base, column=5, columnspan=3)
 
 interfaz.mainloop()
