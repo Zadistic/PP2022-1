@@ -332,15 +332,16 @@ def dibujar(numeros):
   
 def limpiar():
 
-   global i, y1, y2, contadori, contadorf
-
-   dibujo.delete("all")
-   
-   i=x
-   contadorf=x
-   contadori=x
-   y1 = 10
-   y2 = 50
+    global i, y1, y2, contadori, contadorf
+    
+    text_square.delete(0, 'end')
+    dibujo.delete("all")
+    
+    i=x
+    contadorf=x
+    contadori=x
+    y1 = 10
+    y2 = 50
 	 
 interfaz = Tk()
 interfaz.configure(background="grey70")
@@ -348,11 +349,11 @@ interfaz.title("CALCULADORA")
 interfaz.geometry("1280x720")
 fontStyle = tkFont.Font(family="Lucida Grande", size=22)
 
-text_square = Entry(interfaz, width=45, font =("Lucida Grande", 20))
-text_square.grid(ipady= 18, row= 1, column=0, columnspan=3)
+text_square = Entry(interfaz, width=30, font =("Lucida Grande", 20))
+text_square.grid(ipady= 4, row= 1, column=0, columnspan=3)
 
 dibujo = Canvas(interfaz)
-dibujo.grid(columnspan=5, padx=20, pady=30, ipadx=470, ipady=30, row= 0, column=0)
+dibujo.grid(columnspan=5, padx=20, pady=30, ipadx=400, ipady=30, row= 0, column=0)
 
 altura = 1
 ancho = 10
