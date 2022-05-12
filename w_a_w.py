@@ -1,6 +1,6 @@
 from sqlite3 import Row, connect
 from tkinter import*
-import tkinter
+import tkinter as tk
 from tkinter import ttk
 import tkinter.font as tkFont
 from tkinter.tix import COLUMN
@@ -14,7 +14,7 @@ contadorf=x
 op_color = "#0ba37b"
 num_color = "#ff0090"
 
-def color_change():
+def color_change(color):
 
     global op_color, num_color
 
@@ -214,7 +214,7 @@ def dibujar(numeros):
 
         dibujo.addtag_all
         
-    if (numeros == "sen"): #Seno 
+    if (numeros == "sen("): #Seno 
 
         #S
         coord =i, y1,i+20 , y2-40
@@ -249,7 +249,7 @@ def dibujar(numeros):
         dibujo.addtag_all
         i=i+60
     
-    if (numeros == "cos"): #Coseno
+    if (numeros == "cos("): #Coseno
 
         #C
         coord =i, y1,i+20 , y2-40
@@ -282,7 +282,7 @@ def dibujar(numeros):
         i=i+60
         
 
-    if (numeros == "tan"): #Tangente
+    if (numeros == "tan("): #Tangente
 
         #T
         coord =i+15, y1,i+15 , y2
@@ -349,15 +349,32 @@ interfaz.title("CALCULADORA")
 interfaz.geometry("1280x720")
 fontStyle = tkFont.Font(family="Lucida Grande", size=22)
 
+fila_base = 4
+
 text_square = Entry(interfaz, width=30, font =("Lucida Grande", 20))
-text_square.grid(ipady= 4, row= 1, column=0, columnspan=3)
+text_square.grid(ipady= 4, row= fila_base-2, column=0, columnspan=3)
 
 dibujo = Canvas(interfaz)
-dibujo.grid(columnspan=5, padx=20, pady=30, ipadx=400, ipady=30, row= 0, column=0)
+dibujo.grid(columnspan=5, padx=20, pady=10, ipadx=400, ipady=30, row= fila_base-3, column=0)
 
 altura = 1
 ancho = 10
-fila_base = 3
+
+red_color = Button(master = interfaz, bg= "red", width=2,
+command=color_change("red"))
+red_color.grid(row= fila_base-4, column=0)
+
+blue_color = Button(master = interfaz, bg= "blue", width=2,
+command=color_change("red"))
+blue_color.grid(row= fila_base-4, column=1)
+
+green_color = Button(master = interfaz, bg= "green", width=2,
+command=color_change("red"))
+green_color.grid(row= fila_base-4, column=2)
+
+black_color = Button(master = interfaz, bg= "black", width=2,
+command=color_change("red"))
+black_color.grid(row= fila_base-4, column=3)
 
 color_selection = Button(interfaz, text=" color ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(1), height=altura, width=ancho)
