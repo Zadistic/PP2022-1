@@ -354,35 +354,59 @@ fila_base = 4
 altura = 1
 ancho = 9
 
-text_square = Entry(interfaz, width=58, font =("Lucida Grande", 20))
+text_square = Entry(interfaz, width=57, font =("Lucida Grande", 20))
 text_square.grid(ipady= 4, row= fila_base-2, column=0, columnspan=5)
 
 dibujo = Canvas(interfaz)
-dibujo.grid(columnspan=5, padx=20, ipadx=290, ipady=30, row= fila_base-3, column=0)
+dibujo.grid(columnspan=5, padx=20, ipadx=295, ipady=30, row= fila_base-3, column=0)
 
 blue_color = Button(master = interfaz, bg= "blue", width=2,
 command=color_change("blue"), height=altura+1)
 blue_color.grid(row= fila_base-2, column=5)
 
+purple_color = Button(master = interfaz, bg= "purple", width=2,
+command=color_change("purple"), height=altura+1)
+purple_color.grid(row= fila_base-2, column=6)
+
 green_color = Button(master = interfaz, bg= "green", width=2,
 command=color_change("green"), height=altura+1)
 green_color.grid(row= fila_base, column=5)
+
+light_blue_color = Button(master = interfaz, bg= "#0099ad", width=2,
+command=color_change("light_blue"), height=altura+1)
+light_blue_color.grid(row= fila_base, column=6)
 
 black_color = Button(master = interfaz, bg= "black", width=2,
 command=color_change("black"), height=altura+1)
 black_color.grid(row= fila_base+1, column=5)
 
+pink_color = Button(master = interfaz, bg= "#ff1fff", width=2,
+command=color_change("pink"), height=altura+1)
+pink_color.grid(row= fila_base+1, column=6)
+
 orange_color = Button(master = interfaz, bg= "orange", width=2,
 command=color_change("orange"), height=altura+1)
 orange_color.grid(row= fila_base+2, column=5)
+
+cyan_color = Button(master = interfaz, bg= "cyan", width=2,
+command=color_change("cyan"), height=altura+1)
+cyan_color.grid(row= fila_base+2, column=6)
 
 yellow_color = Button(master = interfaz, bg= "yellow", width=2,
 command=color_change("yellow"), height=altura+1)
 yellow_color.grid(row= fila_base+3, column=5)
 
+burdeo_color = Button(master = interfaz, bg= "dark red", width=2,
+command=color_change("dark_red"), height=altura+1)
+burdeo_color.grid(row= fila_base+3, column=6)
+
 red_color = Button(master = interfaz, bg= "red", width=2,
 command=color_change("red"), height=altura+1)
 red_color.grid(row= fila_base+4, column=5)
+
+light_green_color = Button(master = interfaz, bg= "#4dff00", width=2,
+command=color_change("light_green"), height=altura+1)
+light_green_color.grid(row= fila_base+4, column=6)
 
 coord_button = Button(interfaz, text=" coords ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(1), height=altura, width=ancho)
