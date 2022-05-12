@@ -351,8 +351,8 @@ fontStyle = tkFont.Font(family="Lucida Grande", size=22)
 
 fila_base = 4
 
-text_square = Entry(interfaz, width=30, font =("Lucida Grande", 20))
-text_square.grid(ipady= 4, row= fila_base-2, column=0, columnspan=3)
+text_square = Entry(interfaz, width=70, font =("Lucida Grande", 20))
+text_square.grid(ipady= 4, row= fila_base-2, column=0, columnspan=5)
 
 dibujo = Canvas(interfaz)
 dibujo.grid(columnspan=5, padx=20, pady=10, ipadx=400, ipady=30, row= fila_base-3, column=0)
@@ -360,29 +360,28 @@ dibujo.grid(columnspan=5, padx=20, pady=10, ipadx=400, ipady=30, row= fila_base-
 altura = 1
 ancho = 10
 
+color_picker = Label(interfaz, width = 4)
+color_picker.grid(row=fila_base-4, column=4)
+    
 red_color = Button(master = interfaz, bg= "red", width=2,
 command=color_change("red"))
-red_color.grid(row= fila_base-4, column=0)
+red_color.grid(row= fila_base-4, column=1)
 
 blue_color = Button(master = interfaz, bg= "blue", width=2,
 command=color_change("red"))
-blue_color.grid(row= fila_base-4, column=1)
+blue_color.grid(row= fila_base-4, column=2)
 
 green_color = Button(master = interfaz, bg= "green", width=2,
 command=color_change("red"))
-green_color.grid(row= fila_base-4, column=2)
+green_color.grid(row= fila_base-4, column=3)
 
 black_color = Button(master = interfaz, bg= "black", width=2,
 command=color_change("red"))
-black_color.grid(row= fila_base-4, column=3)
-
-color_selection = Button(interfaz, text=" color ", font= fontStyle, fg="white", bg="grey39",
-command=lambda: dibujar(1), height=altura, width=ancho)
-color_selection.grid(row=fila_base-2, column=4)
+black_color.grid(row= fila_base-4, column=4)
 
 coord_button = Button(interfaz, text=" coords ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(1), height=altura, width=ancho)
-coord_button.grid(row=fila_base-2, column=3)
+coord_button.grid(row=fila_base-4, column=0)
 
 #Botón para número 1
 case1 = Button(interfaz, text=" 1 ", font= fontStyle, fg="white", bg="grey39",
