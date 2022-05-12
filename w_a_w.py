@@ -1,3 +1,5 @@
+from cgitb import text
+from distutils.command.config import config
 from sqlite3 import Row, connect
 from tkinter import*
 import tkinter
@@ -14,6 +16,12 @@ contadorf=x
 op_color = "#0ba37b"
 num_color = "#ff0090"
 
+def color_change():
+
+    global op_color, num_color
+
+    return 0
+    
 def fraccion():
 
    global i, y1, y2, contadori, contadorf
@@ -194,14 +202,14 @@ def dibujar(numeros):
         return 0
 
     if (numeros == 14): #Factorial
+
         #recta vertical
         coord =i+3, y1,i+3 , y2-10
         dibujo.create_line(coord, fill=op_color)
         #punto
         coord=i,y1+40,i+5,y2-5
         dibujo.create_oval(coord,fill=op_color)
-        
-        
+
         dibujo.addtag_all
         
     if (numeros == 15): #Seno 
@@ -235,7 +243,6 @@ def dibujar(numeros):
         dibujo.create_line(coord, fill=op_color)
         coord =i+75, y1,i+75, y2
         dibujo.create_line(coord, fill=op_color)
-
     
         dibujo.addtag_all
         i=i+60
@@ -335,25 +342,25 @@ def limpiar():
 interfaz = Tk()
 interfaz.configure(background="grey70")
 interfaz.title("CALCULADORA")
-interfaz.geometry("923x763")
+interfaz.geometry("1280x720")
 fontStyle = tkFont.Font(family="Lucida Grande", size=22)
 
-text_square = ttk.Entry(width=36, font =("Lucida Grande", 20))
+text_square = Entry(interfaz, width=45, font =("Lucida Grande", 20))
 text_square.grid(ipady= 18, row= 1, column=0, columnspan=3)
 
 dibujo = Canvas(interfaz)
-dibujo.grid(columnspan=5, pady=30, ipadx=270, ipady=30, row= 0, column=0)
+dibujo.grid(columnspan=5, padx=20, pady=30, ipadx=470, ipady=30, row= 0, column=0)
 
 altura = 1
 ancho = 10
 fila_base = 3
 
 color_selection = Button(interfaz, text=" color ", font= fontStyle, fg="white", bg="grey39",
-command=lambda: dibujar(1), height=altura, width=5)
+command=lambda: dibujar(1), height=altura, width=ancho)
 color_selection.grid(row=fila_base-2, column=4)
 
 coord_button = Button(interfaz, text=" coords ", font= fontStyle, fg="white", bg="grey39",
-command=lambda: dibujar(1), height=altura, width=5)
+command=lambda: dibujar(1), height=altura, width=ancho)
 coord_button.grid(row=fila_base-2, column=3)
 
 #Botón para número 1
@@ -436,40 +443,40 @@ vaciar = Button(interfaz, text=" AC ",relief=FLAT, font= fontStyle, fg="white", 
 command=limpiar, height=altura, width=ancho)
 vaciar.grid(row=fila_base, column=4)
 
+#Botón para operador factorial
+fact = Button(interfaz, text=" x! ", font = fontStyle, fg= "white", bg="grey39",
+command=lambda:dibujar(14), height=altura, width=ancho)
+fact.grid(row=fila_base, column=0)
+
 #Botón para operador seno
-seno = Button(interfaz, text=" sen ", font = fontStyle, fg= "white", bg="grey39",command=lambda:dibujar(15),
-height=altura, width=ancho)
+seno = Button(interfaz, text=" sen ", font = fontStyle, fg= "white", bg="grey39",
+command=lambda:dibujar(15), height=altura, width=ancho)
 seno.grid(row=fila_base+1, column=0)
 
 #Botón para operador coseno
-coseno = Button(interfaz, text=" cos ", font = fontStyle, fg= "white", bg="grey39",command=lambda:dibujar(16),
-height=altura, width=ancho)
+coseno = Button(interfaz, text=" cos ", font = fontStyle, fg= "white", bg="grey39",
+command=lambda:dibujar(16), height=altura, width=ancho)
 coseno.grid(row=fila_base+2, column=0)
+
+#Botón para operador tangente
+tang = Button(interfaz, text=" tan ", font = fontStyle, fg= "white", bg="grey39",
+command=lambda:dibujar(17), height=altura, width=ancho)
+tang.grid(row=fila_base+3, column=0)
 
 #Botón para operador potencia
 potencia = Button(interfaz, text=" x² ", font = fontStyle, fg= "white", bg="grey39",
-height=altura, width=ancho)
+command = lambda:dibujar(18), height=altura, width=ancho)
 potencia.grid(row=fila_base+4, column=0)
-
-#Botón para operador raiz
-raiz = Button(interfaz, text="√", font = fontStyle, fg= "white", bg="grey39",command=lambda:dibujar(20),
-height=altura, width=ancho)
-raiz.grid(row=fila_base, column=2)
-
-#Botón para operador tangente
-tang = Button(interfaz, text=" tan ", font = fontStyle, fg= "white", bg="grey39",command=lambda:dibujar(17),
-height=altura, width=ancho)
-tang.grid(row=fila_base+3, column=0)
-
-#Botón para operador factorial
-fact = Button(interfaz, text=" x! ", font = fontStyle, fg= "white", bg="grey39",command=lambda:dibujar(14),
-height=altura, width=ancho)
-fact.grid(row=fila_base, column=0)
 
 #Botón para operador decimal
 decimal = Button(interfaz, text=" . ", font = fontStyle, fg="white", bg="grey39",
-height=altura, width=ancho)
+command = lambda:dibujar(19), height=altura, width=ancho)
 decimal.grid(row=fila_base+4, column=2)
+
+#Botón para operador raiz
+raiz = Button(interfaz, text="√", font = fontStyle, fg= "white", bg="grey39",
+command=lambda:dibujar(20), height=altura, width=ancho)
+raiz.grid(row=fila_base, column=2)
 
 #Botón para Abre Paréntesis
 abreP = Button(interfaz, text=" ( ", font = fontStyle, fg="white", bg="grey39",
@@ -478,7 +485,7 @@ abreP.grid(row=fila_base, column= 1)
 
 #Botón para Cierre Paréntesis
 cierreP = Button(interfaz, text=" ) ", font = fontStyle, fg="white", bg="grey39",
-height=altura, width=ancho)
+command = lambda:dibujar(), height=altura, width=ancho)
 cierreP.grid(row =fila_base, column= 3)
 
 interfaz.mainloop()
