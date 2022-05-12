@@ -1,3 +1,4 @@
+from curses.ascii import alt
 from sqlite3 import Row, connect
 from tkinter import*
 import tkinter as tk
@@ -350,34 +351,38 @@ interfaz.geometry("1280x720")
 fontStyle = tkFont.Font(family="Lucida Grande", size=22)
 
 fila_base = 4
+altura = 1
+ancho = 9
 
-text_square = Entry(interfaz, width=70, font =("Lucida Grande", 20))
+text_square = Entry(interfaz, width=58, font =("Lucida Grande", 20))
 text_square.grid(ipady= 4, row= fila_base-2, column=0, columnspan=5)
 
 dibujo = Canvas(interfaz)
-dibujo.grid(columnspan=5, padx=20, pady=10, ipadx=400, ipady=30, row= fila_base-3, column=0)
-
-altura = 1
-ancho = 10
-
-color_picker = Label(interfaz, width = 4)
-color_picker.grid(row=fila_base-4, column=4)
-    
-red_color = Button(master = interfaz, bg= "red", width=2,
-command=color_change("red"))
-red_color.grid(row= fila_base-4, column=1)
+dibujo.grid(columnspan=5, padx=20, ipadx=290, ipady=30, row= fila_base-3, column=0)
 
 blue_color = Button(master = interfaz, bg= "blue", width=2,
-command=color_change("red"))
-blue_color.grid(row= fila_base-4, column=2)
+command=color_change("blue"), height=altura+1)
+blue_color.grid(row= fila_base-2, column=5)
 
 green_color = Button(master = interfaz, bg= "green", width=2,
-command=color_change("red"))
-green_color.grid(row= fila_base-4, column=3)
+command=color_change("green"), height=altura+1)
+green_color.grid(row= fila_base, column=5)
 
 black_color = Button(master = interfaz, bg= "black", width=2,
-command=color_change("red"))
-black_color.grid(row= fila_base-4, column=4)
+command=color_change("black"), height=altura+1)
+black_color.grid(row= fila_base+1, column=5)
+
+orange_color = Button(master = interfaz, bg= "orange", width=2,
+command=color_change("orange"), height=altura+1)
+orange_color.grid(row= fila_base+2, column=5)
+
+yellow_color = Button(master = interfaz, bg= "yellow", width=2,
+command=color_change("yellow"), height=altura+1)
+yellow_color.grid(row= fila_base+3, column=5)
+
+red_color = Button(master = interfaz, bg= "red", width=2,
+command=color_change("red"), height=altura+1)
+red_color.grid(row= fila_base+4, column=5)
 
 coord_button = Button(interfaz, text=" coords ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(1), height=altura, width=ancho)
