@@ -1,12 +1,8 @@
-from curses.ascii import alt
-from sqlite3 import Row, connect
 from tkinter import*
 import tkinter as tk
 from tkinter import ttk
 import tkinter.font as tkFont
 from tkinter.tix import COLUMN
-from turtle import pensize
-import turtle
 
 x=20
 y1=10
@@ -20,9 +16,6 @@ num_color = "#ff0090"
 def color_change(color):
 
     global op_color, num_color
-
-    
-
     return 0
 
 def fraccion(numeros): 
