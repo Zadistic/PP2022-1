@@ -277,7 +277,9 @@ def dibujar(numeros):
         coord =i+70, y1+40,i+50, y2
         dibujo.create_line(coord, fill=op_color)
         dibujo.addtag_all
+        
         i=i+60
+
         
 
     if (numeros == "tan("): #Tangente
@@ -306,13 +308,20 @@ def dibujar(numeros):
         i=i+60
 
     if (numeros == "("): #Abre Parentesis
+        coord=i+10,y1-5,i,y2-35
+        dibujo.create_line(coord,fill=op_color)
+        coord=i,y1+5,i,y2-5
+        dibujo.create_line(coord,fill=op_color)
+        coord=i,y1+35,i+10,y2+5
+        dibujo.create_line(coord,fill=op_color)
+        dibujo.addtag_all
+        i=i-20
 
-        return 0
+        
 
     if (numeros == ")"): #Cierre parentesis
-
         return 0
-
+        
     if(numeros == "√"): #Raiz
 
         coord =i, y1+20,i+10, y2
