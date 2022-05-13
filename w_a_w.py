@@ -277,7 +277,14 @@ def dibujar(numeros):
         coord =i+70, y1+40,i+50, y2
         dibujo.create_line(coord, fill=op_color)
         dibujo.addtag_all
-        
+        #(
+        coord=i+85,y1-5,i+75,y2-35
+        dibujo.create_line(coord,fill=op_color)
+        coord=i+75,y1+5,i+75,y2-5
+        dibujo.create_line(coord,fill=op_color)
+        coord=i+75,y1+35,i+85,y2+5
+        dibujo.create_line(coord,fill=op_color)
+        dibujo.addtag_all
         i=i+60
 
         
