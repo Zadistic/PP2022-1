@@ -320,7 +320,15 @@ def dibujar(numeros):
         
 
     if (numeros == ")"): #Cierre parentesis
-        return 0
+        i=i-10
+        coord=i,y1-5,i+10,y2-35
+        dibujo.create_line(coord,fill=op_color)
+        coord=i+10,y1+5,i+10,y2-5
+        dibujo.create_line(coord,fill=op_color)
+        coord=i+10,y1+35,i,y2+5
+        dibujo.create_line(coord,fill=op_color)
+        dibujo.addtag_all
+        
         
     if(numeros == "√"): #Raiz
 
