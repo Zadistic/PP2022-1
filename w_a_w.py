@@ -310,8 +310,16 @@ def dibujar(numeros):
         dibujo.create_line(coord, fill=op_color)
         coord =i+77, y1,i+77, y2
         dibujo.create_line(coord, fill=op_color)
-
+        #(
+        coord=i+92,y1-5,i+82,y2-35
+        dibujo.create_line(coord,fill=op_color)
+        coord=i+82,y1+5,i+82,y2-5
+        dibujo.create_line(coord,fill=op_color)
+        coord=i+82,y1+35,i+92,y2+5
+        dibujo.create_line(coord,fill=op_color)
         dibujo.addtag_all
+
+        
         i=i+60
 
     if (numeros == "("): #Abre Parentesis
