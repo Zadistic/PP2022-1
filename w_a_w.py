@@ -2,7 +2,6 @@ from tkinter import*
 import tkinter as tk
 from tkinter import ttk
 import tkinter.font as tkFont
-from tkinter.tix import COLUMN
 
 x=20
 y1=10
@@ -21,47 +20,47 @@ def color_change(color):
         op_color = "black"
         num_color = "black"
 
-    if color == "pink":
-        op_color = "pink"
-        num_color = "pink"
+    elif color == "pink":
+        op_color = "#ff00aa"
+        num_color = "#ff00aa"
 
-    if color == "purple":
+    elif color == "purple":
         op_color = "purple"
         num_color = "purple"
 
-    if color == "orange":
+    elif color == "orange":
         op_color = "orange"
         num_color = "orange"
 
-    if color == "cyan":
+    elif color == "cyan":
         op_color = "cyan"
         num_color = "cyan"
 
-    if color == "green":
+    elif color == "green":
         op_color = "green"
         num_color = "green"
 
-    if color == "yellow":
+    elif color == "yellow":
         op_color = "yellow"
         num_color = "yellow"
 
-    if color == "dark_red":
+    elif color == "dark_red":
         op_color = "dark red"
         num_color = "dark red"
 
-    if color == "light_blue":
+    elif color == "light_blue":
         op_color = "#0099ad"
         num_color = "#0099ad"
 
-    if color == "red":
+    elif color == "red":
         op_color = "red"
         num_color = "red"
 
-    if color == "light_green":
+    elif color == "light_green":
         op_color = "#4dff00"
         num_color = "#4dff00"
 
-    if color == "blue":
+    elif color == "blue":
         op_color = "blue"
         num_color = "blue"
 
@@ -100,13 +99,13 @@ def dibujar(numeros):
         dibujo.create_line(coord, fill=num_color, width=3)
         dibujo.addtag_all
 
-    if (numeros == 1): #Nro 1
+    elif (numeros == 1): #Nro 1
 
         coord = i+10, y1, i+10, y2
         dibujo.create_line(coord, fill=num_color, width=3)
         dibujo.addtag_all
         
-    if (numeros == 2): #Nro 2
+    elif (numeros == 2): #Nro 2
         
         coord = i, y1, i+20, y2-40
         dibujo.create_line(coord, fill=num_color, width=3)
@@ -121,7 +120,7 @@ def dibujar(numeros):
         dibujo.create_line(coord, fill=num_color, width=3)
         dibujo.addtag_all
         
-    if (numeros == 3): #Nro 3
+    elif (numeros == 3): #Nro 3
 
         coord = i, y1, i+20, y2-40
         dibujo.create_line(coord, fill=num_color, width=3)
@@ -137,7 +136,7 @@ def dibujar(numeros):
         dibujo.create_line(coord, fill=num_color, width=3)
         dibujo.addtag_all
         
-    if (numeros == 4): #Nro 4
+    elif (numeros == 4): #Nro 4
 
         coord =i, y1+20,i , y2-40
         dibujo.create_line(coord, fill=num_color, width=3)
@@ -149,7 +148,7 @@ def dibujar(numeros):
         dibujo.create_line(coord, fill=num_color, width=3)
         dibujo.addtag_all
         
-    if (numeros == 5): #Nro 5
+    elif (numeros == 5): #Nro 5
 
         coord =i, y1,i+20 , y2-40
         dibujo.create_line(coord, fill=num_color, width=3)
@@ -163,7 +162,7 @@ def dibujar(numeros):
         dibujo.create_line(coord, fill=num_color, width=3)
         dibujo.addtag_all
         
-    if (numeros == 6): #Nro 6
+    elif (numeros == 6): #Nro 6
 
         coord =i, y1 ,i+20 , y2-40
         dibujo.create_line(coord, fill=num_color, width=3)
@@ -177,7 +176,7 @@ def dibujar(numeros):
         dibujo.create_line(coord, fill=num_color, width=3)
         dibujo.addtag_all
         
-    if (numeros == 7): #Nro 7
+    elif (numeros == 7): #Nro 7
 
         coord =i, y1,i+20 , y2-40
         dibujo.create_line(coord, fill=num_color, width=3)
@@ -185,7 +184,7 @@ def dibujar(numeros):
         dibujo.create_line(coord, fill=num_color, width=3)
         dibujo.addtag_all
         
-    if (numeros == 8): #Nro 8
+    elif (numeros == 8): #Nro 8
 
         coord =i, y1,i+20 , y2-40
         dibujo.create_line(coord, fill=num_color, width=3)
@@ -199,7 +198,7 @@ def dibujar(numeros):
         dibujo.create_line(coord, fill=num_color, width=3)
         dibujo.addtag_all
         
-    if (numeros == 9): #Nro 9
+    elif (numeros == 9): #Nro 9
 
         coord =i, y1,i , y2-20
         dibujo.create_line(coord, fill=num_color, width=3)
@@ -210,7 +209,7 @@ def dibujar(numeros):
         coord =i, y1,i+20 , y2-40
         dibujo.create_line(coord, fill=num_color, width=3)
         
-    if (numeros == "+"): #Suma
+    elif (numeros == "+"): #Suma
         
         y1 = 10
         y2 = 50
@@ -222,7 +221,7 @@ def dibujar(numeros):
         dibujo.addtag_all
         contadori=i+30
 
-    if (numeros == "-"): #Resta
+    elif (numeros == "-"): #Resta
 
         y1 = 10
         y2 = 50
@@ -232,7 +231,7 @@ def dibujar(numeros):
         dibujo.addtag_all
         contadori=i+30
         
-    if (numeros == "*"): #Multiplicacion
+    elif (numeros == "*"): #Multiplicacion
         
         y1 = 10
         y2 = 50
@@ -244,7 +243,7 @@ def dibujar(numeros):
         dibujo.addtag_all
         contadori=i+30
 
-    if (numeros =="^"): #Potencia 
+    elif (numeros =="^"): #Potencia 
         #if( numeros==2):
          #   coord = i, y1-5, i+5, y2-45
           #  dibujo.create_line(coord, fill=num_color)
@@ -259,7 +258,7 @@ def dibujar(numeros):
             #dibujo.addtag_all
         return 0
 
-    if (numeros == 14): #Factorial
+    elif (numeros == 14): #Factorial
 
         #recta vertical
         coord =i+3, y1,i+3 , y2-10
@@ -270,7 +269,7 @@ def dibujar(numeros):
 
         dibujo.addtag_all
         
-    if (numeros == "sen("): #Seno 
+    elif (numeros == "sen("): #Seno 
 
         #S
         coord =i, y1,i+20 , y2-40
@@ -309,11 +308,10 @@ def dibujar(numeros):
         coord=i+80,y1+35,i+90,y2+5
         dibujo.create_line(coord,fill=op_color, width=3)
         
-    
         dibujo.addtag_all
         i=i+60
     
-    if (numeros == "cos("): #Coseno
+    elif (numeros == "cos("): #Coseno
 
         #C
         coord =i, y1,i+20 , y2-40
@@ -353,7 +351,7 @@ def dibujar(numeros):
         dibujo.addtag_all
         i=i+60
 
-    if (numeros == "tan("): #Tangente
+    elif (numeros == "tan("): #Tangente
 
         #T
         coord =i+15, y1,i+15 , y2
@@ -385,7 +383,7 @@ def dibujar(numeros):
 
         i=i+60
 
-    if (numeros == "("): #Abre Parentesis
+    elif (numeros == "("): #Abre Parentesis
         coord=i+10,y1-5,i,y2-35
         dibujo.create_line(coord,fill=op_color, width=3)
         coord=i,y1+5,i,y2-5
@@ -395,7 +393,7 @@ def dibujar(numeros):
         dibujo.addtag_all
         i=i-20
 
-    if (numeros == ")"): #Cierre parentesis
+    elif (numeros == ")"): #Cierre parentesis
         i=i-10
         coord=i,y1-5,i+10,y2-35
         dibujo.create_line(coord,fill=op_color, width=3)
@@ -405,7 +403,7 @@ def dibujar(numeros):
         dibujo.create_line(coord,fill=op_color, width=3)
         dibujo.addtag_all
         
-    if(numeros == "√"): #Raiz
+    elif (numeros == "√"): #Raiz
 
         coord =i, y1+20,i+10, y2
         dibujo.create_line(coord, fill=op_color, width=3)
@@ -453,7 +451,7 @@ text_square.grid(columnspan=8, pady=10, ipady= 4, row= fila_base-2, column=0)
 black_color = Button(interfaz, bg= "black",
 command= lambda:color_change("black"), height=altura+2, width=7)
 black_color.grid(row= fila_base+1, column=5)
-pink_color = Button(interfaz, bg= "#ff1fff",
+pink_color = Button(interfaz, bg= "#ff00aa",
 command= lambda:color_change("pink"), height=altura+2, width=7)
 pink_color.grid(row= fila_base+1, column=6)
 purple_color = Button(interfaz, bg= "purple",
