@@ -23,7 +23,7 @@ def fraccion(numeros):
     global i, y1, y2, contadori, contadorf
 
     text_square.insert(i, numeros)
-    coord = contadori, y1+45, contadorf, y2+5
+    coord = contadori, y1+45, i, y2+5
     dibujo.create_line(coord, fill=op_color)
     dibujo.addtag_all
 
@@ -197,9 +197,27 @@ def dibujar(numeros):
         dibujo.addtag_all
         contadori=i+30
 
-    if (numeros == 13): #Potencia
-
+    if (numeros =="^"): #Potencia 
+        #if( numeros==2):
+         #   coord = i, y1-5, i+5, y2-45
+          #  dibujo.create_line(coord, fill=num_color)
+           # coord = i+5, y1-5, i+5, y2-42
+           # dibujo.create_line(coord, fill=num_color)
+            #coord = i+5, y1-2, i, y2-42
+            #dibujo.create_line(coord, fill=num_color)
+            #coord = i, y1-2, i, y2-39
+            #dibujo.create_line(coord, fill=num_color)
+            #coord = i, y1+1, i+5, y2-39
+            #dibujo.create_line(coord, fill=num_color)
+            #dibujo.addtag_all
         return 0
+        
+        
+        
+        
+        
+
+        
 
     if (numeros == 14): #Factorial
 
@@ -351,6 +369,7 @@ def dibujar(numeros):
         coord=i+10,y1+35,i,y2+5
         dibujo.create_line(coord,fill=op_color)
         dibujo.addtag_all
+        
         
         
     if(numeros == "√"): #Raiz
