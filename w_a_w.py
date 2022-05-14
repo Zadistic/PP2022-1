@@ -1,12 +1,10 @@
-from curses.ascii import alt
-from sqlite3 import Row, connect
+from textwrap import fill
 from tkinter import*
 import tkinter as tk
 from tkinter import ttk
 import tkinter.font as tkFont
 from tkinter.tix import COLUMN
-from turtle import pensize
-import turtle
+from turtle import width
 
 x=20
 y1=10
@@ -14,23 +12,24 @@ y2=50
 i=x
 contadori=x
 contadorf=x
-op_color = "#0ba37b"
-num_color = "#ff0090"
+op_color = "black"
+num_color = "black"
 
 def color_change(color):
 
     global op_color, num_color
 
-    
+    if color == "red":
+        op_color = "red"
+        num_color = "red"
 
-    return 0
 
 def fraccion(numeros): 
 
     global i, y1, y2, contadori, contadorf
 
     text_square.insert(i, numeros)
-    coord = contadori, y1+45, contadorf, y2+5
+    coord = contadori, y1+45, i, y2+5
     dibujo.create_line(coord, fill=op_color)
     dibujo.addtag_all
 
@@ -204,10 +203,22 @@ def dibujar(numeros):
         dibujo.addtag_all
         contadori=i+30
 
-    if (numeros == 13): #Potencia
-
+    if (numeros =="^"): #Potencia 
+        #if( numeros==2):
+         #   coord = i, y1-5, i+5, y2-45
+          #  dibujo.create_line(coord, fill=num_color)
+           # coord = i+5, y1-5, i+5, y2-42
+           # dibujo.create_line(coord, fill=num_color)
+            #coord = i+5, y1-2, i, y2-42
+            #dibujo.create_line(coord, fill=num_color)
+            #coord = i, y1-2, i, y2-39
+            #dibujo.create_line(coord, fill=num_color)
+            #coord = i, y1+1, i+5, y2-39
+            #dibujo.create_line(coord, fill=num_color)
+            #dibujo.addtag_all
         return 0
-
+        
+        
     if (numeros == 14): #Factorial
 
         #recta vertical
@@ -250,6 +261,14 @@ def dibujar(numeros):
         dibujo.create_line(coord, fill=op_color)
         coord =i+75, y1,i+75, y2
         dibujo.create_line(coord, fill=op_color)
+        #(
+        coord=i+90,y1-5,i+80,y2-35
+        dibujo.create_line(coord,fill=op_color)
+        coord=i+80,y1+5,i+80,y2-5
+        dibujo.create_line(coord,fill=op_color)
+        coord=i+80,y1+35,i+90,y2+5
+        dibujo.create_line(coord,fill=op_color)
+        
     
         dibujo.addtag_all
         i=i+60
@@ -284,7 +303,16 @@ def dibujar(numeros):
         coord =i+70, y1+40,i+50, y2
         dibujo.create_line(coord, fill=op_color)
         dibujo.addtag_all
+        #(
+        coord=i+85,y1-5,i+75,y2-35
+        dibujo.create_line(coord,fill=op_color)
+        coord=i+75,y1+5,i+75,y2-5
+        dibujo.create_line(coord,fill=op_color)
+        coord=i+75,y1+35,i+85,y2+5
+        dibujo.create_line(coord,fill=op_color)
+        dibujo.addtag_all
         i=i+60
+
         
 
     if (numeros == "tan("): #Tangente
@@ -308,18 +336,42 @@ def dibujar(numeros):
         dibujo.create_line(coord, fill=op_color)
         coord =i+77, y1,i+77, y2
         dibujo.create_line(coord, fill=op_color)
-
+        #(
+        coord=i+92,y1-5,i+82,y2-35
+        dibujo.create_line(coord,fill=op_color)
+        coord=i+82,y1+5,i+82,y2-5
+        dibujo.create_line(coord,fill=op_color)
+        coord=i+82,y1+35,i+92,y2+5
+        dibujo.create_line(coord,fill=op_color)
         dibujo.addtag_all
+
+        
         i=i+60
 
     if (numeros == "("): #Abre Parentesis
+        coord=i+10,y1-5,i,y2-35
+        dibujo.create_line(coord,fill=op_color)
+        coord=i,y1+5,i,y2-5
+        dibujo.create_line(coord,fill=op_color)
+        coord=i,y1+35,i+10,y2+5
+        dibujo.create_line(coord,fill=op_color)
+        dibujo.addtag_all
+        i=i-20
 
-        return 0
+        
 
     if (numeros == ")"): #Cierre parentesis
-
-        return 0
-
+        i=i-10
+        coord=i,y1-5,i+10,y2-35
+        dibujo.create_line(coord,fill=op_color)
+        coord=i+10,y1+5,i+10,y2-5
+        dibujo.create_line(coord,fill=op_color)
+        coord=i+10,y1+35,i,y2+5
+        dibujo.create_line(coord,fill=op_color)
+        dibujo.addtag_all
+        
+        
+        
     if(numeros == "√"): #Raiz
 
         coord =i, y1+20,i+10, y2
@@ -356,57 +408,58 @@ fontStyle = tkFont.Font(family="Lucida Grande", size=22)
 
 fila_base = 4
 altura = 1
-ancho = 8
+ancho = 10
 
 dibujo = Canvas(interfaz)
-dibujo.grid(columnspan=8, pady=10, ipadx=315, ipady=30, row= fila_base-3, column=0)
+dibujo.grid(columnspan=8, ipadx=350, ipady=30, row= fila_base-3, column=0)
 
-text_square = Entry(interfaz, width=60, font =("Lucida Grande", 20))
-text_square.grid(columnspan=8, ipady= 4, row= fila_base-2, column=0)
+text_square = Entry(interfaz, width=68, font =("Lucida Grande", 20), bg="white", fg=op_color)
+text_square.grid(columnspan=8, pady=10, ipady= 4, row= fila_base-2, column=0)
 
-black_color = Button(master = interfaz, bg= "black", width=2,
-command=color_change("black"), height=altura+1)
+#BOTONES COLORES
+
+black_color = Button(interfaz, bg= "black",
+command= lambda:color_change("black"), height=altura+2, width=7)
 black_color.grid(row= fila_base+1, column=5)
-pink_color = Button(master = interfaz, bg= "#ff1fff", width=2,
-command=color_change("pink"), height=altura+1)
+pink_color = Button(interfaz, bg= "#ff1fff",
+command= lambda:color_change("pink"), height=altura+2, width=7)
 pink_color.grid(row= fila_base+1, column=6)
-purple_color = Button(master = interfaz, bg= "purple", width=2,
-command=color_change("purple"), height=altura+1)
+purple_color = Button(interfaz, bg= "purple",
+command= lambda:color_change("purple"), height=altura+2, width=7)
 purple_color.grid(row= fila_base+1, column=7)
 
 
-orange_color = Button(master = interfaz, bg= "orange", width=2,
-command=color_change("orange"), height=altura+1)
+orange_color = Button(interfaz, bg= "orange",
+command= lambda:color_change("orange"), height=altura+2, width=7)
 orange_color.grid(row= fila_base+2, column=5)
-green_color = Button(master = interfaz, bg= "green", width=2,
-command=color_change("green"), height=altura+1)
+green_color = Button(interfaz, bg= "green",
+command= lambda:color_change("green"), height=altura+2, width=7)
 green_color.grid(row= fila_base+2, column=7)
-cyan_color = Button(master = interfaz, bg= "cyan", width=2,
-command=color_change("cyan"), height=altura+1)
+cyan_color = Button(interfaz, bg= "cyan",
+command= lambda:color_change("cyan"), height=altura+2, width=7)
 cyan_color.grid(row= fila_base+2, column=6)
 
 
-red_color = Button(master = interfaz, bg= "red", width=2,
-command=color_change("red"), height=altura+1)
-red_color.grid(row= fila_base+4, column=5)
-light_green_color = Button(master = interfaz, bg= "#4dff00", width=2,
-command=color_change("light_green"), height=altura+1)
-light_green_color.grid(row= fila_base+4, column=6)
-blue_color = Button(master = interfaz, bg= "blue", width=2,
-command=color_change("blue"), height=altura+1)
-blue_color.grid(row= fila_base+4, column=7)
-
-
-yellow_color = Button(master = interfaz, bg= "yellow", width=2,
-command=color_change("yellow"), height=altura+1)
+yellow_color = Button(interfaz, bg= "yellow",
+command= lambda:color_change("yellow"), height=altura+2, width=7)
 yellow_color.grid(row= fila_base+3, column=5)
-burdeo_color = Button(master = interfaz, bg= "dark red", width=2,
-command=color_change("dark_red"), height=altura+1)
+burdeo_color = Button(interfaz, bg= "dark red",
+command= lambda:color_change("dark_red"), height=altura+2, width=7)
 burdeo_color.grid(row= fila_base+3, column=6)
-light_blue_color = Button(master = interfaz, bg= "#0099ad", width=2,
-command=color_change("light_blue"), height=altura+1)
+light_blue_color = Button(interfaz, bg= "#0099ad",
+command= lambda:color_change("light_blue"), height=altura+2, width=7)
 light_blue_color.grid(row= fila_base+3, column=7)
 
+
+red_color = Button(interfaz, bg= "red",
+command= lambda:color_change("red"), height=altura+2, width=7)
+red_color.grid(row= fila_base+4, column=5)
+light_green_color = Button(interfaz, bg= "#4dff00",
+command= lambda:color_change("light_green"), height=altura+2, width=7)
+light_green_color.grid(row= fila_base+4, column=6)
+blue_color = Button(interfaz, bg= "blue",
+command= lambda:color_change("blue"), height=altura+2, width=7)
+blue_color.grid(row= fila_base+4, column=7)
 
 #Botón para número 1
 case1 = Button(interfaz, text=" 1 ", font= fontStyle, fg="white", bg="grey39",
@@ -534,7 +587,7 @@ command = lambda:dibujar(")"), height=altura, width=ancho)
 cierreP.grid(row =fila_base, column= 3)
 
 #Botón para Activar Coordenadas
-coords = Button(interfaz, text=" coords", font=fontStyle, fg="white", bg="grey39",)
+coords = Button(interfaz, text=" coords", font=fontStyle, fg="white", bg="grey39", width=ancho)
 coords.grid(row=fila_base, column=5, columnspan=3)
 
 interfaz.mainloop()
