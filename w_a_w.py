@@ -574,17 +574,17 @@ command=lambda:dibujar("!"), height=altura, width=ancho)
 fact.grid(row=fila_base, column=0)
 
 #Botón para operador seno
-seno = Button(interfaz, text=" sen() ", font = fontStyle, fg= "white", bg="grey39",
+seno = Button(interfaz, text=" sen ", font = fontStyle, fg= "white", bg="grey39",
 command=lambda:dibujar("sen("), height=altura, width=ancho)
 seno.grid(row=fila_base+1, column=0)
 
 #Botón para operador coseno
-coseno = Button(interfaz, text=" cos() ", font = fontStyle, fg= "white", bg="grey39",
+coseno = Button(interfaz, text=" cos ", font = fontStyle, fg= "white", bg="grey39",
 command=lambda:dibujar("cos("), height=altura, width=ancho)
 coseno.grid(row=fila_base+2, column=0)
 
 #Botón para operador tangente
-tang = Button(interfaz, text=" tan() ", font = fontStyle, fg= "white", bg="grey39",
+tang = Button(interfaz, text=" tan ", font = fontStyle, fg= "white", bg="grey39",
 command=lambda:dibujar("tan("), height=altura, width=ancho)
 tang.grid(row=fila_base+3, column=0)
 
