@@ -1,10 +1,8 @@
-from textwrap import fill
 from tkinter import*
 import tkinter as tk
 from tkinter import ttk
 import tkinter.font as tkFont
 from tkinter.tix import COLUMN
-from turtle import width
 
 x=20
 y1=10
@@ -453,10 +451,10 @@ fila_base = 4
 altura = 1
 ancho = 10
 
-dibujo = Canvas(interfaz)
+dibujo = Canvas(interfaz, bg="white")
 dibujo.grid(columnspan=8, ipadx=350, ipady=30, row= fila_base-3, column=0)
 
-text_square = Entry(interfaz, width=68, font =("Lucida Grande", 20), bg="white", fg=op_color)
+text_square = Entry(interfaz, width=70, font =("Lucida Grande", 20), bg="white", fg=num_color)
 text_square.grid(columnspan=8, pady=10, ipady= 4, row= fila_base-2, column=0)
 
 #BOTONES COLORES
@@ -579,7 +577,7 @@ height=altura, width=ancho)
 resol.grid(row=fila_base+4, column=3)
 
 #Botón para VACIAR
-vaciar = Button(interfaz, text=" CE ",relief=FLAT, font= fontStyle, fg="white", bg="#611115",
+vaciar = Button(interfaz, text=" CE ", relief=FLAT, font= fontStyle, fg="white", bg="#611115",
 command=limpiar, height=altura, width=ancho)
 vaciar.grid(row=fila_base, column=4)
 
