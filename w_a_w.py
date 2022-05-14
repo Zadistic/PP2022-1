@@ -19,10 +19,53 @@ def color_change(color):
 
     global op_color, num_color
 
+    if color == "black":
+        op_color = "black"
+        num_color = "black"
+
+    if color == "pink":
+        op_color = "pink"
+        num_color = "pink"
+
+    if color == "purple":
+        op_color = "purple"
+        num_color = "purple"
+
+    if color == "orange":
+        op_color = "orange"
+        num_color = "orange"
+
+    if color == "cyan":
+        op_color = "cyan"
+        num_color = "cyan"
+
+    if color == "green":
+        op_color = "green"
+        num_color = "green"
+
+    if color == "yellow":
+        op_color = "yellow"
+        num_color = "yellow"
+
+    if color == "dark_red":
+        op_color = "dark red"
+        num_color = "dark red"
+
+    if color == "light_blue":
+        op_color = "#0099ad"
+        num_color = "#0099ad"
+
     if color == "red":
         op_color = "red"
         num_color = "red"
 
+    if color == "light_green":
+        op_color = "#4dff00"
+        num_color = "#4dff00"
+
+    if color == "blue":
+        op_color = "blue"
+        num_color = "blue"
 
 def fraccion(numeros): 
 
@@ -432,13 +475,12 @@ purple_color.grid(row= fila_base+1, column=7)
 orange_color = Button(interfaz, bg= "orange",
 command= lambda:color_change("orange"), height=altura+2, width=7)
 orange_color.grid(row= fila_base+2, column=5)
-green_color = Button(interfaz, bg= "green",
-command= lambda:color_change("green"), height=altura+2, width=7)
-green_color.grid(row= fila_base+2, column=7)
 cyan_color = Button(interfaz, bg= "cyan",
 command= lambda:color_change("cyan"), height=altura+2, width=7)
 cyan_color.grid(row= fila_base+2, column=6)
-
+green_color = Button(interfaz, bg= "green",
+command= lambda:color_change("green"), height=altura+2, width=7)
+green_color.grid(row= fila_base+2, column=7)
 
 yellow_color = Button(interfaz, bg= "yellow",
 command= lambda:color_change("yellow"), height=altura+2, width=7)
