@@ -16,7 +16,54 @@ num_color = "#ff0090"
 def color_change(color):
 
     global op_color, num_color
-    return 0
+
+    if color == "black":
+        op_color = "black"
+        num_color = "black"
+
+    elif color == "pink":
+        op_color = "#ff00aa"
+        num_color = "#ff00aa"
+
+    elif color == "purple":
+        op_color = "purple"
+        num_color = "purple"
+
+    elif color == "orange":
+        op_color = "orange"
+        num_color = "orange"
+
+    elif color == "cyan":
+        op_color = "cyan"
+        num_color = "cyan"
+
+    elif color == "green":
+        op_color = "green"
+        num_color = "green"
+
+    elif color == "yellow":
+        op_color = "yellow"
+        num_color = "yellow"
+
+    elif color == "dark_red":
+        op_color = "dark red"
+        num_color = "dark red"
+
+    elif color == "light_blue":
+        op_color = "#0099ad"
+        num_color = "#0099ad"
+
+    elif color == "red":
+        op_color = "red"
+        num_color = "red"
+
+    elif color == "light_green":
+        op_color = "#4dff00"
+        num_color = "#4dff00"
+
+    elif color == "blue":
+        op_color = "blue"
+        num_color = "blue"
 
 def fraccion(numeros): 
 
