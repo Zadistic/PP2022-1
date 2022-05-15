@@ -198,7 +198,23 @@ def dibujar(numeros):
         contadori=i+30
 
     if (numeros =="^"): #Potencia 
-        #if( numeros==2):
+        #0 chiquito
+        #coord =i, y1-5, i+5 , y2-45
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i, y1-5, i , y2-35
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i, y1+5, i+5 , y2-35
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i+5, y1+5, i+5 , y2-45
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i, y1+5, i+5 , y2-45
+        #dibujo.create_line(coord, fill=num_color)
+        
+        #1 chiquito
+        #coord = i, y1-5, i, y2-40
+        #dibujo.create_line(coord, fill=num_color)
+        #dibujo.addtag_all
+        #2 chiquito
          #   coord = i, y1-5, i+5, y2-45
           #  dibujo.create_line(coord, fill=num_color)
            # coord = i+5, y1-5, i+5, y2-42
@@ -210,7 +226,82 @@ def dibujar(numeros):
             #coord = i, y1+1, i+5, y2-39
             #dibujo.create_line(coord, fill=num_color)
             #dibujo.addtag_all
+        #3 chiquito
+        #coord = i, y1-5, i+5, y2-45
+        #dibujo.create_line(coord, fill=num_color)
+        #coord = i+5, y1-5, i+5, y2-42
+        #dibujo.create_line(coord, fill=num_color)
+        #coord = i+5, y1-2, i, y2-42
+        #dibujo.create_line(coord, fill=num_color)
+        #coord = i+5, y1-5, i+5, y2-39
+        #dibujo.create_line(coord, fill=num_color)
+        #coord = i+5, y1+1, i, y2-39
+        #dibujo.create_line(coord, fill=num_color)
+        #4 chiquito
+        #coord =i, y1-5,i , y2-40
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i, y1,i+5 , y2-40
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i+5, y1-5,i+5 , y2-35
+        #dibujo.create_line(coord, fill=num_color)
+        #5 chiquito
+        #coord =i, y1-5,i+5 , y2-45
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i, y1-5,i , y2-42
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i, y1-2,i+5 , y2-42
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i+5, y1-2,i+5 , y2-39
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i+5, y1+1,i , y2-39
+        #dibujo.create_line(coord, fill=num_color)
+        #6 ciquito
+        #coord =i, y1-5 ,i+5 , y2-45
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i, y1-5 ,i , y2-40
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i, y1 ,i+5 , y2-40
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i+5, y1 ,i+5 , y2-35
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i+5, y1+5 ,i , y2-35
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i, y1+5 ,i , y2-40
+        #dibujo.create_line(coord, fill=num_color)
+        #7 chiquito
+        #coord =i, y1-5,i+5 , y2-45
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i+5, y1-5,i+5 , y2-38
+        #dibujo.create_line(coord, fill=num_color)
+        #9 chiquito
+        #coord =i, y1-5,i+5 , y2-45
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i, y1-5,i , y2-40
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i, y1,i+5 , y2-40
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i+5, y1-5,i+5 , y2-35
+        #dibujo.create_line(coord, fill=num_color)
+        #8 chiquito
+        #coord =i, y1-5,i+5 , y2-45
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i, y1-5,i , y2-40
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i, y1,i+5 , y2-40
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i+5, y1-5,i+5 , y2-35
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i+5, y1+5,i , y2-35
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i, y1+5,i , y2-40
+        #dibujo.create_line(coord, fill=num_color)
+
+        
+
+        
+        #dibujo.addtag_all
         return 0
+        
         
         
         
