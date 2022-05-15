@@ -86,20 +86,38 @@ def dibujar(numeros):
     global y1, y2, i, contadori, contadorf, prev_selec
 
     if (numeros == 0): #Nro 0
-    
-        coord =i, y1, i+20 , y2-40
-        dibujo.create_line(coord, fill=num_color, width=3)
-        coord =i, y1+40, i+20 , y2
-        dibujo.create_line(coord, fill=num_color, width=3)
-        coord =i, y1+40, i+20 , y2-40
-        dibujo.create_line(coord, fill=num_color, width=3)
-        coord =i, y1,i , y2
-        dibujo.create_line(coord, fill=num_color, width=3)
-        coord =i+20, y1, i+20 , y2
-        dibujo.create_line(coord, fill=num_color, width=3)
-        dibujo.addtag_all
+        
+        if prev_selec == "^":
 
-        prev_selec = 0
+            #0 Pequeño
+
+            coord =i, y1-5, i+5 , y2-45
+            dibujo.create_line(coord, fill=num_color)
+            coord =i, y1-5, i , y2-35
+            dibujo.create_line(coord, fill=num_color)
+            coord =i, y1+5, i+5 , y2-35
+            dibujo.create_line(coord, fill=num_color)
+            coord =i+5, y1+5, i+5 , y2-45
+            dibujo.create_line(coord, fill=num_color)
+            coord =i, y1+5, i+5 , y2-45
+            dibujo.create_line(coord, fill=num_color)
+
+            prev_selec = 0
+        else:
+
+            coord =i, y1, i+20 , y2-40
+            dibujo.create_line(coord, fill=num_color, width=3)
+            coord =i, y1+40, i+20 , y2
+            dibujo.create_line(coord, fill=num_color, width=3)
+            coord =i, y1+40, i+20 , y2-40
+            dibujo.create_line(coord, fill=num_color, width=3)
+            coord =i, y1,i , y2
+            dibujo.create_line(coord, fill=num_color, width=3)
+            coord =i+20, y1, i+20 , y2
+            dibujo.create_line(coord, fill=num_color, width=3)
+            dibujo.addtag_all
+
+            prev_selec = 0
 
     elif (numeros == 1): #Nro 1
 
@@ -249,7 +267,7 @@ def dibujar(numeros):
 
     elif (numeros == "-"): #Resta
 
-        if prev_selec != "empty" and prev_selec != "-" and prev_selec != "*" and prev_selec != "(":
+        if prev_selec != "empty" and prev_selec != "-" and prev_selec != "*":
 
             y1 = 10
             y2 = 50
@@ -266,31 +284,24 @@ def dibujar(numeros):
         
     elif (numeros == "*"): #Multiplicacion
         
-        y1 = 10
-        y2 = 50
-        
-        coord =i, y1+10, i+10, y2-15
-        dibujo.create_line(coord, fill=op_color, width=3)
-        coord =i+10, y1+10, i, y2-15
-        dibujo.create_line(coord, fill=op_color, width=3)
-        dibujo.addtag_all
-        contadori=i+30
+        if prev_selec != "empty" and prev_selec != "*" and prev_selec != "+" and prev_selec != "-":
 
-        prev_selec = "*"
+            y1 = 10
+            y2 = 50
+            
+            coord =i, y1+10, i+10, y2-15
+            dibujo.create_line(coord, fill=op_color, width=3)
+            coord =i+10, y1+10, i, y2-15
+            dibujo.create_line(coord, fill=op_color, width=3)
+            dibujo.addtag_all
+            contadori=i+30
+
+            prev_selec = "*"
+
+        else:
+            return 0
 
     if (numeros =="^"): #Potencia
-
-        #0 chiquito
-        #coord =i, y1-5, i+5 , y2-45
-        #dibujo.create_line(coord, fill=num_color)
-        #coord =i, y1-5, i , y2-35
-        #dibujo.create_line(coord, fill=num_color)
-        #coord =i, y1+5, i+5 , y2-35
-        #dibujo.create_line(coord, fill=num_color)
-        #coord =i+5, y1+5, i+5 , y2-45
-        #dibujo.create_line(coord, fill=num_color)
-        #coord =i, y1+5, i+5 , y2-45
-        #dibujo.create_line(coord, fill=num_color)
         
         #1 chiquito
         #coord = i, y1-5, i, y2-40
@@ -379,8 +390,9 @@ def dibujar(numeros):
         #dibujo.create_line(coord, fill=num_color)
         #dibujo.addtag_all
 
-        return 0
-
+        prev_selec = "^"
+        i=i-30
+        
     elif (numeros == "!"): #Factorial
 
         #recta vertical
