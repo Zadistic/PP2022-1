@@ -12,6 +12,7 @@ contadori=x
 contadorf=x
 op_color = "#0ba37b"
 num_color = "#ff0090"
+prev_selec = "empty"
 
 def color_change(color):
 
@@ -82,9 +83,7 @@ def fraccion(numeros):
 
 def dibujar(numeros):
    
-    global y1, y2, i, contadori, contadorf
-
-    text_square.insert(i, numeros)
+    global y1, y2, i, contadori, contadorf, prev_selec
 
     if (numeros == 0): #Nro 0
     
@@ -100,11 +99,15 @@ def dibujar(numeros):
         dibujo.create_line(coord, fill=num_color, width=3)
         dibujo.addtag_all
 
+        prev_selec = 0
+
     elif (numeros == 1): #Nro 1
 
         coord = i+10, y1, i+10, y2
         dibujo.create_line(coord, fill=num_color, width=3)
         dibujo.addtag_all
+
+        prev_selec = 1
 
     elif (numeros == 2): #Nro 2
         
@@ -117,9 +120,10 @@ def dibujar(numeros):
         coord = i, y1+20, i, y2
         dibujo.create_line(coord, fill=num_color, width=3)
         coord = i, y1+40, i+20, y2
-
         dibujo.create_line(coord, fill=num_color, width=3)
         dibujo.addtag_all
+
+        prev_selec = 2
         
     elif (numeros == 3): #Nro 3
 
@@ -137,6 +141,8 @@ def dibujar(numeros):
         dibujo.create_line(coord, fill=num_color, width=3)
         dibujo.addtag_all
         
+        prev_selec = 3
+
     elif (numeros == 4): #Nro 4
 
         coord =i, y1+20,i , y2-40
@@ -149,6 +155,8 @@ def dibujar(numeros):
         dibujo.create_line(coord, fill=num_color, width=3)
         dibujo.addtag_all
         
+        prev_selec = 4
+
     elif (numeros == 5): #Nro 5
 
         coord =i, y1,i+20 , y2-40
@@ -162,6 +170,8 @@ def dibujar(numeros):
         coord =i+20, y1+40,i , y2
         dibujo.create_line(coord, fill=num_color, width=3)
         dibujo.addtag_all
+
+        prev_selec = 5
         
     elif (numeros == 6): #Nro 6
 
@@ -177,6 +187,8 @@ def dibujar(numeros):
         dibujo.create_line(coord, fill=num_color, width=3)
         dibujo.addtag_all
         
+        prev_selec = 6
+
     elif (numeros == 7): #Nro 7
 
         coord =i, y1,i+20 , y2-40
@@ -185,6 +197,8 @@ def dibujar(numeros):
         dibujo.create_line(coord, fill=num_color, width=3)
         dibujo.addtag_all
         
+        prev_selec = 7
+
     elif (numeros == 8): #Nro 8
 
         coord =i, y1,i+20 , y2-40
@@ -199,6 +213,8 @@ def dibujar(numeros):
         dibujo.create_line(coord, fill=num_color, width=3)
         dibujo.addtag_all
         
+        prev_selec = 8
+        
     elif (numeros == 9): #Nro 9
 
         coord =i, y1,i , y2-20
@@ -209,28 +225,44 @@ def dibujar(numeros):
         dibujo.create_line(coord, fill=num_color, width=3)
         coord =i, y1,i+20 , y2-40
         dibujo.create_line(coord, fill=num_color, width=3)
-        
+        dibujo.addtag_all
+
+        prev_selec = 9
+
     elif (numeros == "+"): #Suma
         
-        y1 = 10
-        y2 = 50
+        if prev_selec != "empty" and prev_selec != "+" and prev_selec != "*" and prev_selec != "(":
+            
+            y1 = 10
+            y2 = 50
 
-        coord =i+10, y1, i+10 , y2-10
-        dibujo.create_line(coord, fill=op_color, width=3)
-        coord =i, y1+15, i+20 , y2-25
-        dibujo.create_line(coord, fill=op_color, width=3)
-        dibujo.addtag_all
-        contadori=i+30
+            coord =i+10, y1, i+10 , y2-10
+            dibujo.create_line(coord, fill=op_color, width=3)
+            coord =i, y1+15, i+20 , y2-25
+            dibujo.create_line(coord, fill=op_color, width=3)
+            dibujo.addtag_all
+            prev_selec = "+"
+            contadori=i+30
+        
+        else:
+            return 0
 
     elif (numeros == "-"): #Resta
 
-        y1 = 10
-        y2 = 50
+        if prev_selec != "empty" and prev_selec != "-" and prev_selec != "*" and prev_selec != "(":
 
-        coord =i, y1+20,i+20 , y2-20
-        dibujo.create_line(coord, fill=op_color, width=3)
-        dibujo.addtag_all
-        contadori=i+30
+            y1 = 10
+            y2 = 50
+
+            coord =i, y1+20,i+20 , y2-20
+            dibujo.create_line(coord, fill=op_color, width=3)
+            dibujo.addtag_all
+            contadori=i+30
+
+            prev_selec = "-"
+
+        else:
+            return 0
         
     elif (numeros == "*"): #Multiplicacion
         
@@ -243,6 +275,8 @@ def dibujar(numeros):
         dibujo.create_line(coord, fill=op_color, width=3)
         dibujo.addtag_all
         contadori=i+30
+
+        prev_selec = "*"
 
     if (numeros =="^"): #Potencia
 
@@ -343,14 +377,11 @@ def dibujar(numeros):
         #dibujo.create_line(coord, fill=num_color)
         #coord =i, y1+5,i , y2-40
         #dibujo.create_line(coord, fill=num_color)
-
-        
-
-        
         #dibujo.addtag_all
+
         return 0
 
-    elif (numeros == 14): #Factorial
+    elif (numeros == "!"): #Factorial
 
         #recta vertical
         coord =i+3, y1,i+3 , y2-10
@@ -358,8 +389,9 @@ def dibujar(numeros):
         #punto
         coord=i,y1+40,i+5,y2-5
         dibujo.create_oval(coord,fill=op_color, width=3)
-
         dibujo.addtag_all
+
+        prev_selec = "!"
         
     elif (numeros == "sen("): #Seno 
 
@@ -402,6 +434,8 @@ def dibujar(numeros):
         
         dibujo.addtag_all
         i=i+60
+
+        prev_selec = "sen("
     
     elif (numeros == "cos("): #Coseno
 
@@ -443,7 +477,9 @@ def dibujar(numeros):
         dibujo.addtag_all
         i=i+60
 
-    elif (numeros == "tan("): #Tangente
+        prev_selec = "cos("
+
+    elif (numeros == "tan"): #Tangente
 
         #T
         coord =i+15, y1,i+15 , y2
@@ -485,6 +521,8 @@ def dibujar(numeros):
         dibujo.addtag_all
         i=i-20
 
+        prev_selec = "("
+
     elif (numeros == ")"): #Cierre parentesis
         i=i-10
         coord=i,y1-5,i+10,y2-35
@@ -495,6 +533,8 @@ def dibujar(numeros):
         dibujo.create_line(coord,fill=op_color, width=3)
         dibujo.addtag_all
         
+        prev_selec = ")"
+
     elif (numeros == "√"): #Raiz
 
         coord =i, y1+20,i+10, y2
@@ -508,7 +548,8 @@ def dibujar(numeros):
 
     i=i+30
     contadorf=contadorf+30
-  
+    text_square.insert(i, numeros)
+
 def limpiar():
 
     global i, y1, y2, contadori, contadorf
