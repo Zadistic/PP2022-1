@@ -81,6 +81,7 @@ def fraccion(numeros):
 
         i = contadori
         contadorf = i
+
         text_square.insert(i, numeros)
 
     else:
@@ -95,7 +96,6 @@ def dibujar(numeros):
         if prev_selec == "^":
 
             #0 Pequeño
-
             coord =i, y1-5, i+5 , y2-45
             dibujo.create_line(coord, fill=num_color)
             coord =i, y1-5, i , y2-35
@@ -130,7 +130,6 @@ def dibujar(numeros):
         if prev_selec == "^":
 
             #1 chiquito
-
             coord = i, y1-5, i, y2-30
             dibujo.create_line(coord, fill=num_color, width=2)
             dibujo.addtag_all
@@ -150,7 +149,6 @@ def dibujar(numeros):
         if prev_selec == "^":
 
             #2 chiquito
-
             coord = i, y1-5, i+5, y2-45
             dibujo.create_line(coord, fill=num_color)
             coord = i+5, y1-5, i+5, y2-42
@@ -184,7 +182,6 @@ def dibujar(numeros):
         if prev_selec == "^":
 
             #3 chiquito
-
             coord = i, y1-5, i+5, y2-45
             dibujo.create_line(coord, fill=num_color)
             coord = i+5, y1-5, i+5, y2-42
@@ -219,7 +216,6 @@ def dibujar(numeros):
         if prev_selec == "^":
 
             #4 chiquito
-
             coord =i, y1-5,i , y2-40
             dibujo.create_line(coord, fill=num_color)
             coord =i, y1,i+5 , y2-40
@@ -246,7 +242,6 @@ def dibujar(numeros):
         if prev_selec =="^":
 
             #5 chiquito
-
             coord =i, y1-5,i+5 , y2-45
             dibujo.create_line(coord, fill=num_color)
             coord =i, y1-5,i , y2-42
@@ -278,8 +273,7 @@ def dibujar(numeros):
 
         if prev_selec == "^":
 
-             #6 ciquito
-
+            #6 chiquito
             coord =i, y1-5 ,i+5 , y2-45
             dibujo.create_line(coord, fill=num_color)
             coord =i, y1-5 ,i , y2-40
@@ -314,7 +308,6 @@ def dibujar(numeros):
         if prev_selec == "^":
 
             #7 chiquito
-
             coord =i, y1-5,i+5 , y2-45
             dibujo.create_line(coord, fill=num_color)
             coord =i+5, y1-5,i+5 , y2-38
@@ -335,7 +328,6 @@ def dibujar(numeros):
         if prev_selec == "^":
 
             #8 chiquito
-
             coord =i, y1-5,i+5 , y2-45
             dibujo.create_line(coord, fill=num_color)
             coord =i, y1-5,i , y2-40
@@ -371,7 +363,6 @@ def dibujar(numeros):
         if prev_selec == "^":
 
             #9 chiquito
-
             coord =i, y1-5,i+5 , y2-45
             dibujo.create_line(coord, fill=num_color)
             coord =i, y1-5,i , y2-40
@@ -677,7 +668,7 @@ def limpiar():
     prev_selec = "empty"
 	 
 interfaz = Tk()
-interfaz.configure(background="grey70")
+interfaz.configure(background="#616161")
 interfaz.title("CALCULADORA")
 interfaz.minsize()
 fontStyle = tkFont.Font(family="Lucida Grande", size=22)
@@ -686,10 +677,10 @@ fila_base = 4
 altura = 1
 ancho = 10
 
-dibujo = Canvas(interfaz, bg="white")
-dibujo.grid(columnspan=8, ipadx=350, ipady=30, row= fila_base-3, column=0)
+dibujo = Canvas(interfaz, bg="#dbdbdb")
+dibujo.grid(columnspan=8, ipadx=349, ipady=30, row= fila_base-3, column=0)
 
-text_square = Entry(interfaz, width=70, font =("Lucida Grande", 20), bg="white", fg=num_color)
+text_square = Entry(interfaz, width=70, font =("Lucida Grande", 20), bg="#dbdbdb", fg=num_color)
 text_square.grid(columnspan=8, pady=10, ipady= 4, row= fila_base-2, column=0)
 
 #BOTONES COLORES
