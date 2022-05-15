@@ -442,8 +442,15 @@ def dibujar(numeros):
 
     if (numeros =="^"): #Potencia
 
-        prev_selec = "^"
-        i=i-30
+        if (prev_selec != "^" and prev_selec != "empty" and prev_selec != "+"
+        and prev_selec != "-" and prev_selec != "*" and prev_selec != "sen("
+        and prev_selec != "cos("and prev_selec != "tan(") and prev_selec != "(":
+
+            prev_selec = "^"
+            i=i-30
+        
+        else:
+            return 0
 
     elif (numeros == "!"): #Factorial
 
