@@ -2,6 +2,7 @@ from tkinter import*
 import tkinter as tk
 from tkinter import ttk
 import tkinter.font as tkFont
+from tkinter.tix import COLUMN
 
 x=20
 y1=10
@@ -9,60 +10,13 @@ y2=50
 i=x
 contadori=x
 contadorf=x
-op_color = "black"
-num_color = "black"
+op_color = "#0ba37b"
+num_color = "#ff0090"
 
 def color_change(color):
 
     global op_color, num_color
-
-    if color == "black":
-        op_color = "black"
-        num_color = "black"
-
-    elif color == "pink":
-        op_color = "#ff00aa"
-        num_color = "#ff00aa"
-
-    elif color == "purple":
-        op_color = "purple"
-        num_color = "purple"
-
-    elif color == "orange":
-        op_color = "orange"
-        num_color = "orange"
-
-    elif color == "cyan":
-        op_color = "cyan"
-        num_color = "cyan"
-
-    elif color == "green":
-        op_color = "green"
-        num_color = "green"
-
-    elif color == "yellow":
-        op_color = "yellow"
-        num_color = "yellow"
-
-    elif color == "dark_red":
-        op_color = "dark red"
-        num_color = "dark red"
-
-    elif color == "light_blue":
-        op_color = "#0099ad"
-        num_color = "#0099ad"
-
-    elif color == "red":
-        op_color = "red"
-        num_color = "red"
-
-    elif color == "light_green":
-        op_color = "#4dff00"
-        num_color = "#4dff00"
-
-    elif color == "blue":
-        op_color = "blue"
-        num_color = "blue"
+    return 0
 
 def fraccion(numeros): 
 
@@ -70,7 +24,7 @@ def fraccion(numeros):
 
     text_square.insert(i, numeros)
     coord = contadori, y1+45, i, y2+5
-    dibujo.create_line(coord, fill=op_color, width=4)
+    dibujo.create_line(coord, fill=op_color)
     dibujo.addtag_all
 
     y1 = 65
@@ -88,163 +42,179 @@ def dibujar(numeros):
     if (numeros == 0): #Nro 0
     
         coord =i, y1, i+20 , y2-40
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         coord =i, y1+40, i+20 , y2
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         coord =i, y1+40, i+20 , y2-40
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         coord =i, y1,i , y2
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         coord =i+20, y1, i+20 , y2
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         dibujo.addtag_all
 
-    elif (numeros == 1): #Nro 1
+    if (numeros == 1): #Nro 1
 
         coord = i+10, y1, i+10, y2
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         dibujo.addtag_all
         
-    elif (numeros == 2): #Nro 2
+    if (numeros == 2): #Nro 2
         
         coord = i, y1, i+20, y2-40
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         coord = i+20, y1, i+20, y2-20
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         coord = i+20, y1+20, i, y2-20
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         coord = i, y1+20, i, y2
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         coord = i, y1+40, i+20, y2
 
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         dibujo.addtag_all
         
-    elif (numeros == 3): #Nro 3
+    if (numeros == 3): #Nro 3
 
         coord = i, y1, i+20, y2-40
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         coord = i+20, y1, i+20, y2-20
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         coord = i+20, y1+20, i, y2-20
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         coord = i+20, y1+20, i+20, y2
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         coord = i, y1, i+20, y2-40
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         coord = i+20, y1+40, i, y2
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         dibujo.addtag_all
         
-    elif (numeros == 4): #Nro 4
+    if (numeros == 4): #Nro 4
 
         coord =i, y1+20,i , y2-40
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         coord =i, y1+20,i+20 , y2-20
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         coord =i+20, y1+20,i+20 , y2-40
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         coord =i+20, y1,i+20 , y2
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         dibujo.addtag_all
         
-    elif (numeros == 5): #Nro 5
+    if (numeros == 5): #Nro 5
 
         coord =i, y1,i+20 , y2-40
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         coord =i, y1,i , y2-20
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         coord =i, y1+20,i+20 , y2-20
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         coord =i+20, y1+20,i+20 , y2
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         coord =i+20, y1+40,i , y2
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         dibujo.addtag_all
         
-    elif (numeros == 6): #Nro 6
+    if (numeros == 6): #Nro 6
 
         coord =i, y1 ,i+20 , y2-40
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         coord =i, y1 ,i , y2
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         coord =i, y1+40 ,i+20 , y2
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         coord =i+20, y1+40,i+20 , y2-20
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         coord =i, y1+20,i+20, y2-20
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         dibujo.addtag_all
         
-    elif (numeros == 7): #Nro 7
+    if (numeros == 7): #Nro 7
 
         coord =i, y1,i+20 , y2-40
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         coord =i+20, y1,i+20 , y2
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         dibujo.addtag_all
         
-    elif (numeros == 8): #Nro 8
+    if (numeros == 8): #Nro 8
 
         coord =i, y1,i+20 , y2-40
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         coord =i, y1+40,i+20 , y2
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         coord =i, y1+20,i+20 , y2-20
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         coord =i, y1,i , y2
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         coord =i+20, y1,i+20 , y2
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         dibujo.addtag_all
         
-    elif (numeros == 9): #Nro 9
+    if (numeros == 9): #Nro 9
 
         coord =i, y1,i , y2-20
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         coord =i, y1+20,i+20 , y2-20
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         coord =i+20, y1,i+20 , y2
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         coord =i, y1,i+20 , y2-40
-        dibujo.create_line(coord, fill=num_color, width=3)
+        dibujo.create_line(coord, fill=num_color)
         
-    elif (numeros == "+"): #Suma
+    if (numeros == "+"): #Suma
         
         y1 = 10
         y2 = 50
 
         coord =i+10, y1, i+10 , y2-10
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         coord =i, y1+15, i+20 , y2-25
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         dibujo.addtag_all
         contadori=i+30
 
-    elif (numeros == "-"): #Resta
+    if (numeros == "-"): #Resta
 
         y1 = 10
         y2 = 50
 
         coord =i, y1+20,i+20 , y2-20
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         dibujo.addtag_all
         contadori=i+30
         
-    elif (numeros == "*"): #Multiplicacion
+    if (numeros == "*"): #Multiplicacion
         
         y1 = 10
         y2 = 50
         
         coord =i, y1+10, i+10, y2-15
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         coord =i+10, y1+10, i, y2-15
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         dibujo.addtag_all
         contadori=i+30
 
-    elif (numeros =="^"): #Potencia 
-        #if( numeros==2):
+    if (numeros =="^"): #Potencia 
+        #0 chiquito
+        #coord =i, y1-5, i+5 , y2-45
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i, y1-5, i , y2-35
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i, y1+5, i+5 , y2-35
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i+5, y1+5, i+5 , y2-45
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i, y1+5, i+5 , y2-45
+        #dibujo.create_line(coord, fill=num_color)
+        
+        #1 chiquito
+        #coord = i, y1-5, i, y2-40
+        #dibujo.create_line(coord, fill=num_color)
+        #dibujo.addtag_all
+        #2 chiquito
          #   coord = i, y1-5, i+5, y2-45
           #  dibujo.create_line(coord, fill=num_color)
            # coord = i+5, y1-5, i+5, y2-42
@@ -256,163 +226,254 @@ def dibujar(numeros):
             #coord = i, y1+1, i+5, y2-39
             #dibujo.create_line(coord, fill=num_color)
             #dibujo.addtag_all
-        return 0
+        #3 chiquito
+        #coord = i, y1-5, i+5, y2-45
+        #dibujo.create_line(coord, fill=num_color)
+        #coord = i+5, y1-5, i+5, y2-42
+        #dibujo.create_line(coord, fill=num_color)
+        #coord = i+5, y1-2, i, y2-42
+        #dibujo.create_line(coord, fill=num_color)
+        #coord = i+5, y1-5, i+5, y2-39
+        #dibujo.create_line(coord, fill=num_color)
+        #coord = i+5, y1+1, i, y2-39
+        #dibujo.create_line(coord, fill=num_color)
+        #4 chiquito
+        #coord =i, y1-5,i , y2-40
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i, y1,i+5 , y2-40
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i+5, y1-5,i+5 , y2-35
+        #dibujo.create_line(coord, fill=num_color)
+        #5 chiquito
+        #coord =i, y1-5,i+5 , y2-45
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i, y1-5,i , y2-42
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i, y1-2,i+5 , y2-42
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i+5, y1-2,i+5 , y2-39
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i+5, y1+1,i , y2-39
+        #dibujo.create_line(coord, fill=num_color)
+        #6 ciquito
+        #coord =i, y1-5 ,i+5 , y2-45
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i, y1-5 ,i , y2-40
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i, y1 ,i+5 , y2-40
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i+5, y1 ,i+5 , y2-35
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i+5, y1+5 ,i , y2-35
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i, y1+5 ,i , y2-40
+        #dibujo.create_line(coord, fill=num_color)
+        #7 chiquito
+        #coord =i, y1-5,i+5 , y2-45
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i+5, y1-5,i+5 , y2-38
+        #dibujo.create_line(coord, fill=num_color)
+        #9 chiquito
+        #coord =i, y1-5,i+5 , y2-45
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i, y1-5,i , y2-40
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i, y1,i+5 , y2-40
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i+5, y1-5,i+5 , y2-35
+        #dibujo.create_line(coord, fill=num_color)
+        #8 chiquito
+        #coord =i, y1-5,i+5 , y2-45
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i, y1-5,i , y2-40
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i, y1,i+5 , y2-40
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i+5, y1-5,i+5 , y2-35
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i+5, y1+5,i , y2-35
+        #dibujo.create_line(coord, fill=num_color)
+        #coord =i, y1+5,i , y2-40
+        #dibujo.create_line(coord, fill=num_color)
 
-    elif (numeros == 14): #Factorial
+        
+
+        
+        #dibujo.addtag_all
+        return 0
+        
+        
+        
+        
+        
+        
+
+        
+
+    if (numeros == 14): #Factorial
 
         #recta vertical
         coord =i+3, y1,i+3 , y2-10
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         #punto
         coord=i,y1+40,i+5,y2-5
-        dibujo.create_oval(coord,fill=op_color, width=3)
+        dibujo.create_oval(coord,fill=op_color)
 
         dibujo.addtag_all
         
-    elif (numeros == "sen("): #Seno 
+    if (numeros == "sen("): #Seno 
 
         #S
         coord =i, y1,i+20 , y2-40
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         coord =i, y1,i, y2-20
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         coord =i, y1+20,i+20, y2-20
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         coord =i+20, y1+20,i+20, y2
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         coord =i+20, y1+40,i, y2
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         #E
         coord =i+25, y1,i+45, y2-40
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         coord =i+25, y1,i+25, y2-20
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         coord =i+25, y1+20,i+45, y2-20
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         coord =i+25, y1+20,i+25, y2
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         coord =i+25, y1+40,i+45, y2
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         #N
         coord =i+50, y1,i+50, y2
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         coord =i+50, y1,i+75, y2
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         coord =i+75, y1,i+75, y2
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         #(
         coord=i+90,y1-5,i+80,y2-35
-        dibujo.create_line(coord,fill=op_color, width=3)
+        dibujo.create_line(coord,fill=op_color)
         coord=i+80,y1+5,i+80,y2-5
-        dibujo.create_line(coord,fill=op_color, width=3)
+        dibujo.create_line(coord,fill=op_color)
         coord=i+80,y1+35,i+90,y2+5
-        dibujo.create_line(coord,fill=op_color, width=3)
+        dibujo.create_line(coord,fill=op_color)
         
+    
         dibujo.addtag_all
         i=i+60
     
-    elif (numeros == "cos("): #Coseno
+    if (numeros == "cos("): #Coseno
 
         #C
         coord =i, y1,i+20 , y2-40
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         coord=i,y1,i,y2
-        dibujo.create_line(coord,fill=op_color, width=3)
+        dibujo.create_line(coord,fill=op_color)
         coord =i, y1+40,i+20 , y2
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         #O
         coord =i+25, y1, i+45 , y2-40
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         coord =i+25, y1+40, i+45 , y2
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         coord =i+25, y1,i+25 , y2
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         coord =i+45, y1, i+45 , y2
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         #S
         coord =i+50, y1,i+70 , y2-40
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         coord =i+50, y1,i+50, y2-20
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         coord =i+50, y1+20,i+70, y2-20
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         coord =i+70, y1+20,i+70, y2
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         coord =i+70, y1+40,i+50, y2
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         dibujo.addtag_all
         #(
         coord=i+85,y1-5,i+75,y2-35
-        dibujo.create_line(coord,fill=op_color, width=3)
+        dibujo.create_line(coord,fill=op_color)
         coord=i+75,y1+5,i+75,y2-5
-        dibujo.create_line(coord,fill=op_color, width=3)
+        dibujo.create_line(coord,fill=op_color)
         coord=i+75,y1+35,i+85,y2+5
-        dibujo.create_line(coord,fill=op_color, width=3)
+        dibujo.create_line(coord,fill=op_color)
         dibujo.addtag_all
         i=i+60
 
-    elif (numeros == "tan("): #Tangente
+        
+
+    if (numeros == "tan("): #Tangente
 
         #T
         coord =i+15, y1,i+15 , y2
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         coord =i, y1,i+30 , y2-40
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         #A
         coord =i+30, y1+40,i+40 , y2-40
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         coord =i+40, y1,i+50 , y2
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         coord =i+35, y1+20,i+45 , y2-20
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         #N
         coord =i+52, y1,i+52, y2
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         coord =i+52, y1,i+77, y2
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         coord =i+77, y1,i+77, y2
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         #(
         coord=i+92,y1-5,i+82,y2-35
-        dibujo.create_line(coord,fill=op_color, width=3)
+        dibujo.create_line(coord,fill=op_color)
         coord=i+82,y1+5,i+82,y2-5
-        dibujo.create_line(coord,fill=op_color, width=3)
+        dibujo.create_line(coord,fill=op_color)
         coord=i+82,y1+35,i+92,y2+5
-        dibujo.create_line(coord,fill=op_color, width=3)
+        dibujo.create_line(coord,fill=op_color)
         dibujo.addtag_all
 
+        
         i=i+60
 
-    elif (numeros == "("): #Abre Parentesis
+    if (numeros == "("): #Abre Parentesis
         coord=i+10,y1-5,i,y2-35
-        dibujo.create_line(coord,fill=op_color, width=3)
+        dibujo.create_line(coord,fill=op_color)
         coord=i,y1+5,i,y2-5
-        dibujo.create_line(coord,fill=op_color, width=3)
+        dibujo.create_line(coord,fill=op_color)
         coord=i,y1+35,i+10,y2+5
-        dibujo.create_line(coord,fill=op_color, width=3)
+        dibujo.create_line(coord,fill=op_color)
         dibujo.addtag_all
         i=i-20
 
-    elif (numeros == ")"): #Cierre parentesis
+        
+
+    if (numeros == ")"): #Cierre parentesis
         i=i-10
         coord=i,y1-5,i+10,y2-35
-        dibujo.create_line(coord,fill=op_color, width=3)
+        dibujo.create_line(coord,fill=op_color)
         coord=i+10,y1+5,i+10,y2-5
-        dibujo.create_line(coord,fill=op_color, width=3)
+        dibujo.create_line(coord,fill=op_color)
         coord=i+10,y1+35,i,y2+5
-        dibujo.create_line(coord,fill=op_color, width=3)
+        dibujo.create_line(coord,fill=op_color)
         dibujo.addtag_all
         
-    elif (numeros == "√"): #Raiz
+        
+        
+    if(numeros == "√"): #Raiz
 
         coord =i, y1+20,i+10, y2
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         coord =i+10, y1+40,i+15, y2-45
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
         coord =i+15, y1-5,i+25, y2-45
-        dibujo.create_line(coord, fill=op_color, width=3)
+        dibujo.create_line(coord, fill=op_color)
 
         dibujo.addtag_all
+        
 
     i=i+30
     contadorf=contadorf+30
@@ -438,55 +499,57 @@ fontStyle = tkFont.Font(family="Lucida Grande", size=22)
 
 fila_base = 4
 altura = 1
-ancho = 10
+ancho = 8
 
-dibujo = Canvas(interfaz, bg="white")
-dibujo.grid(columnspan=8, ipadx=350, ipady=30, row= fila_base-3, column=0)
+dibujo = Canvas(interfaz)
+dibujo.grid(columnspan=8, pady=10, ipadx=315, ipady=30, row= fila_base-3, column=0)
 
-text_square = Entry(interfaz, width=70, font =("Lucida Grande", 20), bg="white", fg=num_color)
-text_square.grid(columnspan=8, pady=10, ipady= 4, row= fila_base-2, column=0)
+text_square = Entry(interfaz, width=60, font =("Lucida Grande", 20))
+text_square.grid(columnspan=8, ipady= 4, row= fila_base-2, column=0)
 
-#BOTONES COLORES
-
-black_color = Button(interfaz, bg= "black",
-command= lambda:color_change("black"), height=altura+2, width=7)
+black_color = Button(master = interfaz, bg= "black", width=2,
+command=color_change("black"), height=altura+1)
 black_color.grid(row= fila_base+1, column=5)
-pink_color = Button(interfaz, bg= "#ff00aa",
-command= lambda:color_change("pink"), height=altura+2, width=7)
+pink_color = Button(master = interfaz, bg= "#ff1fff", width=2,
+command=color_change("pink"), height=altura+1)
 pink_color.grid(row= fila_base+1, column=6)
-purple_color = Button(interfaz, bg= "purple",
-command= lambda:color_change("purple"), height=altura+2, width=7)
+purple_color = Button(master = interfaz, bg= "purple", width=2,
+command=color_change("purple"), height=altura+1)
 purple_color.grid(row= fila_base+1, column=7)
 
-orange_color = Button(interfaz, bg= "orange",
-command= lambda:color_change("orange"), height=altura+2, width=7)
-orange_color.grid(row= fila_base+2, column=5)
-cyan_color = Button(interfaz, bg= "cyan",
-command= lambda:color_change("cyan"), height=altura+2, width=7)
-cyan_color.grid(row= fila_base+2, column=6)
-green_color = Button(interfaz, bg= "green",
-command= lambda:color_change("green"), height=altura+2, width=7)
-green_color.grid(row= fila_base+2, column=7)
 
-yellow_color = Button(interfaz, bg= "yellow",
-command= lambda:color_change("yellow"), height=altura+2, width=7)
+orange_color = Button(master = interfaz, bg= "orange", width=2,
+command=color_change("orange"), height=altura+1)
+orange_color.grid(row= fila_base+2, column=5)
+green_color = Button(master = interfaz, bg= "green", width=2,
+command=color_change("green"), height=altura+1)
+green_color.grid(row= fila_base+2, column=7)
+cyan_color = Button(master = interfaz, bg= "cyan", width=2,
+command=color_change("cyan"), height=altura+1)
+cyan_color.grid(row= fila_base+2, column=6)
+
+
+red_color = Button(master = interfaz, bg= "red", width=2,
+command=color_change("red"), height=altura+1)
+red_color.grid(row= fila_base+4, column=5)
+light_green_color = Button(master = interfaz, bg= "#4dff00", width=2,
+command=color_change("light_green"), height=altura+1)
+light_green_color.grid(row= fila_base+4, column=6)
+blue_color = Button(master = interfaz, bg= "blue", width=2,
+command=color_change("blue"), height=altura+1)
+blue_color.grid(row= fila_base+4, column=7)
+
+
+yellow_color = Button(master = interfaz, bg= "yellow", width=2,
+command=color_change("yellow"), height=altura+1)
 yellow_color.grid(row= fila_base+3, column=5)
-burdeo_color = Button(interfaz, bg= "dark red",
-command= lambda:color_change("dark_red"), height=altura+2, width=7)
+burdeo_color = Button(master = interfaz, bg= "dark red", width=2,
+command=color_change("dark_red"), height=altura+1)
 burdeo_color.grid(row= fila_base+3, column=6)
-light_blue_color = Button(interfaz, bg= "#0099ad",
-command= lambda:color_change("light_blue"), height=altura+2, width=7)
+light_blue_color = Button(master = interfaz, bg= "#0099ad", width=2,
+command=color_change("light_blue"), height=altura+1)
 light_blue_color.grid(row= fila_base+3, column=7)
 
-red_color = Button(interfaz, bg= "red",
-command= lambda:color_change("red"), height=altura+2, width=7)
-red_color.grid(row= fila_base+4, column=5)
-light_green_color = Button(interfaz, bg= "#4dff00",
-command= lambda:color_change("light_green"), height=altura+2, width=7)
-light_green_color.grid(row= fila_base+4, column=6)
-blue_color = Button(interfaz, bg= "blue",
-command= lambda:color_change("blue"), height=altura+2, width=7)
-blue_color.grid(row= fila_base+4, column=7)
 
 #Botón para número 1
 case1 = Button(interfaz, text=" 1 ", font= fontStyle, fg="white", bg="grey39",
@@ -564,7 +627,7 @@ height=altura, width=ancho)
 resol.grid(row=fila_base+4, column=3)
 
 #Botón para VACIAR
-vaciar = Button(interfaz, text=" CE ", relief=FLAT, font= fontStyle, fg="white", bg="#611115",
+vaciar = Button(interfaz, text=" CE ",relief=FLAT, font= fontStyle, fg="white", bg="#611115",
 command=limpiar, height=altura, width=ancho)
 vaciar.grid(row=fila_base, column=4)
 
@@ -574,17 +637,17 @@ command=lambda:dibujar("!"), height=altura, width=ancho)
 fact.grid(row=fila_base, column=0)
 
 #Botón para operador seno
-seno = Button(interfaz, text=" sen ", font = fontStyle, fg= "white", bg="grey39",
+seno = Button(interfaz, text=" sen() ", font = fontStyle, fg= "white", bg="grey39",
 command=lambda:dibujar("sen("), height=altura, width=ancho)
 seno.grid(row=fila_base+1, column=0)
 
 #Botón para operador coseno
-coseno = Button(interfaz, text=" cos ", font = fontStyle, fg= "white", bg="grey39",
+coseno = Button(interfaz, text=" cos() ", font = fontStyle, fg= "white", bg="grey39",
 command=lambda:dibujar("cos("), height=altura, width=ancho)
 coseno.grid(row=fila_base+2, column=0)
 
 #Botón para operador tangente
-tang = Button(interfaz, text=" tan ", font = fontStyle, fg= "white", bg="grey39",
+tang = Button(interfaz, text=" tan() ", font = fontStyle, fg= "white", bg="grey39",
 command=lambda:dibujar("tan("), height=altura, width=ancho)
 tang.grid(row=fila_base+3, column=0)
 
@@ -614,7 +677,7 @@ command = lambda:dibujar(")"), height=altura, width=ancho)
 cierreP.grid(row =fila_base, column= 3)
 
 #Botón para Activar Coordenadas
-coords = Button(interfaz, text=" coords", font=fontStyle, fg="white", bg="grey39", width=ancho)
+coords = Button(interfaz, text=" coords", font=fontStyle, fg="white", bg="grey39",)
 coords.grid(row=fila_base, column=5, columnspan=3)
 
 interfaz.mainloop()
