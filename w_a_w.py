@@ -70,16 +70,21 @@ def fraccion(numeros):
 
     global i, y1, y2, contadori, contadorf
 
-    text_square.insert(i, numeros)
-    coord = contadori, y1+45, i, y2+5
-    dibujo.create_line(coord, fill=op_color, width=4)
-    dibujo.addtag_all
+    if prev_selec != "empty":
 
-    y1 = 65
-    y2 = 105
+        coord = contadori, y1+45, i, y2+5
+        dibujo.create_line(coord, fill=op_color, width=4)
+        dibujo.addtag_all
 
-    i = contadori
-    contadorf = i
+        y1 = 65
+        y2 = 105
+
+        i = contadori
+        contadorf = i
+        text_square.insert(i, numeros)
+
+    else:
+        return 0
 
 def dibujar(numeros):
    
