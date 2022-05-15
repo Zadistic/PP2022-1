@@ -451,16 +451,22 @@ def dibujar(numeros):
 
     elif (numeros == "!"): #Factorial
 
-        #recta vertical
-        coord =i+3, y1,i+3 , y2-10
-        dibujo.create_line(coord, fill=op_color, width=3)
-        #punto
-        coord=i,y1+40,i+5,y2-5
-        dibujo.create_oval(coord,fill=op_color, width=3)
-        dibujo.addtag_all
+        if (prev_selec != "sen(" and prev_selec != "cos(" and prev_selec != "tan(" and 
+        prev_selec != "(" and prev_selec != "empty" and prev_selec != "+" and prev_selec != "-" and prev_selec != "*"):
 
-        prev_selec = "!"
+            #recta vertical
+            coord =i+3, y1,i+3 , y2-10
+            dibujo.create_line(coord, fill=op_color, width=3)
+            #punto
+            coord=i,y1+40,i+5,y2-5
+            dibujo.create_oval(coord,fill=op_color, width=1)
+            dibujo.addtag_all
+
+            prev_selec = "!"
         
+        else:
+            return 0
+
     elif (numeros == "sen("): #Seno 
 
         if (prev_selec == 1 or prev_selec == 2 or prev_selec == 3 or prev_selec == 4 or prev_selec == 5 or prev_selec == 6 
