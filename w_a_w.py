@@ -392,7 +392,7 @@ def dibujar(numeros):
 
     elif (numeros == "+"): #Suma
         
-        if prev_selec != "empty" and prev_selec != "+" and prev_selec != "*" and prev_selec != "(":
+        if prev_selec != "empty" and prev_selec != "+" and prev_selec != "*" and prev_selec != "(" and prev_selec != "^":
             
             y1 = 10
             y2 = 50
@@ -410,7 +410,7 @@ def dibujar(numeros):
 
     elif (numeros == "-"): #Resta
 
-        if prev_selec != "empty" and prev_selec != "-" and prev_selec != "*":
+        if prev_selec != "empty" and prev_selec != "-" and prev_selec != "*" and prev_selec != "^":
 
             y1 = 10
             y2 = 50
@@ -427,7 +427,7 @@ def dibujar(numeros):
         
     elif (numeros == "*"): #Multiplicacion
         
-        if prev_selec != "empty" and prev_selec != "*" and prev_selec != "+" and prev_selec != "-":
+        if prev_selec != "empty" and prev_selec != "*" and prev_selec != "+" and prev_selec != "-" and prev_selec != "^":
 
             y1 = 10
             y2 = 50
