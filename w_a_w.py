@@ -620,7 +620,7 @@ def dibujar(numeros):
 
 def limpiar():
 
-    global i, y1, y2, contadori, contadorf
+    global i, y1, y2, contadori, contadorf, prev_selec
     
     text_square.delete(0, 'end')
     dibujo.delete("all")
@@ -630,6 +630,7 @@ def limpiar():
     contadori=x
     y1 = 10
     y2 = 50
+    prev_selec = "empty"
 	 
 interfaz = Tk()
 interfaz.configure(background="grey70")
