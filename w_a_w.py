@@ -142,17 +142,35 @@ def dibujar(numeros):
 
     elif (numeros == 2): #Nro 2
         
-        coord = i, y1, i+20, y2-40
-        dibujo.create_line(coord, fill=num_color, width=3)
-        coord = i+20, y1, i+20, y2-20
-        dibujo.create_line(coord, fill=num_color, width=3)
-        coord = i+20, y1+20, i, y2-20
-        dibujo.create_line(coord, fill=num_color, width=3)
-        coord = i, y1+20, i, y2
-        dibujo.create_line(coord, fill=num_color, width=3)
-        coord = i, y1+40, i+20, y2
-        dibujo.create_line(coord, fill=num_color, width=3)
-        dibujo.addtag_all
+        if prev_selec == "^":
+
+            #2 chiquito
+
+            coord = i, y1-5, i+5, y2-45
+            dibujo.create_line(coord, fill=num_color)
+            coord = i+5, y1-5, i+5, y2-42
+            dibujo.create_line(coord, fill=num_color)
+            coord = i+5, y1-2, i, y2-42
+            dibujo.create_line(coord, fill=num_color)
+            coord = i, y1-2, i, y2-39
+            dibujo.create_line(coord, fill=num_color)
+            coord = i, y1+1, i+5, y2-39
+            dibujo.create_line(coord, fill=num_color)
+            dibujo.addtag_all
+
+        else:
+
+            coord = i, y1, i+20, y2-40
+            dibujo.create_line(coord, fill=num_color, width=3)
+            coord = i+20, y1, i+20, y2-20
+            dibujo.create_line(coord, fill=num_color, width=3)
+            coord = i+20, y1+20, i, y2-20
+            dibujo.create_line(coord, fill=num_color, width=3)
+            coord = i, y1+20, i, y2
+            dibujo.create_line(coord, fill=num_color, width=3)
+            coord = i, y1+40, i+20, y2
+            dibujo.create_line(coord, fill=num_color, width=3)
+            dibujo.addtag_all
 
         prev_selec = 2
         
@@ -317,18 +335,7 @@ def dibujar(numeros):
     if (numeros =="^"): #Potencia
         
 
-        #2 chiquito
-         #   coord = i, y1-5, i+5, y2-45
-          #  dibujo.create_line(coord, fill=num_color)
-           # coord = i+5, y1-5, i+5, y2-42
-           # dibujo.create_line(coord, fill=num_color)
-            #coord = i+5, y1-2, i, y2-42
-            #dibujo.create_line(coord, fill=num_color)
-            #coord = i, y1-2, i, y2-39
-            #dibujo.create_line(coord, fill=num_color)
-            #coord = i, y1+1, i+5, y2-39
-            #dibujo.create_line(coord, fill=num_color)
-            #dibujo.addtag_all
+
         #3 chiquito
         #coord = i, y1-5, i+5, y2-45
         #dibujo.create_line(coord, fill=num_color)
