@@ -103,8 +103,9 @@ def dibujar(numeros):
             dibujo.create_line(coord, fill=num_color)
 
             prev_selec = 0
-        else:
 
+        else:
+            
             coord =i, y1, i+20 , y2-40
             dibujo.create_line(coord, fill=num_color, width=3)
             coord =i, y1+40, i+20 , y2
@@ -121,11 +122,23 @@ def dibujar(numeros):
 
     elif (numeros == 1): #Nro 1
 
-        coord = i+10, y1, i+10, y2
-        dibujo.create_line(coord, fill=num_color, width=3)
-        dibujo.addtag_all
+        if prev_selec == "^":
 
-        prev_selec = 1
+            #1 chiquito
+
+            coord = i, y1-5, i, y2-30
+            dibujo.create_line(coord, fill=num_color, width=2)
+            dibujo.addtag_all
+
+            prev_selec = 1
+        
+        else:
+
+            coord = i+10, y1, i+10, y2
+            dibujo.create_line(coord, fill=num_color, width=3)
+            dibujo.addtag_all
+
+            prev_selec = 1
 
     elif (numeros == 2): #Nro 2
         
@@ -303,10 +316,7 @@ def dibujar(numeros):
 
     if (numeros =="^"): #Potencia
         
-        #1 chiquito
-        #coord = i, y1-5, i, y2-40
-        #dibujo.create_line(coord, fill=num_color)
-        #dibujo.addtag_all
+
         #2 chiquito
          #   coord = i, y1-5, i+5, y2-45
           #  dibujo.create_line(coord, fill=num_color)
@@ -392,7 +402,7 @@ def dibujar(numeros):
 
         prev_selec = "^"
         i=i-30
-        
+
     elif (numeros == "!"): #Factorial
 
         #recta vertical
