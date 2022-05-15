@@ -463,145 +463,178 @@ def dibujar(numeros):
         
     elif (numeros == "sen("): #Seno 
 
-        #S
-        coord =i, y1,i+20 , y2-40
-        dibujo.create_line(coord, fill=op_color, width=3)
-        coord =i, y1,i, y2-20
-        dibujo.create_line(coord, fill=op_color, width=3)
-        coord =i, y1+20,i+20, y2-20
-        dibujo.create_line(coord, fill=op_color, width=3)
-        coord =i+20, y1+20,i+20, y2
-        dibujo.create_line(coord, fill=op_color, width=3)
-        coord =i+20, y1+40,i, y2
-        dibujo.create_line(coord, fill=op_color, width=3)
-        #E
-        coord =i+25, y1,i+45, y2-40
-        dibujo.create_line(coord, fill=op_color, width=3)
-        coord =i+25, y1,i+25, y2-20
-        dibujo.create_line(coord, fill=op_color, width=3)
-        coord =i+25, y1+20,i+45, y2-20
-        dibujo.create_line(coord, fill=op_color, width=3)
-        coord =i+25, y1+20,i+25, y2
-        dibujo.create_line(coord, fill=op_color, width=3)
-        coord =i+25, y1+40,i+45, y2
-        dibujo.create_line(coord, fill=op_color, width=3)
-        #N
-        coord =i+50, y1,i+50, y2
-        dibujo.create_line(coord, fill=op_color, width=3)
-        coord =i+50, y1,i+75, y2
-        dibujo.create_line(coord, fill=op_color, width=3)
-        coord =i+75, y1,i+75, y2
-        dibujo.create_line(coord, fill=op_color, width=3)
-        #(
-        coord=i+90,y1-5,i+80,y2-35
-        dibujo.create_line(coord,fill=op_color, width=3)
-        coord=i+80,y1+5,i+80,y2-5
-        dibujo.create_line(coord,fill=op_color, width=3)
-        coord=i+80,y1+35,i+90,y2+5
-        dibujo.create_line(coord,fill=op_color, width=3)
-        
-        dibujo.addtag_all
-        i=i+60
+        if (prev_selec == 1 or prev_selec == 2 or prev_selec == 3 or prev_selec == 4 or prev_selec == 5 or prev_selec == 6 
+        or prev_selec == 7 or prev_selec == 8 or prev_selec == 9 or prev_selec == 0):
 
-        prev_selec = "sen("
+            return 0
+
+        else:
+
+            #S
+            coord =i, y1,i+20 , y2-40
+            dibujo.create_line(coord, fill=op_color, width=3)
+            coord =i, y1,i, y2-20
+            dibujo.create_line(coord, fill=op_color, width=3)
+            coord =i, y1+20,i+20, y2-20
+            dibujo.create_line(coord, fill=op_color, width=3)
+            coord =i+20, y1+20,i+20, y2
+            dibujo.create_line(coord, fill=op_color, width=3)
+            coord =i+20, y1+40,i, y2
+            dibujo.create_line(coord, fill=op_color, width=3)
+            #E
+            coord =i+25, y1,i+45, y2-40
+            dibujo.create_line(coord, fill=op_color, width=3)
+            coord =i+25, y1,i+25, y2-20
+            dibujo.create_line(coord, fill=op_color, width=3)
+            coord =i+25, y1+20,i+45, y2-20
+            dibujo.create_line(coord, fill=op_color, width=3)
+            coord =i+25, y1+20,i+25, y2
+            dibujo.create_line(coord, fill=op_color, width=3)
+            coord =i+25, y1+40,i+45, y2
+            dibujo.create_line(coord, fill=op_color, width=3)
+            #N
+            coord =i+50, y1,i+50, y2
+            dibujo.create_line(coord, fill=op_color, width=3)
+            coord =i+50, y1,i+75, y2
+            dibujo.create_line(coord, fill=op_color, width=3)
+            coord =i+75, y1,i+75, y2
+            dibujo.create_line(coord, fill=op_color, width=3)
+            #(
+            coord=i+90,y1-5,i+80,y2-35
+            dibujo.create_line(coord,fill=op_color, width=3)
+            coord=i+80,y1+5,i+80,y2-5
+            dibujo.create_line(coord,fill=op_color, width=3)
+            coord=i+80,y1+35,i+90,y2+5
+            dibujo.create_line(coord,fill=op_color, width=3)
+            
+            dibujo.addtag_all
+            i=i+60
+
+            prev_selec = "sen("
     
     elif (numeros == "cos("): #Coseno
 
-        #C
-        coord =i, y1,i+20 , y2-40
-        dibujo.create_line(coord, fill=op_color, width=3)
-        coord=i,y1,i,y2
-        dibujo.create_line(coord,fill=op_color, width=3)
-        coord =i, y1+40,i+20 , y2
-        dibujo.create_line(coord, fill=op_color, width=3)
-        #O
-        coord =i+25, y1, i+45 , y2-40
-        dibujo.create_line(coord, fill=op_color, width=3)
-        coord =i+25, y1+40, i+45 , y2
-        dibujo.create_line(coord, fill=op_color, width=3)
-        coord =i+25, y1,i+25 , y2
-        dibujo.create_line(coord, fill=op_color, width=3)
-        coord =i+45, y1, i+45 , y2
-        dibujo.create_line(coord, fill=op_color, width=3)
-        #S
-        coord =i+50, y1,i+70 , y2-40
-        dibujo.create_line(coord, fill=op_color, width=3)
-        coord =i+50, y1,i+50, y2-20
-        dibujo.create_line(coord, fill=op_color, width=3)
-        coord =i+50, y1+20,i+70, y2-20
-        dibujo.create_line(coord, fill=op_color, width=3)
-        coord =i+70, y1+20,i+70, y2
-        dibujo.create_line(coord, fill=op_color, width=3)
-        coord =i+70, y1+40,i+50, y2
-        dibujo.create_line(coord, fill=op_color, width=3)
-        dibujo.addtag_all
-        #(
-        coord=i+85,y1-5,i+75,y2-35
-        dibujo.create_line(coord,fill=op_color, width=3)
-        coord=i+75,y1+5,i+75,y2-5
-        dibujo.create_line(coord,fill=op_color, width=3)
-        coord=i+75,y1+35,i+85,y2+5
-        dibujo.create_line(coord,fill=op_color, width=3)
-        dibujo.addtag_all
-        i=i+60
+        if (prev_selec == 1 or prev_selec == 2 or prev_selec == 3 or prev_selec == 4 or prev_selec == 5 or prev_selec == 6 
+        or prev_selec == 7 or prev_selec == 8 or prev_selec == 9 or prev_selec == 0):
 
-        prev_selec = "cos("
+            return 0
 
-    elif (numeros == "tan"): #Tangente
+        else:
 
-        #T
-        coord =i+15, y1,i+15 , y2
-        dibujo.create_line(coord, fill=op_color, width=3)
-        coord =i, y1,i+30 , y2-40
-        dibujo.create_line(coord, fill=op_color, width=3)
-        #A
-        coord =i+30, y1+40,i+40 , y2-40
-        dibujo.create_line(coord, fill=op_color, width=3)
-        coord =i+40, y1,i+50 , y2
-        dibujo.create_line(coord, fill=op_color, width=3)
-        coord =i+35, y1+20,i+45 , y2-20
-        dibujo.create_line(coord, fill=op_color, width=3)
-        #N
-        coord =i+52, y1,i+52, y2
-        dibujo.create_line(coord, fill=op_color, width=3)
-        coord =i+52, y1,i+77, y2
-        dibujo.create_line(coord, fill=op_color, width=3)
-        coord =i+77, y1,i+77, y2
-        dibujo.create_line(coord, fill=op_color, width=3)
-        #(
-        coord=i+92,y1-5,i+82,y2-35
-        dibujo.create_line(coord,fill=op_color, width=3)
-        coord=i+82,y1+5,i+82,y2-5
-        dibujo.create_line(coord,fill=op_color, width=3)
-        coord=i+82,y1+35,i+92,y2+5
-        dibujo.create_line(coord,fill=op_color, width=3)
-        dibujo.addtag_all
+            #C
+            coord =i, y1,i+20 , y2-40
+            dibujo.create_line(coord, fill=op_color, width=3)
+            coord=i,y1,i,y2
+            dibujo.create_line(coord,fill=op_color, width=3)
+            coord =i, y1+40,i+20 , y2
+            dibujo.create_line(coord, fill=op_color, width=3)
+            #O
+            coord =i+25, y1, i+45 , y2-40
+            dibujo.create_line(coord, fill=op_color, width=3)
+            coord =i+25, y1+40, i+45 , y2
+            dibujo.create_line(coord, fill=op_color, width=3)
+            coord =i+25, y1,i+25 , y2
+            dibujo.create_line(coord, fill=op_color, width=3)
+            coord =i+45, y1, i+45 , y2
+            dibujo.create_line(coord, fill=op_color, width=3)
+            #S
+            coord =i+50, y1,i+70 , y2-40
+            dibujo.create_line(coord, fill=op_color, width=3)
+            coord =i+50, y1,i+50, y2-20
+            dibujo.create_line(coord, fill=op_color, width=3)
+            coord =i+50, y1+20,i+70, y2-20
+            dibujo.create_line(coord, fill=op_color, width=3)
+            coord =i+70, y1+20,i+70, y2
+            dibujo.create_line(coord, fill=op_color, width=3)
+            coord =i+70, y1+40,i+50, y2
+            dibujo.create_line(coord, fill=op_color, width=3)
+            dibujo.addtag_all
+            #(
+            coord=i+85,y1-5,i+75,y2-35
+            dibujo.create_line(coord,fill=op_color, width=3)
+            coord=i+75,y1+5,i+75,y2-5
+            dibujo.create_line(coord,fill=op_color, width=3)
+            coord=i+75,y1+35,i+85,y2+5
+            dibujo.create_line(coord,fill=op_color, width=3)
+            dibujo.addtag_all
+            i=i+60
 
-        i=i+60
+            prev_selec = "cos("
+
+    elif (numeros == "tan("): #Tangente
+
+        if (prev_selec == 1 or prev_selec == 2 or prev_selec == 3 or prev_selec == 4 or prev_selec == 5 or prev_selec == 6 
+        or prev_selec == 7 or prev_selec == 8 or prev_selec == 9 or prev_selec == 0):
+
+            return 0
+
+        else:
+
+            #T
+            coord =i+15, y1,i+15 , y2
+            dibujo.create_line(coord, fill=op_color, width=3)
+            coord =i, y1,i+30 , y2-40
+            dibujo.create_line(coord, fill=op_color, width=3)
+            #A
+            coord =i+30, y1+40,i+40 , y2-40
+            dibujo.create_line(coord, fill=op_color, width=3)
+            coord =i+40, y1,i+50 , y2
+            dibujo.create_line(coord, fill=op_color, width=3)
+            coord =i+35, y1+20,i+45 , y2-20
+            dibujo.create_line(coord, fill=op_color, width=3)
+            #N
+            coord =i+52, y1,i+52, y2
+            dibujo.create_line(coord, fill=op_color, width=3)
+            coord =i+52, y1,i+77, y2
+            dibujo.create_line(coord, fill=op_color, width=3)
+            coord =i+77, y1,i+77, y2
+            dibujo.create_line(coord, fill=op_color, width=3)
+            #(
+            coord=i+92,y1-5,i+82,y2-35
+            dibujo.create_line(coord,fill=op_color, width=3)
+            coord=i+82,y1+5,i+82,y2-5
+            dibujo.create_line(coord,fill=op_color, width=3)
+            coord=i+82,y1+35,i+92,y2+5
+            dibujo.create_line(coord,fill=op_color, width=3)
+            dibujo.addtag_all
+
+            i=i+60
+
+            prev_selec == "tan("
 
     elif (numeros == "("): #Abre Parentesis
-        coord=i+10,y1-5,i,y2-35
-        dibujo.create_line(coord,fill=op_color, width=3)
-        coord=i,y1+5,i,y2-5
-        dibujo.create_line(coord,fill=op_color, width=3)
-        coord=i,y1+35,i+10,y2+5
-        dibujo.create_line(coord,fill=op_color, width=3)
-        dibujo.addtag_all
-        i=i-20
 
-        prev_selec = "("
+        if prev_selec != "sen(" and prev_selec != "cos(" and prev_selec != "tan(":
+            coord=i+10,y1-5,i,y2-35
+            dibujo.create_line(coord,fill=op_color, width=3)
+            coord=i,y1+5,i,y2-5
+            dibujo.create_line(coord,fill=op_color, width=3)
+            coord=i,y1+35,i+10,y2+5
+            dibujo.create_line(coord,fill=op_color, width=3)
+            dibujo.addtag_all
+            i=i-20
+
+            prev_selec = "("
+
+        else:
+            return 0
 
     elif (numeros == ")"): #Cierre parentesis
-        i=i-10
-        coord=i,y1-5,i+10,y2-35
-        dibujo.create_line(coord,fill=op_color, width=3)
-        coord=i+10,y1+5,i+10,y2-5
-        dibujo.create_line(coord,fill=op_color, width=3)
-        coord=i+10,y1+35,i,y2+5
-        dibujo.create_line(coord,fill=op_color, width=3)
-        dibujo.addtag_all
+
+        if prev_selec != "(" and prev_selec != "empty":
+            i=i-10
+            coord=i,y1-5,i+10,y2-35
+            dibujo.create_line(coord,fill=op_color, width=3)
+            coord=i+10,y1+5,i+10,y2-5
+            dibujo.create_line(coord,fill=op_color, width=3)
+            coord=i+10,y1+35,i,y2+5
+            dibujo.create_line(coord,fill=op_color, width=3)
+            dibujo.addtag_all
         
-        prev_selec = ")"
+            prev_selec = ")"
+        
+        else:
+            return 0
 
     elif (numeros == "√"): #Raiz
 
