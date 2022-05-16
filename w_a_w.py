@@ -655,6 +655,18 @@ def dibujar(numeros):
         dibujo.create_line(coord, fill=op_color, width=3)
 
         dibujo.addtag_all
+    elif(numeros == "."):
+
+        if prev_selec != "." and prev_selec != "empty":
+
+            coord=i,y1+40,i+5,y2-5
+            dibujo.create_oval(coord,fill=op_color, width=1)
+            dibujo.addtag_all
+
+            prev_selec = "."
+
+        else:
+            return 0
 
     i=i+30
     contadorf=contadorf+30
