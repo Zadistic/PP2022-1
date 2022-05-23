@@ -1,8 +1,8 @@
+from operator import truediv
 from tkinter import*
 import tkinter as tk
 from tkinter import ttk
 import tkinter.font as tkFont
-from tkinter.tix import COLUMN
 
 x=20
 y1=10
@@ -13,6 +13,8 @@ contadorf=x
 op_color = "black"
 num_color = "black"
 prev_selec = "empty"
+frac_save = 0
+parentesis = False
 
 def color_change(color):
 
@@ -68,7 +70,7 @@ def color_change(color):
 
 def fraccion(numeros): 
 
-    global i, y1, y2, contadori, contadorf
+    global i, y1, y2, contadori, contadorf, frac_save, parentesis
 
     if prev_selec != "empty":
 
@@ -89,7 +91,7 @@ def fraccion(numeros):
 
 def dibujar(numeros):
    
-    global y1, y2, i, contadori, contadorf, prev_selec
+    global y1, y2, i, contadori, contadorf, prev_selec, parentesis
 
     if (numeros == 0): #Nro 0
         
@@ -107,10 +109,9 @@ def dibujar(numeros):
             coord =i, y1+5, i+5 , y2-45
             dibujo.create_line(coord, fill=num_color)
 
-            prev_selec = 0
-
         else:
             
+
             coord =i, y1, i+20 , y2-40
             dibujo.create_line(coord, fill=num_color, width=3)
             coord =i, y1+40, i+20 , y2
@@ -123,7 +124,7 @@ def dibujar(numeros):
             dibujo.create_line(coord, fill=num_color, width=3)
             dibujo.addtag_all
 
-            prev_selec = 0
+        prev_selec = 0
 
     elif (numeros == 1): #Nro 1
 
@@ -133,8 +134,6 @@ def dibujar(numeros):
             coord = i, y1-5, i, y2-30
             dibujo.create_line(coord, fill=num_color, width=2)
             dibujo.addtag_all
-
-            prev_selec = 1
         
         else:
 
@@ -142,7 +141,7 @@ def dibujar(numeros):
             dibujo.create_line(coord, fill=num_color, width=3)
             dibujo.addtag_all
 
-            prev_selec = 1
+        prev_selec = 1
 
     elif (numeros == 2): #Nro 2
         
@@ -399,8 +398,12 @@ def dibujar(numeros):
             dibujo.create_line(coord, fill=op_color, width=3)
             dibujo.addtag_all
             prev_selec = "+"
-            contadori=i+30
+            
         
+        elif prev_selec == "/":
+            
+            return 0
+
         else:
             return 0
 
@@ -614,6 +617,7 @@ def dibujar(numeros):
     elif (numeros == "("): #Abre Parentesis
 
         if prev_selec != "sen(" and prev_selec != "cos(" and prev_selec != "tan(":
+
             coord=i+10,y1-5,i,y2-35
             dibujo.create_line(coord,fill=op_color, width=3)
             coord=i,y1+5,i,y2-5
@@ -621,9 +625,11 @@ def dibujar(numeros):
             coord=i,y1+35,i+10,y2+5
             dibujo.create_line(coord,fill=op_color, width=3)
             dibujo.addtag_all
-            i=i-20
+
 
             prev_selec = "("
+            parentesis = True
+            contadori = i+30
 
         else:
             return 0
@@ -631,7 +637,7 @@ def dibujar(numeros):
     elif (numeros == ")"): #Cierre parentesis
 
         if prev_selec != "(" and prev_selec != "empty":
-            i=i-10
+
             coord=i,y1-5,i+10,y2-35
             dibujo.create_line(coord,fill=op_color, width=3)
             coord=i+10,y1+5,i+10,y2-5
@@ -645,16 +651,17 @@ def dibujar(numeros):
         else:
             return 0
 
-    elif (numeros == "√"): #Raiz
+    #elif (numeros == "√"): #Raiz
 
-        coord =i, y1+20,i+10, y2
-        dibujo.create_line(coord, fill=op_color, width=3)
-        coord =i+10, y1+40,i+15, y2-45
-        dibujo.create_line(coord, fill=op_color, width=3)
-        coord =i+15, y1-5,i+25, y2-45
-        dibujo.create_line(coord, fill=op_color, width=3)
+    #    coord =i, y1+20,i+10, y2
+    #    dibujo.create_line(coord, fill=op_color, width=3)
+    #    coord =i+10, y1+40,i+15, y2-45
+    #    dibujo.create_line(coord, fill=op_color, width=3)
+    #    coord =i+15, y1-5,i+25, y2-45
+    #    dibujo.create_line(coord, fill=op_color, width=3)
 
-        dibujo.addtag_all
+    #    dibujo.addtag_all
+
     elif(numeros == "."):
 
         if prev_selec != "." and prev_selec != "empty":
@@ -685,11 +692,19 @@ def limpiar():
     y1 = 10
     y2 = 50
     prev_selec = "empty"
-	 
+
+def tamaño(n):
+
+    if n == "tamaño":
+        
+        interfaz = interfaz.minsize()
+        
 interfaz = Tk()
 interfaz.configure(background="#616161")
 interfaz.title("CALCULADORA")
+
 interfaz.minsize()
+
 fontStyle = tkFont.Font(family="Lucida Grande", size=22)
 
 fila_base = 4
@@ -816,7 +831,7 @@ division.grid(row=fila_base+4, column=4)
 
 #Botón para operador =
 resol = Button(interfaz, text=" = ", font= fontStyle, fg="white", bg="grey39",
-height=altura, width=ancho)
+command=lambda: tamaño("tamaño"), height=altura, width=ancho)
 resol.grid(row=fila_base+4, column=3)
 
 #Botón para VACIAR
