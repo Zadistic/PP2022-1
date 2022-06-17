@@ -15,6 +15,8 @@ num_color = "black"
 prev_selec = "empty"
 frac_save = 0
 parentesis = False
+text_space = 72
+modo = 1
 
 def color_change(color):
 
@@ -693,17 +695,31 @@ def limpiar():
     y2 = 50
     prev_selec = "empty"
 
-def tamaño(n):
+def tamaño():
 
-    if n == "tamaño":
-        
-        interfaz = interfaz.minsize()
-        
+    global modo, title
+
+    if modo%2 != 0:
+
+        interfaz.geometry("900x683")
+        calc_mode['text'] = "Científica"
+        interfaz.title("CALCULADORA BÁSICA")
+
+    elif modo%2 == 0:
+
+        interfaz.geometry("1078x683")
+        calc_mode['text'] = "Básica"
+        interfaz.title("CALCULADORA CIENTÍFICA")
+
+    modo = modo + 1
+
+    return modo
+
 interfaz = Tk()
 interfaz.configure(background="#616161")
-interfaz.title("CALCULADORA")
-
-interfaz.minsize()
+interfaz.title("CALCULADORA CIENTÍFICA")
+interfaz.geometry("1078x683")
+interfaz.resizable(0,0)
 
 fontStyle = tkFont.Font(family="Lucida Grande", size=22)
 
@@ -714,8 +730,15 @@ ancho = 10
 dibujo = Canvas(interfaz, bg="#dbdbdb")
 dibujo.grid(columnspan=8, ipadx=349, ipady=30, row= fila_base-3, column=0)
 
-text_square = Entry(interfaz, width=70, font =("Lucida Grande", 20), bg="#dbdbdb", fg=num_color)
+text_square = Entry(interfaz, width=text_space, font =("Lucida Grande", 20), bg="#dbdbdb", fg=num_color)
 text_square.grid(columnspan=8, pady=10, ipady= 4, row= fila_base-2, column=0)
+
+
+#Botón para Cambiar Modo de Calculadora
+
+calc_mode = Button(interfaz, text=" Básica ", font=fontStyle, fg="white", bg="grey39", 
+command=lambda:tamaño(), height=altura, width=ancho)
+calc_mode.grid(row=fila_base, column=0, columnspan= 3)
 
 #BOTONES COLORES
 
@@ -843,10 +866,6 @@ vaciar.grid(row=fila_base, column=6)
 fact = Button(interfaz, text=" x! ", font = fontStyle, fg= "white", bg="grey39",
 command=lambda:dibujar("!"), height=altura, width=ancho)
 fact.grid(row=fila_base, column=7)
-
-#Botón para Activar Coordenadas
-coords = Button(interfaz, text=" coords", font=fontStyle, fg="white", bg="grey39", height=altura, width=ancho)
-coords.grid(row=fila_base, column=0, columnspan= 3)
 
 #Botón para operador seno
 seno = Button(interfaz, text=" sen ", font = fontStyle, fg= "white", bg="grey39",
