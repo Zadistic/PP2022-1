@@ -651,21 +651,24 @@ def dibujar(numeros):
         else:
             return 0
 
-    elif (numeros == "°"): #grado
+    #elif (numeros == "√"): #Raiz
 
-            coord =i-5, y1,i, y2-35
-            dibujo.create_oval(coord, width=2)
-            dibujo.addtag_all
-            i=i-20
+    #    coord =i, y1+20,i+10, y2
+    #    dibujo.create_line(coord, fill=op_color, width=3)
+    #    coord =i+10, y1+40,i+15, y2-45
+    #    dibujo.create_line(coord, fill=op_color, width=3)
+    #    coord =i+15, y1-5,i+25, y2-45
+    #    dibujo.create_line(coord, fill=op_color, width=3)
+
+    #    dibujo.addtag_all
 
     elif(numeros == "."):
 
         if prev_selec != "." and prev_selec != "empty":
-            i=i-5 
+
             coord=i,y1+40,i+5,y2-5
-            dibujo.create_oval(coord,fill=op_color, width=2)
+            dibujo.create_oval(coord,fill=op_color, width=1)
             dibujo.addtag_all
-            i=i-20
 
             prev_selec = "."
 
@@ -867,8 +870,8 @@ command = lambda:dibujar("."), height=altura, width=ancho)
 decimal.grid(row=fila_base+4, column=2)
 
 #Botón para operador raiz
-raiz = Button(interfaz, text=" ° ", font = fontStyle, fg= "white", bg="grey39",
-command=lambda:dibujar("°"), height=altura, width=ancho)
+raiz = Button(interfaz, text=" √ ", font = fontStyle, fg= "white", bg="grey39",
+command=lambda:dibujar("√"), height=altura, width=ancho)
 raiz.grid(row=fila_base, column=2)
 
 #Botón para Abre Paréntesis
