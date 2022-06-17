@@ -721,171 +721,173 @@ text_square.grid(columnspan=8, pady=10, ipady= 4, row= fila_base-2, column=0)
 
 black_color = Button(interfaz, bg= "black",
 command= lambda:color_change("black"), height=altura+2, width=7)
-black_color.grid(row= fila_base+1, column=5)
+black_color.grid(row= fila_base+1, column=0)
 pink_color = Button(interfaz, bg= "#ff00aa",
 command= lambda:color_change("pink"), height=altura+2, width=7)
-pink_color.grid(row= fila_base+1, column=6)
+pink_color.grid(row= fila_base+1, column=1)
 purple_color = Button(interfaz, bg= "purple",
 command= lambda:color_change("purple"), height=altura+2, width=7)
-purple_color.grid(row= fila_base+1, column=7)
+purple_color.grid(row= fila_base+1, column=2)
 
 orange_color = Button(interfaz, bg= "orange",
 command= lambda:color_change("orange"), height=altura+2, width=7)
-orange_color.grid(row= fila_base+2, column=5)
+orange_color.grid(row= fila_base+2, column=0)
 cyan_color = Button(interfaz, bg= "cyan",
 command= lambda:color_change("cyan"), height=altura+2, width=7)
-cyan_color.grid(row= fila_base+2, column=6)
+cyan_color.grid(row= fila_base+2, column=1)
 green_color = Button(interfaz, bg= "green",
 command= lambda:color_change("green"), height=altura+2, width=7)
-green_color.grid(row= fila_base+2, column=7)
+green_color.grid(row= fila_base+2, column=2)
 
 yellow_color = Button(interfaz, bg= "yellow",
 command= lambda:color_change("yellow"), height=altura+2, width=7)
-yellow_color.grid(row= fila_base+3, column=5)
+yellow_color.grid(row= fila_base+3, column=0)
 burdeo_color = Button(interfaz, bg= "dark red",
 command= lambda:color_change("dark_red"), height=altura+2, width=7)
-burdeo_color.grid(row= fila_base+3, column=6)
+burdeo_color.grid(row= fila_base+3, column=1)
 light_blue_color = Button(interfaz, bg= "#0099ad",
 command= lambda:color_change("light_blue"), height=altura+2, width=7)
-light_blue_color.grid(row= fila_base+3, column=7)
+light_blue_color.grid(row= fila_base+3, column=2)
 
 red_color = Button(interfaz, bg= "red",
 command= lambda:color_change("red"), height=altura+2, width=7)
-red_color.grid(row= fila_base+4, column=5)
+red_color.grid(row= fila_base+4, column=0)
 light_green_color = Button(interfaz, bg= "#4dff00",
 command= lambda:color_change("light_green"), height=altura+2, width=7)
-light_green_color.grid(row= fila_base+4, column=6)
+light_green_color.grid(row= fila_base+4, column=1)
 blue_color = Button(interfaz, bg= "blue",
 command= lambda:color_change("blue"), height=altura+2, width=7)
-blue_color.grid(row= fila_base+4, column=7)
+blue_color.grid(row= fila_base+4, column=2)
 
 #Botón para número 1
 case1 = Button(interfaz, text=" 1 ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(1), height=altura, width=ancho)
-case1.grid(row=fila_base+3, column=1)
+case1.grid(row=fila_base+3, column=3)
 
 #Botón para número 2
 case2 = Button(interfaz, text=" 2 ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(2), height=altura, width=ancho)
-case2.grid(row=fila_base+3, column=2)
+case2.grid(row=fila_base+3, column=4)
 
 #Botón para número 3
 case3 = Button(interfaz, text=" 3 ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(3), height=altura, width=ancho)
-case3.grid(row=fila_base+3, column=3)
+case3.grid(row=fila_base+3, column=5)
 
 #Botón para número 4
 case4 = Button(interfaz, text=" 4 ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(4), height=altura, width=ancho)
-case4.grid(row=fila_base+2, column=1)
+case4.grid(row=fila_base+2, column=3)
 
 #Botón para número 5
 case5 = Button(interfaz, text=" 5 ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(5), height=altura, width=ancho)
-case5.grid(row=fila_base+2, column=2)
+case5.grid(row=fila_base+2, column=4)
 
 #Botón para número 6
 case6 = Button(interfaz, text=" 6 ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(6), height=altura, width=ancho)
-case6.grid(row=fila_base+2, column=3)
+case6.grid(row=fila_base+2, column=5)
 
 #Botón para número 7
 case7 = Button(interfaz, text=" 7 ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(7), height=altura, width=ancho)
-case7.grid(row=fila_base+1, column=1)
+case7.grid(row=fila_base+1, column=3)
 
 #Botón para número 8
 case8 = Button(interfaz, text=" 8 ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(8), height=altura, width=ancho)
-case8.grid(row=fila_base+1, column=2)
+case8.grid(row=fila_base+1, column=4)
 
 #Botón para número 9
 case9 = Button(interfaz, text=" 9 ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(9), height=altura, width=ancho)
-case9.grid(row=fila_base+1, column=3)
+case9.grid(row=fila_base+1, column=5)
 
 #Botón para número 0
 case0 = Button(interfaz, text=" 0 ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar(0), height=altura, width=ancho)
-case0.grid(row=fila_base+4, column=1)
+case0.grid(row=fila_base+4, column=3)
 
 #Botón para operador +
 suma = Button(interfaz, text=" + ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar("+"), height=altura, width=ancho)
-suma.grid(row=fila_base+1, column=4)
+suma.grid(row=fila_base+1, column=6)
 
 #Botón para operador -
 resta = Button(interfaz, text=" — ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar("-"), height=altura, width=ancho)
-resta.grid(row=fila_base+2, column=4)
+resta.grid(row=fila_base+2, column=6)
 
 #Botón para operador X
 multip = Button(interfaz, text=" X ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: dibujar("*"), height=altura, width=ancho)
-multip.grid(row=fila_base+3, column=4)
+multip.grid(row=fila_base+3, column=6)
 
 #Botón para operador /
 division = Button(interfaz, text=" / ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: fraccion("/"), height=altura, width=ancho)
-division.grid(row=fila_base+4, column=4)
+division.grid(row=fila_base+4, column=6)
 
 #Botón para operador =
 resol = Button(interfaz, text=" = ", font= fontStyle, fg="white", bg="grey39",
 command=lambda: tamaño("tamaño"), height=altura, width=ancho)
-resol.grid(row=fila_base+4, column=3)
+resol.grid(row=fila_base+4, column=5)
 
 #Botón para VACIAR
 vaciar = Button(interfaz, text=" CE ", relief=FLAT, font= fontStyle, fg="white", bg="#611115",
 command=limpiar, height=altura, width=ancho)
-vaciar.grid(row=fila_base, column=4)
+vaciar.grid(row=fila_base, column=6)
 
 #Botón para operador factorial
 fact = Button(interfaz, text=" x! ", font = fontStyle, fg= "white", bg="grey39",
 command=lambda:dibujar("!"), height=altura, width=ancho)
-fact.grid(row=fila_base, column=0)
+fact.grid(row=fila_base, column=7)
+
+#Botón para Activar Coordenadas
+coords = Button(interfaz, text=" coords", font=fontStyle, fg="white", bg="grey39", height=altura, width=ancho)
+coords.grid(row=fila_base, column=0, columnspan= 3)
 
 #Botón para operador seno
 seno = Button(interfaz, text=" sen ", font = fontStyle, fg= "white", bg="grey39",
 command=lambda:dibujar("sen("), height=altura, width=ancho)
-seno.grid(row=fila_base+1, column=0)
+seno.grid(row=fila_base+1, column=7)
 
 #Botón para operador coseno
 coseno = Button(interfaz, text=" cos ", font = fontStyle, fg= "white", bg="grey39",
 command=lambda:dibujar("cos("), height=altura, width=ancho)
-coseno.grid(row=fila_base+2, column=0)
+coseno.grid(row=fila_base+2, column=7)
 
 #Botón para operador tangente
 tang = Button(interfaz, text=" tan ", font = fontStyle, fg= "white", bg="grey39",
 command=lambda:dibujar("tan("), height=altura, width=ancho)
-tang.grid(row=fila_base+3, column=0)
+tang.grid(row=fila_base+3, column=7)
 
 #Botón para operador potencia
 potencia = Button(interfaz, text=" x² ", font = fontStyle, fg= "white", bg="grey39",
 command = lambda:dibujar("^"), height=altura, width=ancho)
-potencia.grid(row=fila_base+4, column=0)
+potencia.grid(row=fila_base+4, column=7)
 
 #Botón para operador decimal
 decimal = Button(interfaz, text=" . ", font = fontStyle, fg="white", bg="grey39",
 command = lambda:dibujar("."), height=altura, width=ancho)
-decimal.grid(row=fila_base+4, column=2)
+decimal.grid(row=fila_base+4, column=4)
 
 #Botón para operador raiz
 raiz = Button(interfaz, text=" √ ", font = fontStyle, fg= "white", bg="grey39",
 command=lambda:dibujar("√"), height=altura, width=ancho)
-raiz.grid(row=fila_base, column=2)
+raiz.grid(row=fila_base, column=4)
 
 #Botón para Abre Paréntesis
 abreP = Button(interfaz, text=" ( ", font = fontStyle, fg="white", bg="grey39",
 command = lambda:dibujar("("), height=altura, width=ancho)
-abreP.grid(row=fila_base, column= 1)
+abreP.grid(row=fila_base, column= 3)
 
 #Botón para Cierre Paréntesis
 cierreP = Button(interfaz, text=" ) ", font = fontStyle, fg="white", bg="grey39",
 command = lambda:dibujar(")"), height=altura, width=ancho)
-cierreP.grid(row =fila_base, column= 3)
+cierreP.grid(row =fila_base, column= 5)
 
-#Botón para Activar Coordenadas
-coords = Button(interfaz, text=" coords", font=fontStyle, fg="white", bg="grey39", width=ancho)
-coords.grid(row=fila_base, column=5, columnspan=3)
+
 
 interfaz.mainloop()
