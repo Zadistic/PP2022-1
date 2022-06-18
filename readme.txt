@@ -7,4 +7,6 @@ Nicolás Alexis Valenzuela Avaca
 
 Repositorio GitHub: https://github.com/Zadistic/PP2022-1
 Tablero KanBan: https://trello.com/b/7XkbRbvE/pp20221
-Video Test de proyecto: https://youtu.be/714_jHV2e-4
+Video Test de proyecto: https://www.youtube.com/watch?v=TXNmhIP9Apo
+
+El codigo no se encuentra con un ejecutable por razones de peso de archivo, solo se adjunta archivo.py
