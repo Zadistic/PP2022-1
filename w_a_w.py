@@ -13,6 +13,7 @@ contadorf=x
 op_color = "black"
 num_color = "black"
 prev_selec = "empty"
+grado= "empty"
 frac_save = 0
 parentesis = False
 text_space = 72
@@ -93,7 +94,7 @@ def fraccion(numeros):
 
 def dibujar(numeros):
    
-    global y1, y2, i, contadori, contadorf, prev_selec, parentesis
+    global y1, y2, i, contadori, contadorf, prev_selec, parentesis, grado
 
     if (numeros == 0): #Nro 0
         
@@ -386,6 +387,7 @@ def dibujar(numeros):
             dibujo.addtag_all
 
         prev_selec = 9
+        
 
     elif (numeros == "+"): #Suma
         
@@ -400,6 +402,7 @@ def dibujar(numeros):
             dibujo.create_line(coord, fill=op_color, width=3)
             dibujo.addtag_all
             prev_selec = "+"
+            grado="empty"
             
         
         elif prev_selec == "/":
@@ -422,6 +425,7 @@ def dibujar(numeros):
             contadori=i+30
 
             prev_selec = "-"
+            grado="empty"
 
         else:
             return 0
@@ -441,6 +445,7 @@ def dibujar(numeros):
             contadori=i+30
 
             prev_selec = "*"
+            grado="empty"
 
         else:
             return 0
@@ -453,6 +458,7 @@ def dibujar(numeros):
 
             prev_selec = "^"
             i=i-30
+            grado="empty"
         
         else:
             return 0
@@ -471,6 +477,7 @@ def dibujar(numeros):
             dibujo.addtag_all
 
             prev_selec = "!"
+            grado="empty"
         
         else:
             return 0
@@ -525,6 +532,7 @@ def dibujar(numeros):
             i=i+60
 
             prev_selec = "sen("
+            grado ="sen("
     
     elif (numeros == "cos("): #Coseno
 
@@ -574,6 +582,7 @@ def dibujar(numeros):
             i=i+60
 
             prev_selec = "cos("
+            grado ="cos("
 
     elif (numeros == "tan("): #Tangente
 
@@ -614,7 +623,8 @@ def dibujar(numeros):
 
             i=i+60
 
-            prev_selec == "tan("
+            prev_selec ="tan("
+            grado="tan("
 
     elif (numeros == "("): #Abre Parentesis
 
@@ -632,6 +642,7 @@ def dibujar(numeros):
             prev_selec = "("
             parentesis = True
             contadori = i+30
+            grado="empty"
 
         else:
             return 0
@@ -649,20 +660,25 @@ def dibujar(numeros):
             dibujo.addtag_all
         
             prev_selec = ")"
+            grado="empty"
         
         else:
             return 0
 
     elif (numeros == "°"): #grado
 
-        if (prev_selec != "empty" and prev_selec != "*" and prev_selec != "+" and prev_selec != "-"
-        and prev_selec != "^" and prev_selec != "x!"):
+        if ( prev_selec != "°" and prev_selec != "empty" and prev_selec != "*" and prev_selec != "+" and prev_selec != "-"
+        and prev_selec != "^" and prev_selec != "x!"   ):
+            if((grado =="sen(" or grado=="cos(" or grado=="tan(") and (prev_selec==0 or prev_selec==1 or prev_selec==2 or prev_selec==3 or prev_selec==4 or prev_selec==5 or prev_selec==6 or prev_selec==7 or prev_selec==8 or prev_selec==9 )):
+                coord = i-5, y1, i, y2-35
+                dibujo.create_oval(coord, width=2)
+                dibujo.addtag_all
 
-            coord = i-5, y1, i, y2-35
-            dibujo.create_oval(coord, width=2)
-            dibujo.addtag_all
-
-            i = i-20
+                i = i-20
+                prev_selec = "°"
+            else:
+                return 0
+   
 
     elif(numeros == "."):
 
