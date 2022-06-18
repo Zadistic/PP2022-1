@@ -678,6 +678,8 @@ def dibujar(numeros):
                 prev_selec = "°"
             else:
                 return 0
+        else:
+            return 0
    
 
     elif(numeros == "."):
